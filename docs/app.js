@@ -502,6 +502,61 @@ function bindEvents() {
 
   attachDialogLightDismissFallback(els.toolDialog);
   attachDialogLightDismissFallback(els.compareDialog);
+
+  // Keyboard-first navigation shortcuts
+  document.addEventListener("keydown", (event) => {
+    if (els.toolDialog.open || els.compareDialog.open) return;
+    const activeTag = (document.activeElement?.tagName || "").toUpperCase();
+    const isTyping = activeTag === "INPUT" || activeTag === "TEXTAREA" || activeTag === "SELECT";
+
+    if (event.key === "/" && !isTyping && !event.ctrlKey && !event.metaKey) {
+      event.preventDefault();
+      els.searchInput.focus();
+      els.searchInput.select();
+      return;
+    }
+
+    if (event.key === "Escape" && document.activeElement === els.searchInput && state.query) {
+      state.query = "";
+      els.searchInput.value = "";
+      renderToolsGrid();
+      syncUrl();
+      return;
+    }
+
+    if (isTyping || event.ctrlKey || event.metaKey || event.altKey) return;
+
+    if (event.key === "l" || event.key === "L") {
+      state.lang = state.lang === "en" ? "zh" : "en";
+      renderAll();
+      return;
+    }
+
+    const cards = Array.from(els.toolsGrid.querySelectorAll(".tool-card"));
+    if (!cards.length) return;
+
+    if (event.key === "j" || event.key === "k") {
+      event.preventDefault();
+      const delta = event.key === "j" ? 1 : -1;
+      state.focusedIndex =
+        state.focusedIndex < 0
+          ? 0
+          : (state.focusedIndex + delta + cards.length) % cards.length;
+      for (const [i, card] of cards.entries()) {
+        card.classList.toggle("is-focused", i === state.focusedIndex);
+      }
+      const target = cards[state.focusedIndex];
+      target.focus({ preventScroll: false });
+      target.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      return;
+    }
+
+    if (event.key === "Enter" && document.activeElement?.classList.contains("tool-card")) {
+      const tid = document.activeElement.dataset.toolId;
+      const tool = state.bundle?.tools.find((item) => item.id === tid);
+      if (tool) openToolDialog(tool);
+    }
+  });
 }
 
 async function boot() {

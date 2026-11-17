@@ -11,7 +11,7 @@
 
 > 纯粹且极致：由 Schema 严格校验的精选目录，只收录 **100% 专为 Google Antigravity 设计研发** 的原生 IDE 扩展、底层系统补丁、运行时热修补与专用工程网关。
 
-[English Documentation](README.md) · [贡献指南](CONTRIBUTING.zh-CN.md) · [每日健康与清退报告](health_report.zh-CN.md) · [提交新工具](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
+[🌐 交互式网页目录](https://wllzhang.github.io/awesome-antigravity-tools/?lang=zh) · [English Documentation](README.md) · [贡献指南](CONTRIBUTING.zh-CN.md) · [每日健康与清退报告](health_report.zh-CN.md) · [提交新工具](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
 
 ---
 

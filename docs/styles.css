@@ -808,6 +808,32 @@ select:focus-visible {
   font-weight: 600;
 }
 
+@media print {
+  .site-header,
+  .controls-panel,
+  .compare-bar,
+  .card-actions,
+  .insights-section {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .tools-grid {
+    display: block;
+  }
+
+  .tool-card {
+    break-inside: avoid;
+    box-shadow: none;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
