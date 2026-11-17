@@ -1,0 +1,37 @@
+name: Lint & Link Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Run weekly on Monday at 08:00 UTC to detect stale/dead links
+    - cron: '0 8 * * 1'
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Link Checker with Lychee
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress './*.md'
+          fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Lint Markdown Files
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            *.md

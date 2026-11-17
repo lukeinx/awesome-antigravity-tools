@@ -1,0 +1,64 @@
+name: 🚀 Submit a Tool / Extension
+description: Suggest an Antigravity tool, extension, platform fix, or MCP server for inclusion
+title: "[Tool Submission]: "
+labels: ["submission", "review-needed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping curate **awesome-antigravity-tools**!
+        Please fill out this form to recommend a project. Note: We only accept **actionable engineering tools, code, and extensions** (not bare prompt/skill text files).
+
+  - type: input
+    id: tool_name
+    attributes:
+      label: Tool Name
+      description: The name of the project or extension.
+      placeholder: e.g. vscode-antigravity-cockpit
+    validations:
+      required: true
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository / Project URL
+      description: Link to the GitHub repository, documentation, or marketplace page.
+      placeholder: https://github.com/user/project
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which section does this tool belong to?
+      options:
+        - "IDE Extensions & HUDs"
+        - "Platform Fixes & System Utilities"
+        - "Packaged Plugins & Bundles"
+        - "MCP Servers & Bridges"
+        - "Lifecycle Hooks & Automations"
+        - "CLI Utilities & Dev Tools"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: One-line Description
+      description: A concise summary of what this tool accomplishes. Must start with a capital letter and end with a period.
+      placeholder: e.g. Zero-copy NTFS hardlink bridge resolving Go language server directory junction discovery on Windows.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: quality_checklist
+    attributes:
+      label: Quality Verification
+      options:
+        - label: The project is open source and contains executable code or configuration (NOT a bare prompt or raw markdown skill).
+          required: true
+        - label: The project is actively maintained and documented with clear installation instructions.
+          required: true
+        - label: I have tested this tool and verified it functions as intended.
+          required: true
