@@ -1,0 +1,258 @@
+#!/usr/bin/env python3
+"""
+Automated Candidate Discovery & Exclusivity Screening Radar for awesome-antigravity-tools.
+
+Searches GitHub for emerging Antigravity-native repositories, filters out
+already-cataloged projects, generic prompt dumps, and multi-agent rebrands,
+and ranks candidates by an Antigravity Exclusivity & Engineering Signal Score.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
+from typing import Any
+
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_CATALOG = REPO_ROOT / "data" / "tools.json"
+
+DEFAULT_QUERIES = [
+    "antigravity in:name archived:false fork:false",
+    "antigravity acp in:name,description archived:false fork:false",
+    "agy acp in:name,description archived:false fork:false",
+]
+
+CODE_LANGUAGES = {
+    "Rust",
+    "Go",
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "C++",
+    "C",
+    "C#",
+    "PowerShell",
+    "Swift",
+    "Kotlin",
+    "Java",
+    "Shell",
+    "Zig",
+}
+
+NATIVE_ENGINEERING_RE = re.compile(
+    r"\b(agy|acp|quota|cockpit|language server|plugin\.json|vsix|extension|patch|fix|bridge|proxy|sdk|gateway|cli|hud|tauri|electron)\b",
+    re.IGNORECASE,
+)
+
+OTHER_AGENTS = [
+    "claude code",
+    "codex",
+    "cursor",
+    "windsurf",
+    "copilot",
+    "opencode",
+    "kiro",
+    "cline",
+    "gemini cli",
+]
+
+PROMPT_DUMP_RE = re.compile(
+    r"(awesome-|prompt\s*(pack|collection|library|dump)|skill\s*pack|agent\s*skills|cheatsheet|system\s*prompts)",
+    re.IGNORECASE,
+)
+
+
+def get_token(use_gh_cli: bool = False) -> str:
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+    if token or not use_gh_cli:
+        return token
+    try:
+        proc = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, timeout=5, check=False)
+        if proc.returncode == 0:
+            return proc.stdout.strip()
+    except Exception:
+        pass
+    return ""
+
+
+def search_github_repos(query: str, per_page: int = 25, token: str = "") -> list[dict[str, Any]]:
+    encoded = urllib.parse.quote(query, safe="")
+    url = f"https://api.github.com/search/repositories?q={encoded}&sort=stars&order=desc&per_page={per_page}"
+    headers = {
+        "User-Agent": "Awesome-Antigravity-Discovery/1.0",
+        "Accept": "application/vnd.github+json",
+    }
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+            return payload.get("items", [])
+    except urllib.error.HTTPError as e:
+        print(f"[WARN] Search query failed ({e.code}): {query}", file=sys.stderr)
+        return []
+    except Exception as e:
+        print(f"[WARN] Search error ({e}): {query}", file=sys.stderr)
+        return []
+
+
+def score_candidate(repo_obj: dict[str, Any]) -> tuple[int, list[str]]:
+    """Compute 0-100 Antigravity exclusivity & engineering signal score with reasons."""
+    name = (repo_obj.get("name") or "").lower()
+    desc = repo_obj.get("description") or ""
+    desc_l = desc.lower()
+    lang = repo_obj.get("language") or ""
+    stars = int(repo_obj.get("stargazers_count", 0))
+    lic_obj = repo_obj.get("license")
+    lic = lic_obj.get("spdx_id") if isinstance(lic_obj, dict) else None
+
+    score = 0
+    reasons: list[str] = []
+
+    if "antigravity" in name or re.search(r"(^|[-_])agy($|[-_])", name):
+        score += 35
+        reasons.append("dedicated-name")
+    elif "antigravity" in desc_l:
+        score += 15
+        reasons.append("mentions-antigravity")
+
+    if lang in CODE_LANGUAGES:
+        score += 20
+        reasons.append(f"code:{lang}")
+
+    if NATIVE_ENGINEERING_RE.search(f"{name} {desc}"):
+        score += 15
+        reasons.append("engineering-keywords")
+
+    if lic and lic not in ("NONE", "NOASSERTION"):
+        score += 15
+        reasons.append(f"license:{lic}")
+
+    if stars >= 500:
+        score += 15
+    elif stars >= 50:
+        score += 11
+    elif stars >= 10:
+        score += 7
+    elif stars >= 3:
+        score += 4
+
+    other_hits = sum(1 for agent in OTHER_AGENTS if agent in desc_l)
+    if other_hits >= 3:
+        score -= 40
+        reasons.append(f"penalty:multi-agent({other_hits})")
+    elif other_hits == 2:
+        score -= 15
+        reasons.append("penalty:cross-agent(2)")
+
+    if PROMPT_DUMP_RE.search(f"{name} {desc}"):
+        score -= 35
+        reasons.append("penalty:prompt-or-list")
+
+    if not desc.strip():
+        score -= 15
+        reasons.append("penalty:no-description")
+
+    return max(0, min(100, score)), reasons
+
+
+def load_existing_slugs(catalog_path: Path) -> set[str]:
+    if not catalog_path.exists():
+        return set()
+    data = json.loads(catalog_path.read_text(encoding="utf-8"))
+    slugs = {t["repo"].lower() for t in data.get("tools", []) if "repo" in t}
+    if data.get("repository"):
+        slugs.add(data["repository"].lower())
+    return slugs
+
+
+def render_markdown_table(candidates: list[dict[str, Any]]) -> str:
+    if not candidates:
+        return "No new high-signal Antigravity-exclusive candidates matched the current thresholds.\n"
+    lines = [
+        "# Antigravity-Exclusive Candidate Discovery Radar",
+        "",
+        "| Score | Repository | Stars | Language | License | Last Push | Signals | Description |",
+        "| :---: | :--- | :---: | :---: | :---: | :---: | :--- | :--- |",
+    ]
+    for c in candidates:
+        desc = (c["description"] or "").replace("|", "\\|").replace("\n", " ")[:120]
+        signals = ", ".join(c["signals"])
+        lines.append(
+            f"| **{c['score']}** | [{c['full_name']}]({c['url']}) | {c['stars']:,} | "
+            f"{c['language'] or '-'} | {c['license'] or '-'} | {c['pushed_at']} | `{signals}` | {desc} |"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Discover emerging Antigravity-exclusive tools on GitHub.")
+    parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
+    parser.add_argument("--min-stars", type=int, default=5)
+    parser.add_argument("--min-score", type=int, default=55)
+    parser.add_argument("--limit", type=int, default=20)
+    parser.add_argument("--format", choices=["md", "json"], default="md")
+    parser.add_argument("--out", type=Path, default=None, help="Optional output file path")
+    parser.add_argument("--use-gh-cli", action="store_true")
+    args = parser.parse_args()
+
+    token = get_token(use_gh_cli=args.use_gh_cli)
+    existing = load_existing_slugs(args.catalog)
+
+    dedup: dict[str, dict[str, Any]] = {}
+    for query in DEFAULT_QUERIES:
+        for item in search_github_repos(query, per_page=25, token=token):
+            full_name = item.get("full_name", "")
+            if not full_name:
+                continue
+            key = full_name.lower()
+            if key in existing or key in dedup:
+                continue
+            if item.get("archived") or item.get("fork") or item.get("disabled"):
+                continue
+            if int(item.get("stargazers_count", 0)) < args.min_stars:
+                continue
+            score, signals = score_candidate(item)
+            if score < args.min_score:
+                continue
+            lic_obj = item.get("license")
+            dedup[key] = {
+                "full_name": full_name,
+                "url": item.get("html_url", f"https://github.com/{full_name}"),
+                "stars": int(item.get("stargazers_count", 0)),
+                "language": item.get("language"),
+                "license": lic_obj.get("spdx_id") if isinstance(lic_obj, dict) else None,
+                "pushed_at": (item.get("pushed_at") or "")[:10],
+                "description": (item.get("description") or "").strip(),
+                "score": score,
+                "signals": signals,
+            }
+
+    ranked = sorted(dedup.values(), key=lambda x: (x["score"], x["stars"]), reverse=True)[: args.limit]
+    output = (
+        json.dumps(ranked, indent=2, ensure_ascii=False) + "\n"
+        if args.format == "json"
+        else render_markdown_table(ranked)
+    )
+
+    if args.out:
+        args.out.write_text(output, encoding="utf-8", newline="\n")
+        print(f"[+] Wrote {len(ranked)} candidates to {args.out}")
+    else:
+        sys.stdout.write(output)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
