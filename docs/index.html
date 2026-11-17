@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      const saved = localStorage.getItem("color-scheme");
+      if (saved === "light" || saved === "dark") {
+        document.querySelector('meta[name="color-scheme"]').content = saved;
+      }
+    } catch {}
+  </script>
+  <title>Awesome Antigravity Tools — Strictly Antigravity-Exclusive Engineering Index</title>
+  <meta name="description" content="A strictly curated, daily-audited directory of 100% Google Antigravity-exclusive tools, IDE extensions, runtime hotfixes, and ACP gateways.">
+  <link rel="alternate" type="application/rss+xml" title="Awesome Antigravity Tools RSS" href="feed.xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to catalog</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <div class="brand-badge" aria-hidden="true">AGY</div>
+        <div>
+          <h1 class="site-title" data-i18n="title">Awesome Antigravity Tools</h1>
+          <p class="site-subtitle" data-i18n="subtitle">100% Google Antigravity-exclusive tools, extensions, runtime hotfixes &amp; ACP gateways.</p>
+        </div>
+      </div>
+
+      <nav class="header-actions" aria-label="Site controls">
+        <button id="langToggle" class="btn btn-ghost" type="button" aria-label="Switch language">
+          中文
+        </button>
+        <button id="themeToggle" class="btn btn-ghost theme-toggle" type="button">
+          <span class="theme-opt-dark" aria-hidden="true">🌙</span>
+          <span class="theme-opt-dark sr-only">Switch to dark theme</span>
+          <span class="theme-opt-light" aria-hidden="true">☀️</span>
+          <span class="theme-opt-light sr-only">Switch to light theme</span>
+        </button>
+        <a class="btn btn-ghost" href="feed.xml" title="RSS Feed">RSS</a>
+        <a class="btn btn-primary" href="https://github.com/wllzhang/awesome-antigravity-tools" target="_blank" rel="noopener noreferrer" data-i18n="githubBtn">
+          GitHub ↗
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero-stats" aria-label="Ecosystem metrics">
+      <div class="stat-card">
+        <span class="stat-label" data-i18n="statTools">Curated Tools</span>
+        <strong class="stat-value" id="statTotalTools">—</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label" data-i18n="statStars">Combined Stars</span>
+        <strong class="stat-value" id="statTotalStars">—</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label" data-i18n="statHealth">Active Ratio</span>
+        <strong class="stat-value" id="statActiveRatio">—</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label" data-i18n="statScore">Avg Health Score</span>
+        <strong class="stat-value" id="statAvgScore">—</strong>
+      </div>
+    </section>
+
+    <section class="controls-panel" aria-label="Search and filters">
+      <div class="search-row">
+        <div class="search-box">
+          <label for="searchInput" class="sr-only" data-i18n="searchLabel">Search tools</label>
+          <input
+            id="searchInput"
+            type="search"
+            autocomplete="off"
+            placeholder="Search tools, tags, languages, ACP, quota... (Press /)"
+          >
+        </div>
+
+        <div class="select-group">
+          <label for="platformFilter" class="sr-only" data-i18n="platformLabel">Platform</label>
+          <select id="platformFilter" aria-label="Filter by platform">
+            <option value="all" data-i18n="allPlatforms">All Platforms</option>
+          </select>
+
+          <label for="statusFilter" class="sr-only" data-i18n="statusLabel">Health status</label>
+          <select id="statusFilter" aria-label="Filter by health status">
+            <option value="all" data-i18n="allStatuses">All Statuses</option>
+            <option value="HEALTHY" data-i18n="statusHealthy">Healthy &amp; Active</option>
+            <option value="STALE" data-i18n="statusStale">Stale (&gt;180d)</option>
+          </select>
+
+          <label for="sortSelect" class="sr-only" data-i18n="sortLabel">Sort by</label>
+          <select id="sortSelect" aria-label="Sort tools">
+            <option value="stars" data-i18n="sortStars">Most Stars</option>
+            <option value="score" data-i18n="sortScore">Health Score</option>
+            <option value="recent" data-i18n="sortRecent">Recently Updated</option>
+            <option value="name" data-i18n="sortName">Alphabetical (A-Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="categoryPills" class="category-pills" role="tablist" aria-label="Categories"></div>
+
+      <div class="results-bar">
+        <p id="resultsCount" class="results-count" role="status" aria-live="polite">Loading catalog...</p>
+        <div class="results-actions">
+          <button id="resetFiltersBtn" class="btn btn-link" type="button" hidden data-i18n="resetFilters">Reset filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="insightsMount" class="insights-section" aria-label="Ecosystem insights" hidden></section>
+
+    <section aria-label="Curated tools directory">
+      <div id="toolsGrid" class="tools-grid"></div>
+      <div id="emptyState" class="empty-state" hidden>
+        <p data-i18n="emptyMessage">No Antigravity-exclusive tools matched your current filters.</p>
+        <button id="emptyResetBtn" class="btn btn-primary" type="button" data-i18n="resetFilters">Reset filters</button>
+      </div>
+    </section>
+  </main>
+
+  <aside id="compareBar" class="compare-bar" aria-label="Tool comparison tray" hidden></aside>
+
+  <dialog id="toolDialog" class="tool-dialog" closedby="any" aria-labelledby="dialogTitle">
+    <div class="dialog-surface">
+      <header class="dialog-header">
+        <div>
+          <h2 id="dialogTitle" class="dialog-title"></h2>
+          <p id="dialogRepo" class="dialog-repo"></p>
+        </div>
+        <button id="dialogCloseBtn" class="btn btn-ghost icon-btn" type="button" aria-label="Close details">✕</button>
+      </header>
+      <div id="dialogBody" class="dialog-body"></div>
+      <footer class="dialog-footer">
+        <a id="dialogGithubLink" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer" data-i18n="openRepo">
+          Open on GitHub ↗
+        </a>
+        <button id="dialogCopyUrlBtn" class="btn btn-ghost" type="button" data-i18n="copyLink">Copy Share Link</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <dialog id="compareDialog" class="tool-dialog compare-dialog" closedby="any" aria-labelledby="compareTitle">
+    <div class="dialog-surface">
+      <header class="dialog-header">
+        <h2 id="compareTitle" class="dialog-title" data-i18n="compareHeading">Side-by-Side Tool Comparison</h2>
+        <button id="compareCloseBtn" class="btn btn-ghost icon-btn" type="button" aria-label="Close comparison">✕</button>
+      </header>
+      <div id="compareBody" class="dialog-body"></div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        <span data-i18n="footerNote">Backed by single-source-of-truth</span>
+        <code>data/tools.json</code> ·
+        <span id="lastUpdatedText">Audited daily</span>
+      </p>
+      <p class="footer-links">
+        <a href="https://github.com/wllzhang/awesome-antigravity-tools/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" data-i18n="contribute">Contribute</a>
+        ·
+        <a href="https://github.com/wllzhang/awesome-antigravity-tools/blob/main/health_report.md" target="_blank" rel="noopener noreferrer" data-i18n="auditReport">Health Report</a>
+        ·
+        <a href="catalog-bundle.json" target="_blank" rel="noopener noreferrer">JSON API</a>
+        ·
+        <a href="feed.xml" target="_blank" rel="noopener noreferrer">RSS</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
