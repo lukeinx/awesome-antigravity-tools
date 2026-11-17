@@ -30,8 +30,10 @@ jobs:
       - name: Validate Catalog Schema & README Sync
         run: python scripts/validate_catalog.py --check-sync --strict-warnings
 
-      - name: Verify Static Site Artifacts Sync
-        run: python scripts/build_site.py --check
+      - name: Verify Static Site & Export Artifacts Sync
+        run: |
+          python scripts/build_site.py --check
+          python scripts/export_catalog.py --check
 
       - name: Run Python Unit & Integration Tests
         run: python -m unittest discover -s tests -v

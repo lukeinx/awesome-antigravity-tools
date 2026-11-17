@@ -1,0 +1,283 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Awesome Antigravity Tools",
+  "description": "Strictly curated directory of 100% Google Antigravity-exclusive engineering tools, IDE extensions, runtime hotfixes, and ACP gateways.",
+  "url": "https://github.com/wllzhang/awesome-antigravity-tools",
+  "numberOfItems": 21,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-cli",
+        "url": "https://github.com/google-antigravity/antigravity-cli",
+        "applicationCategory": "Official CLI & SDKs",
+        "operatingSystem": "Windows, macOS, Linux",
+        "description": "Official Antigravity CLI (`agy`) bringing the reasoning, execution, and orchestration capabilities of the Antigravity agent harness directly into the terminal.",
+        "keywords": "Official, CLI, Terminal"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-sdk-python",
+        "url": "https://github.com/google-antigravity/antigravity-sdk-python",
+        "applicationCategory": "Official CLI & SDKs",
+        "operatingSystem": "Cross-Platform",
+        "description": "Official Apache-2.0 Python SDK for building programmatic AI agents and workflows powered directly by Google Antigravity.",
+        "keywords": "Official, Python, SDK"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-link-extension",
+        "url": "https://github.com/cafeTechne/antigravity-link-extension",
+        "applicationCategory": "IDE Extensions & Cockpits",
+        "operatingSystem": "Antigravity IDE, Mobile",
+        "description": "Mobile companion extension specifically mirroring Antigravity IDE sessions to phone with emergency stop triggers and 9 MCP tools.",
+        "keywords": "Mobile, Antigravity-IDE, MCP"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Antigravity-Manager",
+        "url": "https://github.com/lbjlaq/Antigravity-Manager",
+        "applicationCategory": "IDE Extensions & Cockpits",
+        "operatingSystem": "Windows, macOS, Linux",
+        "description": "Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React.",
+        "keywords": "Desktop, Rust, Tauri"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-panel",
+        "url": "https://github.com/n2ns/antigravity-panel",
+        "applicationCategory": "IDE Extensions & Cockpits",
+        "operatingSystem": "VS Code, Antigravity IDE",
+        "description": "Quota monitor and cache manager for Google Antigravity IDE tracking Gemini, Claude, and GPT limits with usage trend analytics.",
+        "keywords": "VS Code, TypeScript, Quota"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "AntigravityManager",
+        "url": "https://github.com/Draculabo/AntigravityManager",
+        "applicationCategory": "IDE Extensions & Cockpits",
+        "operatingSystem": "Windows, macOS, Linux",
+        "description": "Desktop application for managing Google accounts across Antigravity Classic, Antigravity IDE, and `agy` CLI with real-time quota views.",
+        "keywords": "Desktop, TypeScript, Quota"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "AntigravityQuotaWatcher",
+        "url": "https://github.com/wusimpl/AntigravityQuotaWatcher",
+        "applicationCategory": "IDE Extensions & Cockpits",
+        "operatingSystem": "VS Code, Antigravity IDE",
+        "description": "VS Code extension for continuous monitoring and status bar alerts of Antigravity AI model quotas.",
+        "keywords": "VS Code, IDE, Quota"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "vscode-antigravity-cockpit",
+        "url": "https://github.com/jlcodes99/vscode-antigravity-cockpit",
+        "applicationCategory": "IDE Extensions & Cockpits",
+        "operatingSystem": "VS Code, Antigravity IDE",
+        "description": "VS Code extension for real-time Antigravity model quota tracking, status bar countdowns, multi-model pinning, and capability HUDs.",
+        "keywords": "VS Code, TypeScript, HUD"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Antigravity-Chinese-Localization",
+        "url": "https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization",
+        "applicationCategory": "Platform Fixes & Runtime Patches",
+        "operatingSystem": "Windows, macOS, Linux, Antigravity IDE",
+        "description": "MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE.",
+        "keywords": "Localization, JavaScript, Patch"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-conversation-fix",
+        "url": "https://github.com/FutureisinPast/antigravity-conversation-fix",
+        "applicationCategory": "Platform Fixes & Runtime Patches",
+        "operatingSystem": "Cross-Platform, Antigravity IDE",
+        "description": "Repairs corrupted Antigravity session databases, missing threads, and out-of-order conversation history.",
+        "keywords": "IDE, Fix, Recovery"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-fixer",
+        "url": "https://github.com/fulldiagnose/antigravity-fixer",
+        "applicationCategory": "Platform Fixes & Runtime Patches",
+        "operatingSystem": "Windows, macOS, Linux",
+        "description": "Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error.",
+        "keywords": "Python, Fix, Diagnostics"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-junction-skill-fix",
+        "url": "https://github.com/wllzhang/antigravity-junction-skill-fix",
+        "applicationCategory": "Platform Fixes & Runtime Patches",
+        "operatingSystem": "Windows, Antigravity IDE",
+        "description": "Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`).",
+        "keywords": "Windows, PowerShell, NTFS"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-proxy",
+        "url": "https://github.com/yuaotian/antigravity-proxy",
+        "applicationCategory": "Platform Fixes & Runtime Patches",
+        "operatingSystem": "Windows, Antigravity IDE",
+        "description": "Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode.",
+        "keywords": "Windows, C++, Proxy"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity_bypass",
+        "url": "https://github.com/Futureppo/antigravity_bypass",
+        "applicationCategory": "Platform Fixes & Runtime Patches",
+        "operatingSystem": "Windows, Antigravity IDE",
+        "description": "Runtime patch raising local MCP tool limits to 8192 in Antigravity IDE and Windows desktop client with automated backup and restore.",
+        "keywords": "Windows, Patch, MCP"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "vscode-antigravity-backend-fix",
+        "url": "https://github.com/HeshamNoaman/vscode-antigravity-backend-fix",
+        "applicationCategory": "Platform Fixes & Runtime Patches",
+        "operatingSystem": "Windows, VS Code",
+        "description": "Hotfix for the official VS Code Antigravity extension resolving the repeated ~202 MB `agy.exe` background download loop caused by Windows Defender timeouts.",
+        "keywords": "Windows, Node.js, PowerShell"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "ACP-Ant",
+        "url": "https://github.com/czg86389-hub/ACP-Ant",
+        "applicationCategory": "Dedicated Gateways, ACP Adapters & Migration Tooling",
+        "operatingSystem": "Cross-Platform",
+        "description": "OpenAI and Anthropic compatible API server bridging Google's official Antigravity CLI over ACP with per-account proxy and tool-calling support.",
+        "keywords": "Python, ACP, Gateway"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "agy-acp",
+        "url": "https://github.com/shindgew/agy-acp",
+        "applicationCategory": "Dedicated Gateways, ACP Adapters & Migration Tooling",
+        "operatingSystem": "Cross-Platform",
+        "description": "Apache-2.0 Agent Client Protocol adapter wrapping the official Google Antigravity CLI (`agy`) for ACP-compatible editors.",
+        "keywords": "TypeScript, ACP, Adapter"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-acp",
+        "url": "https://github.com/shubzkothekar/antigravity-acp",
+        "applicationCategory": "Dedicated Gateways, ACP Adapters & Migration Tooling",
+        "operatingSystem": "Cross-Platform",
+        "description": "Bun-powered Agent Client Protocol server for Google Antigravity's `agy` CLI featuring live streaming and session history replay.",
+        "keywords": "TypeScript, Bun, ACP"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "antigravity-skill-porter",
+        "url": "https://github.com/Pranav-Nexus/antigravity-skill-porter",
+        "applicationCategory": "Dedicated Gateways, ACP Adapters & Migration Tooling",
+        "operatingSystem": "Cross-Platform",
+        "description": "CLI tool specifically adapting, wrapping, and validating external skills into native Antigravity plugins with `plugin.json` and tool name mapping.",
+        "keywords": "CLI, Converter, Plugin"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "liftgate",
+        "url": "https://github.com/acking-you/liftgate",
+        "applicationCategory": "Dedicated Gateways, ACP Adapters & Migration Tooling",
+        "operatingSystem": "Windows, macOS, Linux",
+        "description": "Run Antigravity as a local OpenAI Responses and Anthropic Messages gateway via official `agy acp` over stdio with native GPUI desktop and TUI controls.",
+        "keywords": "Rust, GPUI, Gateway"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "refined-antigravity-acp",
+        "url": "https://github.com/simonepri/refined-antigravity-acp",
+        "applicationCategory": "Dedicated Gateways, ACP Adapters & Migration Tooling",
+        "operatingSystem": "Cross-Platform",
+        "description": "Drop-in refined Google Antigravity ACP binary wrapper resolving protocol compatibility quirks for external ACP clients.",
+        "keywords": "TypeScript, ACP, Wrapper"
+      }
+    }
+  ]
+}

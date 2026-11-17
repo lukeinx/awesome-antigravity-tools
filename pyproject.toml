@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awesome-antigravity-tools"
+version = "2.0.0"
+description = "Schema-validated catalog, health telemetry engine, CLI, and static web explorer for 100% Google Antigravity-exclusive engineering tools."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://wllzhang.github.io/awesome-antigravity-tools/"
+Repository = "https://github.com/wllzhang/awesome-antigravity-tools"
+Issues = "https://github.com/wllzhang/awesome-antigravity-tools/issues"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
