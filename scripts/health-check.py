@@ -33,8 +33,10 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CATALOG = REPO_ROOT / "data" / "tools.json"
 DEFAULT_SNAPSHOT = REPO_ROOT / "data" / "health_snapshot.json"
+DEFAULT_HISTORY = REPO_ROOT / "data" / "health_history.json"
 DEFAULT_REPORT_EN = REPO_ROOT / "health_report.md"
 DEFAULT_REPORT_ZH = REPO_ROOT / "health_report.zh-CN.md"
+MAX_HISTORY_DAYS = 90
 
 # Regex to match GitHub repo links in markdown bullet points (fallback mode)
 REPO_PATTERN = re.compile(r"^- \[([^\]]+)\]\((https://github\.com/([^/\s\)]+)/([^/\s\)\#]+))/?\)(.*)$")
@@ -367,11 +369,83 @@ def build_snapshot_payload(results: list[dict[str, Any]], now_dt: datetime) -> d
     }
 
 
+def detect_status_changes(
+    current_snapshot: dict[str, Any], previous_snapshot: dict[str, Any] | None
+) -> list[dict[str, str]]:
+    if not previous_snapshot:
+        return []
+    prev_map = {
+        r["full_name"].lower(): r for r in previous_snapshot.get("repositories", []) if "full_name" in r
+    }
+    changes: list[dict[str, str]] = []
+    for repo in current_snapshot.get("repositories", []):
+        prev = prev_map.get(repo["full_name"].lower())
+        if prev and prev.get("status") != repo.get("status"):
+            changes.append(
+                {
+                    "repo": repo["full_name"],
+                    "from": str(prev.get("status", "UNKNOWN")),
+                    "to": str(repo.get("status", "UNKNOWN")),
+                }
+            )
+    return changes
+
+
+def update_health_history(
+    history_path: Path,
+    snapshot: dict[str, Any],
+    status_changes: list[dict[str, str]] | None = None,
+    max_days: int = MAX_HISTORY_DAYS,
+) -> dict[str, Any]:
+    existing_entries: list[dict[str, Any]] = []
+    if history_path.exists():
+        try:
+            loaded = json.loads(history_path.read_text(encoding="utf-8"))
+            if isinstance(loaded, dict) and isinstance(loaded.get("entries"), list):
+                existing_entries = loaded["entries"]
+        except Exception:
+            existing_entries = []
+
+    day_key = snapshot["generated_at"][:10]
+    summary = snapshot["summary"]
+    entry: dict[str, Any] = {
+        "date": day_key,
+        "generated_at": snapshot["generated_at"],
+        "total": summary["total"],
+        "healthy": summary["healthy"],
+        "stale": summary["stale"],
+        "very_stale": summary["very_stale"],
+        "archived": summary["archived"],
+        "dead": summary["dead"],
+        "health_ratio_pct": summary["health_ratio_pct"],
+        "total_stars": summary["total_stars"],
+        "total_forks": summary["total_forks"],
+        "average_health_score": summary["average_health_score"],
+    }
+    if status_changes:
+        entry["status_changes"] = status_changes
+
+    by_date = {e["date"]: e for e in existing_entries if isinstance(e, dict) and "date" in e}
+    by_date[day_key] = entry
+    sorted_entries = [by_date[d] for d in sorted(by_date.keys())][-max_days:]
+
+    payload = {
+        "schema_version": "1.0.0",
+        "retention_days": max_days,
+        "entries": sorted_entries,
+    }
+    history_path.parent.mkdir(parents=True, exist_ok=True)
+    history_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+    print(f"[+] Health history updated ({len(sorted_entries)} day(s)) at {history_path}")
+    return payload
+
+
 def generate_report_en(
     snapshot: dict[str, Any],
     report_file: Path,
     issue_file: Path | None = None,
     previous_snapshot: dict[str, Any] | None = None,
+    status_changes: list[dict[str, str]] | None = None,
 ) -> tuple[str, int]:
     results = snapshot["repositories"]
     summary = snapshot["summary"]
@@ -407,6 +481,19 @@ def generate_report_en(
         f"| ⚠️ **API Errors** | {summary['error']} | Re-check during next scheduled run |",
         "",
     ]
+
+    if status_changes:
+        lines.extend(
+            [
+                "## 🔄 Status Transitions Since Last Audit",
+                "",
+                "| Repository | Previous | Current |",
+                "| :--- | :---: | :---: |",
+            ]
+        )
+        for ch in status_changes:
+            lines.append(f"| `{ch['repo']}` | `{ch['from']}` | `{ch['to']}` |")
+        lines.append("")
 
     if action_needed:
         lines.extend(
@@ -589,36 +676,13 @@ def main() -> int:
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT_EN, help="Output path for English audit report")
     parser.add_argument("--report-zh", type=Path, default=DEFAULT_REPORT_ZH, help="Output path for Chinese audit report")
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT, help="Output path for JSON telemetry snapshot")
+    parser.add_argument("--history", type=Path, default=DEFAULT_HISTORY, help="Output path for rolling 90-day health history JSON")
+    parser.add_argument("--from-snapshot", action="store_true", help="Offline mode: re-render reports and history from existing snapshot")
     parser.add_argument("--output-issue", type=Path, default=None, help="Output path for GitHub issue body if action required")
     parser.add_argument("--no-releases", action="store_true", help="Skip fetching latest release tag per repository")
     parser.add_argument("--use-gh-cli", action="store_true", help="Fallback to `gh auth token` when env token is unset")
     parser.add_argument("--fail-on-dead", action="store_true", help="Exit with code 1 if dead/archived/very-stale repos exist")
     args = parser.parse_args()
-
-    token = get_github_token(allow_gh_cli=args.use_gh_cli)
-    if not token:
-        print("[!] Warning: No GITHUB_TOKEN or GH_TOKEN found. Rate limit will be 60 req/hr.")
-    else:
-        print("[*] Authenticated via GitHub Token (5,000 req/hr).")
-
-    if args.file is not None:
-        repos = parse_readme_repos(args.file)
-    elif args.catalog.exists():
-        repos = load_repos_from_catalog(args.catalog)
-    else:
-        repos = parse_readme_repos(REPO_ROOT / "README.md")
-
-    if not repos:
-        print("[-] No repositories detected to check.")
-        return 0
-
-    unique_repos: list[dict[str, Any]] = []
-    seen: set[str] = set()
-    for r in repos:
-        key = r["full_name"].lower()
-        if key not in seen:
-            seen.add(key)
-            unique_repos.append(r)
 
     previous_snapshot = None
     if args.snapshot.exists():
@@ -627,16 +691,56 @@ def main() -> int:
         except Exception:
             previous_snapshot = None
 
-    results = audit_repositories(unique_repos, token=token, fetch_releases=not args.no_releases)
-    now_dt = datetime.now(timezone.utc)
-    snapshot = build_snapshot_payload(results, now_dt)
+    if args.from_snapshot:
+        if previous_snapshot is None:
+            print(f"[ERROR] Snapshot not found for --from-snapshot: {args.snapshot}", file=sys.stderr)
+            return 1
+        snapshot = previous_snapshot
+        status_changes: list[dict[str, str]] = []
+    else:
+        token = get_github_token(allow_gh_cli=args.use_gh_cli)
+        if not token:
+            print("[!] Warning: No GITHUB_TOKEN or GH_TOKEN found. Rate limit will be 60 req/hr.")
+        else:
+            print("[*] Authenticated via GitHub Token (5,000 req/hr).")
 
-    args.snapshot.parent.mkdir(parents=True, exist_ok=True)
-    args.snapshot.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
-    print(f"[+] Telemetry snapshot written to {args.snapshot}")
+        if args.file is not None:
+            repos = parse_readme_repos(args.file)
+        elif args.catalog.exists():
+            repos = load_repos_from_catalog(args.catalog)
+        else:
+            repos = parse_readme_repos(REPO_ROOT / "README.md")
+
+        if not repos:
+            print("[-] No repositories detected to check.")
+            return 0
+
+        unique_repos: list[dict[str, Any]] = []
+        seen: set[str] = set()
+        for r in repos:
+            key = r["full_name"].lower()
+            if key not in seen:
+                seen.add(key)
+                unique_repos.append(r)
+
+        results = audit_repositories(unique_repos, token=token, fetch_releases=not args.no_releases)
+        now_dt = datetime.now(timezone.utc)
+        snapshot = build_snapshot_payload(results, now_dt)
+        status_changes = detect_status_changes(snapshot, previous_snapshot)
+
+        args.snapshot.parent.mkdir(parents=True, exist_ok=True)
+        args.snapshot.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+        print(f"[+] Telemetry snapshot written to {args.snapshot}")
+
+    if args.history:
+        update_health_history(args.history, snapshot, status_changes=status_changes)
 
     _, action_count = generate_report_en(
-        snapshot, args.report, issue_file=args.output_issue, previous_snapshot=previous_snapshot
+        snapshot,
+        args.report,
+        issue_file=args.output_issue,
+        previous_snapshot=None if args.from_snapshot else previous_snapshot,
+        status_changes=status_changes,
     )
     if args.report_zh:
         generate_report_zh(snapshot, args.report_zh)
