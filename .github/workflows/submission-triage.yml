@@ -1,0 +1,41 @@
+name: Automated Tool Submission Triage
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  triage-submission:
+    if: contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Parse & Validate Submission Form
+        id: parse
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          printf '%s' "$ISSUE_BODY" > /tmp/issue_input.md
+          python scripts/parse_submission.py --input /tmp/issue_input.md --verify-github --format comment --out /tmp/triage_comment.md || true
+
+      - name: Post Automated Triage Comment
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          if [ -f /tmp/triage_comment.md ]; then
+            gh issue comment "$ISSUE_NUMBER" --body-file /tmp/triage_comment.md
+          fi

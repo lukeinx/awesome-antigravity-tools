@@ -26,7 +26,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/health-check.py --file README.md --report health_report.md --output-issue issue_body.md
+          python scripts/health-check.py --output-issue issue_body.md
+
+      - name: Regenerate Badges, Bilingual Docs & Web Bundle
+        run: |
+          python scripts/generate_badges.py
+          python scripts/generate_docs.py
+          python scripts/build_site.py
+          python scripts/validate_catalog.py --check-sync --strict-warnings
 
       - name: Manage Health Audit Issue
         env:
@@ -34,7 +41,6 @@ jobs:
         run: |
           if [ -f issue_body.md ]; then
             echo "[!] Health check detected repositories requiring attention."
-            # Check for existing open audit issue
             EXISTING_ISSUE=$(gh issue list --state open --label "health-audit" --json number --jq '.[0].number')
             if [ -n "$EXISTING_ISSUE" ]; then
               echo "[*] Updating existing issue #$EXISTING_ISSUE..."
@@ -47,7 +53,6 @@ jobs:
             fi
           else
             echo "[+] All curated repositories are healthy. No action required."
-            # Close existing open health audit issue if all healthy now
             EXISTING_ISSUE=$(gh issue list --state open --label "health-audit" --json number --jq '.[0].number')
             if [ -n "$EXISTING_ISSUE" ]; then
               echo "[*] Closing resolved health audit issue #$EXISTING_ISSUE..."
@@ -55,14 +60,16 @@ jobs:
             fi
           fi
 
-      - name: Commit Health Report
+      - name: Commit Updated Audit Telemetry & Generated Docs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add health_report.md
+          git add health_report.md health_report.zh-CN.md README.md README.zh-CN.md \
+            data/health_snapshot.json data/health_history.json data/badges/ \
+            docs/catalog-bundle.json docs/feed.xml docs/sitemap.xml docs/robots.txt
           if git diff --staged --quiet; then
-            echo "No changes in health report."
+            echo "No changes in health audit artifacts."
           else
-            git commit -m "chore(audit): update automated repository health report [skip ci]"
+            git commit -m "chore(audit): refresh daily telemetry, badges, docs, and web bundle [skip ci]"
             git push
           fi

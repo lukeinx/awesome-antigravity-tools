@@ -1,4 +1,4 @@
-name: Lint & Link Check
+name: Lint, Tests & Link Check
 
 on:
   push:
@@ -10,7 +10,41 @@ on:
     - cron: '0 8 * * 1'
 
 jobs:
+  catalog-and-tests:
+    name: Catalog Validation & Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate Catalog Schema & README Sync
+        run: python scripts/validate_catalog.py --check-sync --strict-warnings
+
+      - name: Verify Static Site Artifacts Sync
+        run: python scripts/build_site.py --check
+
+      - name: Run Python Unit & Integration Tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Check JS Syntax & Run Frontend Tests
+        run: |
+          node --check docs/catalog-logic.js
+          node --check docs/insights.js
+          node --check docs/app.js
+          node --test tests/test_web.mjs
+
   link-check:
+    name: External Link Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -25,6 +59,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   markdown-lint:
+    name: Markdown Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
