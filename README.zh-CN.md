@@ -2,11 +2,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![每日健康巡检](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
+[![仓库健康状态](https://img.shields.io/badge/巡检状态-每日验证-blue)](health_report.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
 
 > 汇集 Google Antigravity 生态中高含金量的 **IDE 控制台、底层系统补丁、上下文优化引擎、生命周期守卫、集群编排与专用 MCP 桥接器**。
 
-[English Documentation](README.md) · [贡献指南](CONTRIBUTING.md) · [提交新工具](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
+[English Documentation](README.md) · [贡献指南](CONTRIBUTING.md) · [每日健康与清退报告](health_report.md) · [提交新工具](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
 
 ---
 

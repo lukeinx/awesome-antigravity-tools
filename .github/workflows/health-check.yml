@@ -1,0 +1,68 @@
+name: Daily Repository Health Check & Prune Audit
+
+on:
+  schedule:
+    # Run daily at 02:00 UTC (10:00 AM Beijing time / CST)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Repository Health & Deprecation Audit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/health-check.py --file README.md --report health_report.md --output-issue issue_body.md
+
+      - name: Manage Health Audit Issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f issue_body.md ]; then
+            echo "[!] Health check detected repositories requiring attention."
+            # Check for existing open audit issue
+            EXISTING_ISSUE=$(gh issue list --state open --label "health-audit" --json number --jq '.[0].number')
+            if [ -n "$EXISTING_ISSUE" ]; then
+              echo "[*] Updating existing issue #$EXISTING_ISSUE..."
+              gh issue comment "$EXISTING_ISSUE" --body-file issue_body.md
+            else
+              echo "[*] Creating new health audit issue..."
+              gh issue create --title "🧹 Daily Health Audit: Deprecated or Inaccessible Repositories Detected" \
+                --body-file issue_body.md \
+                --label "health-audit"
+            fi
+          else
+            echo "[+] All curated repositories are healthy. No action required."
+            # Close existing open health audit issue if all healthy now
+            EXISTING_ISSUE=$(gh issue list --state open --label "health-audit" --json number --jq '.[0].number')
+            if [ -n "$EXISTING_ISSUE" ]; then
+              echo "[*] Closing resolved health audit issue #$EXISTING_ISSUE..."
+              gh issue close "$EXISTING_ISSUE" --comment "All audited repositories are now healthy and verified! 🎉"
+            fi
+          fi
+
+      - name: Commit Health Report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add health_report.md
+          if git diff --staged --quiet; then
+            echo "No changes in health report."
+          else
+            git commit -m "chore(audit): update automated repository health report [skip ci]"
+            git push
+          fi

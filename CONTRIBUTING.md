@@ -23,6 +23,23 @@ Unlike general prompt or skill lists, **awesome-antigravity-tools** focuses stri
 
 ---
 
+## 🧹 Automated Health Check & Deprecation Policy (定期扫描与清退机制)
+
+To ensure this index remains reliable and free of dead weight, we enforce an automated **Daily Health Audit & Deprecation Workflow**:
+
+* ⏰ **Daily Automated Scan**: A GitHub Actions workflow (`.github/workflows/health-check.yml`) runs every day at 02:00 UTC (10:00 AM Beijing time).
+* 🔍 **What Gets Checked**:
+  1. **HTTP Availability**: Detects deleted, renamed, or private repositories (404).
+  2. **Archival Status**: Checks whether the repository has been marked `archived: true` by its author.
+  3. **Activity & Staleness**: Calculates elapsed days since the last push (`pushed_at`).
+* ⚖️ **Deprecation & Retirement Actions**:
+  - **Immediate Pruning**: Repositories returning 404 or with wiped code are removed immediately from the active list.
+  - **Archival Tagging**: Repositories archived by authors are tagged with `[Archived]` or transitioned to the archive appendix.
+  - **Stale Observation**: Repositories with zero commits for >180 days with critical unresolved breaking issues enter a 30-day review period before pruning.
+  - **Audit Dashboard**: Results are published daily in [`health_report.md`](health_report.md) with automated tracking issues.
+
+---
+
 ## 📝 Formatting Guidelines
 
 When adding a new item, ensure it adheres to these rules:
