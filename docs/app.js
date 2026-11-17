@@ -6,6 +6,7 @@ import {
   parseParamsToState,
   serializeStateToParams,
 } from "./catalog-logic.js";
+import { renderCompareTray, renderInsightsPanel } from "./insights.js";
 
 const I18N = {
   en: {
@@ -111,6 +112,7 @@ const els = {
   compareDialog: document.getElementById("compareDialog"),
   compareBody: document.getElementById("compareBody"),
   compareCloseBtn: document.getElementById("compareCloseBtn"),
+  insightsMount: document.getElementById("insightsMount"),
   statTotalTools: document.getElementById("statTotalTools"),
   statTotalStars: document.getElementById("statTotalStars"),
   statActiveRatio: document.getElementById("statActiveRatio"),
@@ -395,13 +397,28 @@ function renderToolsGrid() {
   }
 }
 
+function syncCompareTray() {
+  renderCompareTray(
+    els.compareBar,
+    els.compareDialog,
+    els.compareBody,
+    state,
+    (id) => toggleCompare(id),
+    () => {
+      state.compareIds = [];
+      syncCompareTray();
+      renderToolsGrid();
+    }
+  );
+}
+
 function toggleCompare(toolId) {
   if (state.compareIds.includes(toolId)) {
     state.compareIds = state.compareIds.filter((id) => id !== toolId);
   } else if (state.compareIds.length < 3) {
     state.compareIds = [...state.compareIds, toolId];
   }
-  window.dispatchEvent(new CustomEvent("aat:compare-updated"));
+  syncCompareTray();
   renderToolsGrid();
 }
 
@@ -423,6 +440,8 @@ function renderAll() {
   renderSummary();
   populatePlatformSelect();
   renderCategoryPills();
+  renderInsightsPanel(els.insightsMount, state.bundle, state.lang);
+  syncCompareTray();
   renderToolsGrid();
   syncUrl();
   window.dispatchEvent(new CustomEvent("aat:rendered", { detail: { state } }));
