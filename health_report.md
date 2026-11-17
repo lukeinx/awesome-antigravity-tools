@@ -1,14 +1,17 @@
 # Awesome Antigravity Tools - Repository Health & Deprecation Report
 
-> **Generated at**: `2026-11-17 14:08:29 UTC`  
-> **Total Curated Repositories Audited**: `10`  
-> **Overall Health Ratio**: `9/10` (90.0%)
+> **Generated at**: `2026-11-17 19:00:31 UTC`  
+> **Total Curated Repositories Audited**: `19`  
+> **Overall Active Ratio**: `18/19` (94.7%)  
+> **Combined GitHub Stars**: `57,558` · **Average Health Score**: `84.5/100`
+
+[中文巡检报告 (Chinese)](health_report.zh-CN.md) · [Back to Catalog](README.md)
 
 ## Summary Statistics
 
 | Category | Count | Policy Action |
 | :--- | :---: | :--- |
-| 🟢 **Healthy & Active** | 9 | Retain as verified recommended tools |
+| 🟢 **Healthy & Active** | 18 | Retain as verified recommended tools |
 | 🟡 **Stale (>180 Days)** | 1 | Mark for observation |
 | 🟠 **Very Stale (>365 Days)** | 0 | Candidate for deprecation / retirement notice |
 | 🔴 **Archived by Author** | 0 | Add `[Archived]` tag or move to Archive appendix |
@@ -17,15 +20,32 @@
 
 ## Complete Repository Audit Table
 
-| Project | Section | Status | Stars | Last Push | Notes |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | 33233 | 0d ago | Active (0d ago, 33233 stars) |
-| [antigravity-link-extension](https://github.com/cafeTechne/antigravity-link-extension) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | 223 | 166d ago | Active (166d ago, 223 stars) |
-| [AntigravityQuotaWatcher](https://github.com/wusimpl/AntigravityQuotaWatcher) | 🖥️ IDE Extensions & Cockpits | 🟡 Stale | 2249 | 264d ago | Inactive for 264 days (>6 months) |
-| [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | 4853 | 5d ago | Active (5d ago, 4853 stars) |
-| [antigravity_bypass](https://github.com/Futureppo/antigravity_bypass) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | 70 | 63d ago | Active (63d ago, 70 stars) |
-| [antigravity-conversation-fix](https://github.com/FutureisinPast/antigravity-conversation-fix) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | 1143 | 82d ago | Active (82d ago, 1143 stars) |
-| [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | 0 | 0d ago | Active (0d ago, 0 stars) |
-| [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | 4 | 17d ago | Active (17d ago, 4 stars) |
-| [antigravity-skill-porter](https://github.com/Pranav-Nexus/antigravity-skill-porter) | 🔌 Dedicated Gateways & Migration Tooling | 🟢 Healthy | 6 | 2d ago | Active (2d ago, 6 stars) |
-| [liftgate](https://github.com/acking-you/liftgate) | 🔌 Dedicated Gateways & Migration Tooling | 🟢 Healthy | 30 | 0d ago | Active (0d ago, 30 stars) |
+| Project | Category | Status | Score | Stars | Language | License | Release | Last Push |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [antigravity-cli](https://github.com/google-antigravity/antigravity-cli) | 🚀 Official CLI & SDKs | 🟢 Healthy | **81** | 2,865 | - | - | `1.5.10` | 0d ago |
+| [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | 🚀 Official CLI & SDKs | 🟢 Healthy | **97** | 4,101 | Python | Apache-2.0 | - | 20d ago |
+| [antigravity-link-extension](https://github.com/cafeTechne/antigravity-link-extension) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **76** | 223 | HTML | MIT | `v1.0.20` | 166d ago |
+| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **93** | 33,247 | Rust | NOASSERTION | `v5.0.3` | 0d ago |
+| [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **90** | 2,521 | TypeScript | NOASSERTION | `v0.32.1` | 1d ago |
+| [AntigravityQuotaWatcher](https://github.com/wusimpl/AntigravityQuotaWatcher) | 🖥️ IDE Extensions & Cockpits | 🟡 Stale | **62** | 2,249 | TypeScript | MIT | `v1.0.3` | 264d ago |
+| [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **96** | 4,853 | TypeScript | MIT | `v2.1.53` | 5d ago |
+| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | **93** | 1,121 | JavaScript | MIT | `v2.32.2.1` | 0d ago |
+| [antigravity-conversation-fix](https://github.com/FutureisinPast/antigravity-conversation-fix) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | **84** | 1,144 | Python | MIT | `V1.07` | 83d ago |
+| [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | **70** | 0 | PowerShell | MIT | - | 0d ago |
+| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | **93** | 4,946 | C++ | NOASSERTION | `v2.6.4` | 0d ago |
+| [antigravity_bypass](https://github.com/Futureppo/antigravity_bypass) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | **84** | 70 | Go | AGPL-3.0 | `v2.1.0` | 63d ago |
+| [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | 🔧 Platform Fixes & Runtime Patches | 🟢 Healthy | **75** | 4 | JavaScript | MIT | - | 17d ago |
+| [ACP-Ant](https://github.com/czg86389-hub/ACP-Ant) | 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling | 🟢 Healthy | **93** | 50 | Python | MIT | `v1.5.2` | 0d ago |
+| [agy-acp](https://github.com/shindgew/agy-acp) | 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling | 🟢 Healthy | **79** | 21 | TypeScript | Apache-2.0 | `v0.5.2` | 90d ago |
+| [antigravity-acp](https://github.com/shubzkothekar/antigravity-acp) | 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling | 🟢 Healthy | **84** | 85 | TypeScript | MIT | `v1.2.0` | 51d ago |
+| [antigravity-skill-porter](https://github.com/Pranav-Nexus/antigravity-skill-porter) | 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling | 🟢 Healthy | **83** | 6 | Python | MIT | `v1.0.1` | 2d ago |
+| [liftgate](https://github.com/acking-you/liftgate) | 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling | 🟢 Healthy | **84** | 31 | Rust | Apache-2.0 | `v0.2.0` | 0d ago |
+| [refined-antigravity-acp](https://github.com/simonepri/refined-antigravity-acp) | 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling | 🟢 Healthy | **88** | 21 | TypeScript | MIT | `v1.6.7` | 0d ago |
+
+## Health Score Methodology
+
+Each repository receives a deterministic `0-100` score computed from:
+- **Freshness (45 pts)**: Days elapsed since the last push (`pushed_at`).
+- **Community Adoption (25 pts)**: Log-tiered GitHub star traction.
+- **License Clarity (15 pts)**: Presence of a recognized OSI SPDX license.
+- **Distribution & Metadata (15 pts)**: Description, repository topics, releases, and fork activity.
