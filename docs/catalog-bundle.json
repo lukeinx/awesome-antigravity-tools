@@ -1,0 +1,923 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-17T19:11:31Z",
+  "repository": "wllzhang/awesome-antigravity-tools",
+  "site_url": "https://wllzhang.github.io/awesome-antigravity-tools/",
+  "summary": {
+    "total_tools": 21,
+    "total_categories": 4,
+    "healthy_tools": 20,
+    "health_ratio_pct": 95.2,
+    "total_stars": 59005,
+    "total_forks": 6671,
+    "average_health_score": 85.0,
+    "by_status": {
+      "HEALTHY": 20,
+      "STALE": 1
+    },
+    "by_language": [
+      {
+        "name": "TypeScript",
+        "count": 7
+      },
+      {
+        "name": "Python",
+        "count": 5
+      },
+      {
+        "name": "Rust",
+        "count": 2
+      },
+      {
+        "name": "JavaScript",
+        "count": 2
+      },
+      {
+        "name": "Unspecified",
+        "count": 1
+      },
+      {
+        "name": "HTML",
+        "count": 1
+      },
+      {
+        "name": "PowerShell",
+        "count": 1
+      },
+      {
+        "name": "C++",
+        "count": 1
+      },
+      {
+        "name": "Go",
+        "count": 1
+      }
+    ],
+    "by_platform": [
+      {
+        "name": "Windows",
+        "count": 10
+      },
+      {
+        "name": "Antigravity IDE",
+        "count": 9
+      },
+      {
+        "name": "Cross-Platform",
+        "count": 7
+      },
+      {
+        "name": "macOS",
+        "count": 6
+      },
+      {
+        "name": "Linux",
+        "count": 6
+      },
+      {
+        "name": "VS Code",
+        "count": 4
+      },
+      {
+        "name": "Mobile",
+        "count": 1
+      }
+    ],
+    "top_tags": [
+      {
+        "name": "TypeScript",
+        "count": 6
+      },
+      {
+        "name": "Windows",
+        "count": 4
+      },
+      {
+        "name": "ACP",
+        "count": 4
+      },
+      {
+        "name": "Python",
+        "count": 3
+      },
+      {
+        "name": "VS Code",
+        "count": 3
+      },
+      {
+        "name": "Quota",
+        "count": 3
+      },
+      {
+        "name": "Official",
+        "count": 2
+      },
+      {
+        "name": "CLI",
+        "count": 2
+      },
+      {
+        "name": "MCP",
+        "count": 2
+      },
+      {
+        "name": "Desktop",
+        "count": 2
+      },
+      {
+        "name": "Rust",
+        "count": 2
+      },
+      {
+        "name": "IDE",
+        "count": 2
+      },
+      {
+        "name": "Patch",
+        "count": 2
+      },
+      {
+        "name": "Fix",
+        "count": 2
+      },
+      {
+        "name": "PowerShell",
+        "count": 2
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "official-cli-sdks",
+      "icon": "🚀",
+      "name_en": "Official CLI & SDKs",
+      "name_zh": "官方 CLI 与开发套件",
+      "description_en": "First-party command-line harnesses and SDKs maintained under `google-antigravity` for terminal workflows and programmatic agent orchestration.",
+      "description_zh": "由 `google-antigravity` 官方维护的终端命令行工具与 SDK，支持命令行编排与程序化 Agent 开发。"
+    },
+    {
+      "id": "ide-extensions-cockpits",
+      "icon": "🖥️",
+      "name_en": "IDE Extensions & Cockpits",
+      "name_zh": "IDE 扩展与专属控制台",
+      "description_en": "Extensions and desktop applications designed exclusively to monitor Antigravity model quotas, manage accounts, and provide HUD telemetry.",
+      "description_zh": "专为 Antigravity 模型配额监控、状态栏倒计时与账号管理打造的桌面应用与扩展。"
+    },
+    {
+      "id": "platform-fixes-runtime-patches",
+      "icon": "🔧",
+      "name_en": "Platform Fixes & Runtime Patches",
+      "name_zh": "平台补丁与底层运行时修复",
+      "description_en": "System-level hotfixes, localization injectors, network bridges, and patches solving core Antigravity bugs and OS runtime limitations.",
+      "description_zh": "正面攻克 Antigravity 官方客户端特定缺陷、汉化注入、无 TUN 代理、符号链接失效与进程死锁的底层工具。"
+    },
+    {
+      "id": "dedicated-gateways-migration",
+      "icon": "🔌",
+      "name_en": "Dedicated Gateways, ACP Adapters & Migration Tooling",
+      "name_zh": "专用网关、ACP 适配器与迁移工具",
+      "description_en": "Engineering utilities specifically built around the official Antigravity Agent Client Protocol (`agy acp`) and native plugin specifications (`plugin.json`).",
+      "description_zh": "严格围绕 Antigravity 官方核心协议（`agy acp`）与原生插件规范（`plugin.json`）打造的高性能工程工具。"
+    }
+  ],
+  "tools": [
+    {
+      "id": "antigravity-cli",
+      "name": "antigravity-cli",
+      "repo": "google-antigravity/antigravity-cli",
+      "url": "https://github.com/google-antigravity/antigravity-cli",
+      "category": "official-cli-sdks",
+      "description_en": "Official Antigravity CLI (`agy`) bringing the reasoning, execution, and orchestration capabilities of the Antigravity agent harness directly into the terminal.",
+      "description_zh": "Google Antigravity 官方命令行工具（`agy`），将 Antigravity 的推理、执行与编排能力原生引入终端环境。",
+      "exclusivity_reason_en": "First-party official CLI harness for Google Antigravity (`agy` and `agy acp`).",
+      "exclusivity_reason_zh": "Google Antigravity 官方终端命令行本体（`agy` 与 `agy acp`）。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Official",
+        "CLI",
+        "Terminal"
+      ],
+      "install_hint": "Follow official installer instructions in google-antigravity/antigravity-cli",
+      "added_at": "2026-11-18",
+      "featured": true,
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 81,
+        "stars": 2865,
+        "forks": 284,
+        "open_issues": 1016,
+        "language": null,
+        "license": null,
+        "latest_release": "1.5.10",
+        "pushed_at": "2026-11-17T05:41:17Z",
+        "days_inactive": 0
+      }
+    },
+    {
+      "id": "antigravity-sdk-python",
+      "name": "antigravity-sdk-python",
+      "repo": "google-antigravity/antigravity-sdk-python",
+      "url": "https://github.com/google-antigravity/antigravity-sdk-python",
+      "category": "official-cli-sdks",
+      "description_en": "Official Apache-2.0 Python SDK for building programmatic AI agents and workflows powered directly by Google Antigravity.",
+      "description_zh": "Google Antigravity 官方 Apache-2.0 Python SDK，用于以代码方式构建和编排 Antigravity AI 智能体。",
+      "exclusivity_reason_en": "Official Python client library purpose-built for Google Antigravity's agent runtime.",
+      "exclusivity_reason_zh": "专为 Google Antigravity 智能体运行时打造的官方 Python 开发套件。",
+      "platforms": [
+        "Cross-Platform"
+      ],
+      "tags": [
+        "Official",
+        "Python",
+        "SDK"
+      ],
+      "install_hint": "pip install antigravity-sdk (check repo README for exact package name)",
+      "added_at": "2026-11-18",
+      "featured": true,
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 97,
+        "stars": 4101,
+        "forks": 1597,
+        "open_issues": 34,
+        "language": "Python",
+        "license": "Apache-2.0",
+        "latest_release": null,
+        "pushed_at": "2026-10-28T16:45:46Z",
+        "days_inactive": 20
+      }
+    },
+    {
+      "id": "antigravity-link-extension",
+      "name": "antigravity-link-extension",
+      "repo": "cafeTechne/antigravity-link-extension",
+      "url": "https://github.com/cafeTechne/antigravity-link-extension",
+      "category": "ide-extensions-cockpits",
+      "description_en": "Mobile companion extension specifically mirroring Antigravity IDE sessions to phone with emergency stop triggers and 9 MCP tools.",
+      "description_zh": "专为 Antigravity IDE 打造的手机伴侣扩展，实时镜像会话进度，支持手机端紧急终止并提供 9 种 MCP 工具操作。",
+      "exclusivity_reason_en": "Built exclusively to mirror Antigravity IDE session state and expose emergency stop hooks over Antigravity's extension API.",
+      "exclusivity_reason_zh": "专为 Antigravity IDE 会话镜像与移动端紧急终止控制研发。",
+      "platforms": [
+        "Antigravity IDE",
+        "Mobile"
+      ],
+      "tags": [
+        "Mobile",
+        "Antigravity-IDE",
+        "MCP"
+      ],
+      "install_hint": "Install from GitHub Releases or package VSIX for Antigravity IDE",
+      "added_at": "2026-11-17",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 76,
+        "stars": 223,
+        "forks": 33,
+        "open_issues": 1,
+        "language": "HTML",
+        "license": "MIT",
+        "latest_release": "v1.0.20",
+        "pushed_at": "2026-06-04T05:55:39Z",
+        "days_inactive": 166
+      }
+    },
+    {
+      "id": "antigravity-manager",
+      "name": "Antigravity-Manager",
+      "repo": "lbjlaq/Antigravity-Manager",
+      "url": "https://github.com/lbjlaq/Antigravity-Manager",
+      "category": "ide-extensions-cockpits",
+      "description_en": "Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React.",
+      "description_zh": "基于 Rust (Tauri v2) + React 构建的桌面级 Antigravity 账号管理与一键切换工具。",
+      "exclusivity_reason_en": "Targets Antigravity's local profile, authentication state, and account switching workflow natively.",
+      "exclusivity_reason_zh": "直接面向 Antigravity 本地账号配置与一键切换流程构建。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Desktop",
+        "Rust",
+        "Tauri"
+      ],
+      "install_hint": "Download platform installer from GitHub Releases",
+      "added_at": "2026-11-17",
+      "featured": true,
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 93,
+        "stars": 33248,
+        "forks": 3554,
+        "open_issues": 1691,
+        "language": "Rust",
+        "license": "NOASSERTION",
+        "latest_release": "v5.0.3",
+        "pushed_at": "2026-11-17T12:54:13Z",
+        "days_inactive": 0
+      }
+    },
+    {
+      "id": "antigravity-panel",
+      "name": "antigravity-panel",
+      "repo": "n2ns/antigravity-panel",
+      "url": "https://github.com/n2ns/antigravity-panel",
+      "category": "ide-extensions-cockpits",
+      "description_en": "Quota monitor and cache manager for Google Antigravity IDE tracking Gemini, Claude, and GPT limits with usage trend analytics.",
+      "description_zh": "专为 Google Antigravity IDE 打造的配额监控与缓存管理面板，支持多模型额度、周限额与趋势统计。",
+      "exclusivity_reason_en": "Reads Google Antigravity IDE local quota telemetry and cache directories directly.",
+      "exclusivity_reason_zh": "直接对接 Google Antigravity IDE 本地配额数据与缓存目录。",
+      "platforms": [
+        "VS Code",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "VS Code",
+        "TypeScript",
+        "Quota"
+      ],
+      "added_at": "2026-11-18",
+      "install_hint": "Install VSIX from GitHub Releases or VS Code Marketplace",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 97,
+        "stars": 857,
+        "forks": 46,
+        "open_issues": 5,
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "latest_release": "v2.8.5",
+        "pushed_at": "2026-11-16T09:01:15Z",
+        "days_inactive": 1
+      }
+    },
+    {
+      "id": "draculabo-antigravity-manager",
+      "name": "AntigravityManager",
+      "repo": "Draculabo/AntigravityManager",
+      "url": "https://github.com/Draculabo/AntigravityManager",
+      "category": "ide-extensions-cockpits",
+      "description_en": "Desktop application for managing Google accounts across Antigravity Classic, Antigravity IDE, and `agy` CLI with real-time quota views.",
+      "description_zh": "面向 Antigravity Classic、Antigravity IDE 与 `agy` CLI 的多客户端账号管理桌面端，支持实时配额查看与无缝切换。",
+      "exclusivity_reason_en": "Built specifically around Antigravity Classic, Antigravity IDE, and `agy` CLI local account and quota storage.",
+      "exclusivity_reason_zh": "专门适配 Antigravity Classic、IDE 与 `agy` CLI 的本地账号与配额体系。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Desktop",
+        "TypeScript",
+        "Quota"
+      ],
+      "install_hint": "Download installer from GitHub Releases",
+      "added_at": "2026-11-18",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 90,
+        "stars": 2521,
+        "forks": 303,
+        "open_issues": 14,
+        "language": "TypeScript",
+        "license": "NOASSERTION",
+        "latest_release": "v0.32.1",
+        "pushed_at": "2026-11-16T11:11:11Z",
+        "days_inactive": 1
+      }
+    },
+    {
+      "id": "antigravity-quota-watcher",
+      "name": "AntigravityQuotaWatcher",
+      "repo": "wusimpl/AntigravityQuotaWatcher",
+      "url": "https://github.com/wusimpl/AntigravityQuotaWatcher",
+      "category": "ide-extensions-cockpits",
+      "description_en": "VS Code extension for continuous monitoring and status bar alerts of Antigravity AI model quotas.",
+      "description_zh": "长期维护的高星 Antigravity AI 模型配额观察与状态栏提示插件。",
+      "exclusivity_reason_en": "Queries Antigravity's local language server quota telemetry directly for status bar alerting.",
+      "exclusivity_reason_zh": "直接读取 Antigravity 本地语言服务器的模型配额状态并在状态栏预警。",
+      "platforms": [
+        "VS Code",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "VS Code",
+        "IDE",
+        "Quota"
+      ],
+      "install_hint": "Install VSIX from GitHub Releases or Open VSX",
+      "added_at": "2026-11-17",
+      "telemetry": {
+        "status": "STALE",
+        "health_score": 62,
+        "stars": 2249,
+        "forks": 105,
+        "open_issues": 7,
+        "language": "TypeScript",
+        "license": "MIT",
+        "latest_release": "v1.0.3",
+        "pushed_at": "2026-02-26T09:24:24Z",
+        "days_inactive": 264
+      }
+    },
+    {
+      "id": "vscode-antigravity-cockpit",
+      "name": "vscode-antigravity-cockpit",
+      "repo": "jlcodes99/vscode-antigravity-cockpit",
+      "url": "https://github.com/jlcodes99/vscode-antigravity-cockpit",
+      "category": "ide-extensions-cockpits",
+      "description_en": "VS Code extension for real-time Antigravity model quota tracking, status bar countdowns, multi-model pinning, and capability HUDs.",
+      "description_zh": "Antigravity 标杆级 VS Code 扩展，支持多模型配额实时监控、状态栏倒计时提示、多模型置顶及模型能力 HUD。",
+      "exclusivity_reason_en": "Purpose-built HUD and quota dashboard tailored exclusively to Antigravity's model catalog and reset windows.",
+      "exclusivity_reason_zh": "专为 Antigravity 模型配额周期与能力面板设计的实时控制台扩展。",
+      "platforms": [
+        "VS Code",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "VS Code",
+        "TypeScript",
+        "HUD"
+      ],
+      "install_hint": "Install from VS Code Marketplace / Open VSX or GitHub Releases",
+      "added_at": "2026-11-17",
+      "featured": true,
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 96,
+        "stars": 4853,
+        "forks": 145,
+        "open_issues": 26,
+        "language": "TypeScript",
+        "license": "MIT",
+        "latest_release": "v2.1.53",
+        "pushed_at": "2026-11-12T08:56:56Z",
+        "days_inactive": 5
+      }
+    },
+    {
+      "id": "antigravity-chinese-localization",
+      "name": "Antigravity-Chinese-Localization",
+      "repo": "antigravity-cn-community/Antigravity-Chinese-Localization",
+      "url": "https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE.",
+      "description_zh": "MIT 开源协议的 Antigravity IDE 一键中文汉化工具包，精准覆盖客户端界面与菜单词条。",
+      "exclusivity_reason_en": "Targets Antigravity IDE's bundled UI string tables and resource packages exclusively.",
+      "exclusivity_reason_zh": "专为 Antigravity IDE 客户端界面资源与词条结构定制的汉化补丁。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "Localization",
+        "JavaScript",
+        "Patch"
+      ],
+      "install_hint": "Run localization script per repository README",
+      "added_at": "2026-11-18",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 93,
+        "stars": 1121,
+        "forks": 34,
+        "open_issues": 1,
+        "language": "JavaScript",
+        "license": "MIT",
+        "latest_release": "v2.32.2.1",
+        "pushed_at": "2026-11-17T04:13:13Z",
+        "days_inactive": 0
+      }
+    },
+    {
+      "id": "antigravity-conversation-fix",
+      "name": "antigravity-conversation-fix",
+      "repo": "FutureisinPast/antigravity-conversation-fix",
+      "url": "https://github.com/FutureisinPast/antigravity-conversation-fix",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "Repairs corrupted Antigravity session databases, missing threads, and out-of-order conversation history.",
+      "description_zh": "修复 Antigravity 会话数据损坏、历史乱序与线程丢失的专用修复工具。",
+      "exclusivity_reason_en": "Operates specifically on Antigravity's internal conversation storage schema to recover damaged threads.",
+      "exclusivity_reason_zh": "针对 Antigravity 内部会话存储格式进行损坏检测与历史重建。",
+      "platforms": [
+        "Cross-Platform",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "IDE",
+        "Fix",
+        "Recovery"
+      ],
+      "install_hint": "Clone repository and run recovery script against Antigravity storage",
+      "added_at": "2026-11-17",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 84,
+        "stars": 1144,
+        "forks": 98,
+        "open_issues": 4,
+        "language": "Python",
+        "license": "MIT",
+        "latest_release": "V1.07",
+        "pushed_at": "2026-08-26T15:53:28Z",
+        "days_inactive": 83
+      }
+    },
+    {
+      "id": "antigravity-fixer",
+      "name": "antigravity-fixer",
+      "repo": "fulldiagnose/antigravity-fixer",
+      "url": "https://github.com/fulldiagnose/antigravity-fixer",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error.",
+      "description_zh": "针对 Google Antigravity「not eligible」账号资格报错的一键诊断、凭证清理与自动修复工具。",
+      "exclusivity_reason_en": "Targets Google Antigravity's local authentication cache and eligibility diagnostic workflow specifically.",
+      "exclusivity_reason_zh": "专门排查并清理 Google Antigravity 本地鉴权缓存与资格状态异常。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Python",
+        "Fix",
+        "Diagnostics"
+      ],
+      "added_at": "2026-11-18",
+      "install_hint": "Clone repository and run Python diagnostic fixer per README",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 84,
+        "stars": 589,
+        "forks": 64,
+        "open_issues": 3,
+        "language": "Python",
+        "license": "MIT",
+        "latest_release": null,
+        "pushed_at": "2026-09-29T12:53:16Z",
+        "days_inactive": 49
+      }
+    },
+    {
+      "id": "antigravity-junction-skill-fix",
+      "name": "antigravity-junction-skill-fix",
+      "repo": "wllzhang/antigravity-junction-skill-fix",
+      "url": "https://github.com/wllzhang/antigravity-junction-skill-fix",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`).",
+      "description_zh": "零磁盘占用 NTFS 硬链接目录桥接工具，彻底解决 Antigravity Go Language Server 无法加载 Windows 目录联接 (`mklink /J`) 与符号链接 (`mklink /D`) 的硬伤问题。",
+      "exclusivity_reason_en": "Solves the Antigravity Go language server (`language_server_windows_x64.exe`) reparse-point skip bug via a native `SessionStart` plugin hook.",
+      "exclusivity_reason_zh": "通过 Antigravity 原生 `SessionStart` 钩子解决其 Go 语言服务器忽略 NTFS 重解析点的缺陷。",
+      "platforms": [
+        "Windows",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "Windows",
+        "PowerShell",
+        "NTFS"
+      ],
+      "install_hint": "git clone https://github.com/wllzhang/antigravity-junction-skill-fix.git && pwsh -ExecutionPolicy Bypass -File .\\antigravity-junction-skill-fix\\install.ps1",
+      "added_at": "2026-11-17",
+      "featured": true,
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 70,
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "language": "PowerShell",
+        "license": "MIT",
+        "latest_release": null,
+        "pushed_at": "2026-11-17T09:51:08Z",
+        "days_inactive": 0
+      }
+    },
+    {
+      "id": "antigravity-proxy",
+      "name": "antigravity-proxy",
+      "repo": "yuaotian/antigravity-proxy",
+      "url": "https://github.com/yuaotian/antigravity-proxy",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode.",
+      "description_zh": "专为 Antigravity 打造的 Windows 免 TUN 强制代理工具，基于 DLL 注入实现进程级 SOCKS5/HTTP 流量转发。",
+      "exclusivity_reason_en": "Targets Antigravity's Windows child processes (including language server binaries) that ignore system proxy settings.",
+      "exclusivity_reason_zh": "针对 Antigravity Windows 底层子进程忽略系统代理的痛点进行定向进程劫持。",
+      "platforms": [
+        "Windows",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "Windows",
+        "C++",
+        "Proxy"
+      ],
+      "install_hint": "Download release package and launch Antigravity through antigravity-proxy",
+      "added_at": "2026-11-18",
+      "featured": true,
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 93,
+        "stars": 4946,
+        "forks": 343,
+        "open_issues": 0,
+        "language": "C++",
+        "license": "NOASSERTION",
+        "latest_release": "v2.6.4",
+        "pushed_at": "2026-11-17T13:10:55Z",
+        "days_inactive": 0
+      }
+    },
+    {
+      "id": "antigravity-bypass",
+      "name": "antigravity_bypass",
+      "repo": "Futureppo/antigravity_bypass",
+      "url": "https://github.com/Futureppo/antigravity_bypass",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "Runtime patch raising local MCP tool limits to 8192 in Antigravity IDE and Windows desktop client with automated backup and restore.",
+      "description_zh": "底层限制解除补丁，将 Antigravity IDE 本地 MCP 工具数量上限安全提升至 8192，带自动备份与一键还原。",
+      "exclusivity_reason_en": "Patches Antigravity's hardcoded MCP tool registration cap directly inside its runtime bundle.",
+      "exclusivity_reason_zh": "直接修补 Antigravity 客户端内置的 MCP 工具注册数量硬上限。",
+      "platforms": [
+        "Windows",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "Windows",
+        "Patch",
+        "MCP"
+      ],
+      "install_hint": "Follow backup and patch instructions in repository README",
+      "added_at": "2026-11-17",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 84,
+        "stars": 70,
+        "forks": 16,
+        "open_issues": 0,
+        "language": "Go",
+        "license": "AGPL-3.0",
+        "latest_release": "v2.1.0",
+        "pushed_at": "2026-09-15T02:18:40Z",
+        "days_inactive": 63
+      }
+    },
+    {
+      "id": "vscode-antigravity-backend-fix",
+      "name": "vscode-antigravity-backend-fix",
+      "repo": "HeshamNoaman/vscode-antigravity-backend-fix",
+      "url": "https://github.com/HeshamNoaman/vscode-antigravity-backend-fix",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "Hotfix for the official VS Code Antigravity extension resolving the repeated ~202 MB `agy.exe` background download loop caused by Windows Defender timeouts.",
+      "description_zh": "官方 VS Code 插件热修补工具，彻底解决 Windows Defender 超时引发的每次启动重复下载 ~202MB `agy.exe` 的网络拥堵与进程锁死问题。",
+      "exclusivity_reason_en": "Patches the official VS Code Antigravity extension's `agy.exe` binary extraction and startup verification timeout.",
+      "exclusivity_reason_zh": "专治官方 VS Code Antigravity 扩展因 Defender 扫描超时导致的 `agy.exe` 无限重复下载故障。",
+      "platforms": [
+        "Windows",
+        "VS Code"
+      ],
+      "tags": [
+        "Windows",
+        "Node.js",
+        "PowerShell"
+      ],
+      "install_hint": "Follow automated patch script in repository README",
+      "added_at": "2026-11-17",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 75,
+        "stars": 4,
+        "forks": 0,
+        "open_issues": 0,
+        "language": "JavaScript",
+        "license": "MIT",
+        "latest_release": null,
+        "pushed_at": "2026-10-30T21:29:13Z",
+        "days_inactive": 17
+      }
+    },
+    {
+      "id": "acp-ant",
+      "name": "ACP-Ant",
+      "repo": "czg86389-hub/ACP-Ant",
+      "url": "https://github.com/czg86389-hub/ACP-Ant",
+      "category": "dedicated-gateways-migration",
+      "description_en": "OpenAI and Anthropic compatible API server bridging Google's official Antigravity CLI over ACP with per-account proxy and tool-calling support.",
+      "description_zh": "基于 Google 官方 Antigravity CLI ACP 协议构建的 OpenAI/Anthropic 兼容 API 服务，支持多账号独立代理与工具调用。",
+      "exclusivity_reason_en": "Drives Google's official `agy` CLI strictly through its Agent Client Protocol interface.",
+      "exclusivity_reason_zh": "严格通过官方 `agy` CLI 的 ACP 协议暴露标准兼容 API 网关。",
+      "platforms": [
+        "Cross-Platform"
+      ],
+      "tags": [
+        "Python",
+        "ACP",
+        "Gateway"
+      ],
+      "install_hint": "Clone repo and install Python dependencies per README",
+      "added_at": "2026-11-18",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 93,
+        "stars": 50,
+        "forks": 7,
+        "open_issues": 2,
+        "language": "Python",
+        "license": "MIT",
+        "latest_release": "v1.5.2",
+        "pushed_at": "2026-11-17T15:59:29Z",
+        "days_inactive": 0
+      }
+    },
+    {
+      "id": "agy-acp",
+      "name": "agy-acp",
+      "repo": "shindgew/agy-acp",
+      "url": "https://github.com/shindgew/agy-acp",
+      "category": "dedicated-gateways-migration",
+      "description_en": "Apache-2.0 Agent Client Protocol adapter wrapping the official Google Antigravity CLI (`agy`) for ACP-compatible editors.",
+      "description_zh": "Apache-2.0 协议的 Agent Client Protocol 适配器，将官方 `agy` CLI 接入各类支持 ACP 的编辑器。",
+      "exclusivity_reason_en": "Dedicated ACP protocol wrapper specifically targeting the `agy` CLI command surface.",
+      "exclusivity_reason_zh": "专门封装 Google Antigravity `agy` CLI 的 ACP 协议适配层。",
+      "platforms": [
+        "Cross-Platform"
+      ],
+      "tags": [
+        "TypeScript",
+        "ACP",
+        "Adapter"
+      ],
+      "install_hint": "Install via npm/npx per repository README",
+      "added_at": "2026-11-18",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 79,
+        "stars": 21,
+        "forks": 9,
+        "open_issues": 27,
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "latest_release": "v0.5.2",
+        "pushed_at": "2026-08-19T07:31:21Z",
+        "days_inactive": 90
+      }
+    },
+    {
+      "id": "antigravity-acp",
+      "name": "antigravity-acp",
+      "repo": "shubzkothekar/antigravity-acp",
+      "url": "https://github.com/shubzkothekar/antigravity-acp",
+      "category": "dedicated-gateways-migration",
+      "description_en": "Bun-powered Agent Client Protocol server for Google Antigravity's `agy` CLI featuring live streaming and session history replay.",
+      "description_zh": "基于 Bun 构建的 Google Antigravity `agy` CLI ACP 服务端，支持实时流式输出与会话历史回放。",
+      "exclusivity_reason_en": "Dedicated ACP server bridge written specifically for driving `agy` CLI sessions from ACP editors.",
+      "exclusivity_reason_zh": "专为驱动 `agy` CLI 并提供流式回放的独立 ACP 服务端。",
+      "platforms": [
+        "Cross-Platform"
+      ],
+      "tags": [
+        "TypeScript",
+        "Bun",
+        "ACP"
+      ],
+      "install_hint": "Run with Bun following repository instructions",
+      "added_at": "2026-11-18",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 84,
+        "stars": 85,
+        "forks": 24,
+        "open_issues": 8,
+        "language": "TypeScript",
+        "license": "MIT",
+        "latest_release": "v1.2.0",
+        "pushed_at": "2026-09-27T12:37:59Z",
+        "days_inactive": 51
+      }
+    },
+    {
+      "id": "antigravity-skill-porter",
+      "name": "antigravity-skill-porter",
+      "repo": "Pranav-Nexus/antigravity-skill-porter",
+      "url": "https://github.com/Pranav-Nexus/antigravity-skill-porter",
+      "category": "dedicated-gateways-migration",
+      "description_en": "CLI tool specifically adapting, wrapping, and validating external skills into native Antigravity plugins with `plugin.json` and tool name mapping.",
+      "description_zh": "专门用于将外部技能代码适配并打包为规范 Antigravity 原生插件（自动补全 `plugin.json` 与生命周期配置）的转换脚手架。",
+      "exclusivity_reason_en": "Targets Antigravity's native `plugin.json` manifest format and tool namespace mapping directly.",
+      "exclusivity_reason_zh": "严格面向 Antigravity 原生 `plugin.json` 规范与工具名映射进行打包迁移。",
+      "platforms": [
+        "Cross-Platform"
+      ],
+      "tags": [
+        "CLI",
+        "Converter",
+        "Plugin"
+      ],
+      "install_hint": "Install CLI per repository README",
+      "added_at": "2026-11-17",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 83,
+        "stars": 6,
+        "forks": 2,
+        "open_issues": 0,
+        "language": "Python",
+        "license": "MIT",
+        "latest_release": "v1.0.1",
+        "pushed_at": "2026-11-15T08:06:00Z",
+        "days_inactive": 2
+      }
+    },
+    {
+      "id": "liftgate",
+      "name": "liftgate",
+      "repo": "acking-you/liftgate",
+      "url": "https://github.com/acking-you/liftgate",
+      "category": "dedicated-gateways-migration",
+      "description_en": "Run Antigravity as a local OpenAI Responses and Anthropic Messages gateway via official `agy acp` over stdio with native GPUI desktop and TUI controls.",
+      "description_zh": "专为 Antigravity 官方 `agy acp`（Agent Client Protocol）通道构建的原生 API 网关与 GPUI 桌面控制中心，免除任何账号池与封号风险。",
+      "exclusivity_reason_en": "Built natively on Google Antigravity's official `agy acp` stdio Agent Client Protocol.",
+      "exclusivity_reason_zh": "原生基于 Antigravity 官方 `agy acp` 标准输入输出协议构建本地兼容网关。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Rust",
+        "GPUI",
+        "Gateway"
+      ],
+      "install_hint": "Build with Cargo or download binary from GitHub Releases",
+      "added_at": "2026-11-17",
+      "featured": true,
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 84,
+        "stars": 31,
+        "forks": 3,
+        "open_issues": 0,
+        "language": "Rust",
+        "license": "Apache-2.0",
+        "latest_release": "v0.2.0",
+        "pushed_at": "2026-11-17T10:47:23Z",
+        "days_inactive": 0
+      }
+    },
+    {
+      "id": "refined-antigravity-acp",
+      "name": "refined-antigravity-acp",
+      "repo": "simonepri/refined-antigravity-acp",
+      "url": "https://github.com/simonepri/refined-antigravity-acp",
+      "category": "dedicated-gateways-migration",
+      "description_en": "Drop-in refined Google Antigravity ACP binary wrapper resolving protocol compatibility quirks for external ACP clients.",
+      "description_zh": "开箱即用的 Google Antigravity ACP 协议增强封装二进制，修复第三方 ACP 客户端接入时的兼容性边界问题。",
+      "exclusivity_reason_en": "Wraps and normalizes Google Antigravity's native ACP protocol stream specifically.",
+      "exclusivity_reason_zh": "专门封装并规范化 Google Antigravity 原生 ACP 协议流。",
+      "platforms": [
+        "Cross-Platform"
+      ],
+      "tags": [
+        "TypeScript",
+        "ACP",
+        "Wrapper"
+      ],
+      "install_hint": "Install via npm/npx per repository README",
+      "added_at": "2026-11-18",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 88,
+        "stars": 21,
+        "forks": 4,
+        "open_issues": 11,
+        "language": "TypeScript",
+        "license": "MIT",
+        "latest_release": "v1.6.7",
+        "pushed_at": "2026-11-17T12:35:08Z",
+        "days_inactive": 0
+      }
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-11-17",
+      "generated_at": "2026-11-17T19:11:31Z",
+      "total": 21,
+      "healthy": 20,
+      "stale": 1,
+      "very_stale": 0,
+      "archived": 0,
+      "dead": 0,
+      "health_ratio_pct": 95.2,
+      "total_stars": 59005,
+      "total_forks": 6671,
+      "average_health_score": 85.0
+    }
+  ]
+}
