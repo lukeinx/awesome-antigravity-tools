@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wllzhang/awesome-antigravity-tools/blob/main/data/catalog.schema.json",
+  "title": "Awesome Antigravity Tools Catalog Schema",
+  "description": "Canonical schema for strictly Antigravity-exclusive engineering tools, IDE extensions, runtime hotfixes, and gateways.",
+  "type": "object",
+  "required": ["schema_version", "repository", "categories", "tools"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "icon", "name_en", "name_zh", "description_en", "description_zh"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "icon": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name_en": {
+            "type": "string",
+            "minLength": 2
+          },
+          "name_zh": {
+            "type": "string",
+            "minLength": 2
+          },
+          "description_en": {
+            "type": "string",
+            "minLength": 10
+          },
+          "description_zh": {
+            "type": "string",
+            "minLength": 6
+          }
+        }
+      }
+    },
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "repo",
+          "url",
+          "category",
+          "description_en",
+          "description_zh",
+          "exclusivity_reason_en",
+          "exclusivity_reason_zh",
+          "platforms",
+          "tags",
+          "added_at"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "repo": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+          },
+          "category": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "description_en": {
+            "type": "string",
+            "minLength": 15,
+            "maxLength": 240
+          },
+          "description_zh": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 160
+          },
+          "exclusivity_reason_en": {
+            "type": "string",
+            "minLength": 12
+          },
+          "exclusivity_reason_zh": {
+            "type": "string",
+            "minLength": 6
+          },
+          "platforms": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "Windows",
+                "macOS",
+                "Linux",
+                "Cross-Platform",
+                "VS Code",
+                "Antigravity IDE",
+                "Mobile",
+                "Web"
+              ]
+            }
+          },
+          "tags": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24
+            }
+          },
+          "install_hint": {
+            "type": "string"
+          },
+          "added_at": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "featured": {
+            "type": "boolean"
+          },
+          "archived_note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
