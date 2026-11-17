@@ -18,6 +18,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import build_site
+import export_catalog
 
 
 class TestSiteArtifacts(unittest.TestCase):
@@ -62,6 +63,23 @@ class TestSiteArtifacts(unittest.TestCase):
             self.assertEqual(build_site.main(), 0)
         finally:
             sys.argv = old_argv
+
+    def test_exports_check_mode_and_jsonld_integrity(self):
+        old_argv = sys.argv
+        try:
+            sys.argv = ["export_catalog.py", "--check"]
+            self.assertEqual(export_catalog.main(), 0)
+        finally:
+            sys.argv = old_argv
+
+        catalog = json.loads((REPO_ROOT / "data" / "tools.json").read_text(encoding="utf-8"))
+        jsonld = json.loads((REPO_ROOT / "data" / "exports" / "catalog.jsonld").read_text(encoding="utf-8"))
+        self.assertEqual(jsonld["@type"], "ItemList")
+        self.assertEqual(jsonld["numberOfItems"], len(catalog["tools"]))
+        self.assertEqual(len(jsonld["itemListElement"]), len(catalog["tools"]))
+
+        csv_lines = (REPO_ROOT / "data" / "exports" / "tools.csv").read_text(encoding="utf-8").strip().splitlines()
+        self.assertEqual(len(csv_lines), len(catalog["tools"]) + 1)
 
 
 if __name__ == "__main__":
