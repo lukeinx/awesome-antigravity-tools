@@ -129,6 +129,28 @@
       "featured": true
     },
     {
+      "id": "antigravity-panel",
+      "name": "antigravity-panel",
+      "repo": "n2ns/antigravity-panel",
+      "url": "https://github.com/n2ns/antigravity-panel",
+      "category": "ide-extensions-cockpits",
+      "description_en": "Quota monitor and cache manager for Google Antigravity IDE tracking Gemini, Claude, and GPT limits with usage trend analytics.",
+      "description_zh": "专为 Google Antigravity IDE 打造的配额监控与缓存管理面板，支持多模型额度、周限额与趋势统计。",
+      "exclusivity_reason_en": "Reads Google Antigravity IDE local quota telemetry and cache directories directly.",
+      "exclusivity_reason_zh": "直接对接 Google Antigravity IDE 本地配额数据与缓存目录。",
+      "platforms": [
+        "VS Code",
+        "Antigravity IDE"
+      ],
+      "tags": [
+        "VS Code",
+        "TypeScript",
+        "Quota"
+      ],
+      "added_at": "2026-11-18",
+      "install_hint": "Install VSIX from GitHub Releases or VS Code Marketplace"
+    },
+    {
       "id": "draculabo-antigravity-manager",
       "name": "AntigravityManager",
       "repo": "Draculabo/AntigravityManager",
@@ -241,6 +263,29 @@
       ],
       "install_hint": "Clone repository and run recovery script against Antigravity storage",
       "added_at": "2026-11-17"
+    },
+    {
+      "id": "antigravity-fixer",
+      "name": "antigravity-fixer",
+      "repo": "fulldiagnose/antigravity-fixer",
+      "url": "https://github.com/fulldiagnose/antigravity-fixer",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error.",
+      "description_zh": "针对 Google Antigravity「not eligible」账号资格报错的一键诊断、凭证清理与自动修复工具。",
+      "exclusivity_reason_en": "Targets Google Antigravity's local authentication cache and eligibility diagnostic workflow specifically.",
+      "exclusivity_reason_zh": "专门排查并清理 Google Antigravity 本地鉴权缓存与资格状态异常。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Python",
+        "Fix",
+        "Diagnostics"
+      ],
+      "added_at": "2026-11-18",
+      "install_hint": "Clone repository and run Python diagnostic fixer per README"
     },
     {
       "id": "antigravity-junction-skill-fix",

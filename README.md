@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Curated Tools](https://img.shields.io/badge/Curated-19%20Tools-4285F4.svg)](#contents)
+[![Curated Tools](https://img.shields.io/badge/Curated-21%20Tools-4285F4.svg)](#contents)
 [![Daily Health Audit](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
 [![Repository Health](https://img.shields.io/badge/Health%20Audit-18/19%20Active%20%2895%25%29-brightgreen)](health_report.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
@@ -26,15 +26,15 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 - Directly fixes critical Antigravity bugs, OS runtime limitations, or telemetry blind spots.
 - Verified daily by our automated health audit (`scripts/health-check.py`) and backed by a single-source-of-truth JSON catalog (`data/tools.json`).
 
-> **Ecosystem Pulse**: `19` curated tools across `4` categories · `57.6k` combined GitHub stars · `18/19` active (`94.7%`) · Avg Health Score: `84.5/100` ([Full Audit](health_report.md))
+> **Ecosystem Pulse**: `21` curated tools across `4` categories · `57.6k` combined GitHub stars · `18/19` active (`94.7%`) · Avg Health Score: `84.5/100` ([Full Audit](health_report.md))
 
 ---
 
 ## Contents
 
 - [Official CLI & SDKs (2)](#-official-cli--sdks)
-- [IDE Extensions & Cockpits (5)](#-ide-extensions--cockpits)
-- [Platform Fixes & Runtime Patches (6)](#-platform-fixes--runtime-patches)
+- [IDE Extensions & Cockpits (6)](#-ide-extensions--cockpits)
+- [Platform Fixes & Runtime Patches (7)](#-platform-fixes--runtime-patches)
 - [Dedicated Gateways, ACP Adapters & Migration Tooling (6)](#-dedicated-gateways-acp-adapters--migration-tooling)
 - [Badge](#-badge)
 - [Contributing](#-contributing)
@@ -56,6 +56,7 @@ Extensions and desktop applications designed exclusively to monitor Antigravity 
 
 - [antigravity-link-extension](https://github.com/cafeTechne/antigravity-link-extension) - Mobile companion extension specifically mirroring Antigravity IDE sessions to phone with emergency stop triggers and 9 MCP tools. `Mobile` `Antigravity-IDE` `MCP`
 - [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) - Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React. `Desktop` `Rust` `Tauri`
+- [antigravity-panel](https://github.com/n2ns/antigravity-panel) - Quota monitor and cache manager for Google Antigravity IDE tracking Gemini, Claude, and GPT limits with usage trend analytics. `VS Code` `TypeScript` `Quota`
 - [AntigravityManager](https://github.com/Draculabo/AntigravityManager) - Desktop application for managing Google accounts across Antigravity Classic, Antigravity IDE, and `agy` CLI with real-time quota views. `Desktop` `TypeScript` `Quota`
 - [AntigravityQuotaWatcher](https://github.com/wusimpl/AntigravityQuotaWatcher) - VS Code extension for continuous monitoring and status bar alerts of Antigravity AI model quotas. `VS Code` `IDE` `Quota`
 - [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) - VS Code extension for real-time Antigravity model quota tracking, status bar countdowns, multi-model pinning, and capability HUDs. `VS Code` `TypeScript` `HUD`
@@ -68,6 +69,7 @@ System-level hotfixes, localization injectors, network bridges, and patches solv
 
 - [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) - MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE. `Localization` `JavaScript` `Patch`
 - [antigravity-conversation-fix](https://github.com/FutureisinPast/antigravity-conversation-fix) - Repairs corrupted Antigravity session databases, missing threads, and out-of-order conversation history. `IDE` `Fix` `Recovery`
+- [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) - Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error. `Python` `Fix` `Diagnostics`
 - [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`). `Windows` `PowerShell` `NTFS`
 - [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) - Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode. `Windows` `C++` `Proxy`
 - [antigravity_bypass](https://github.com/Futureppo/antigravity_bypass) - Runtime patch raising local MCP tool limits to 8192 in Antigravity IDE and Windows desktop client with automated backup and restore. `Windows` `Patch` `MCP`
