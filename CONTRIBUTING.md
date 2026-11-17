@@ -1,78 +1,77 @@
 # Contributing to awesome-antigravity-tools
 
-Thank you for your interest in contributing to **awesome-antigravity-tools**! We welcome submissions of high-quality tools, extensions, platform fixes, and developer utilities for the Google Antigravity ecosystem.
+[中文贡献指南 (Chinese)](CONTRIBUTING.zh-CN.md)
+
+Thank you for contributing to **awesome-antigravity-tools**! We curate strictly **100% Google Antigravity-exclusive** engineering tools, IDE extensions, runtime hotfixes, and ACP gateways.
 
 ---
 
-## 🎯 Inclusion Criteria (Quality Bar)
+## 🎯 Inclusion Criteria (Strict Exclusivity Gate)
 
-Unlike general prompt or skill lists, **awesome-antigravity-tools** focuses strictly on **actionable engineering tools and extensions**.
+### ✅ What We Accept
+- **Official CLI & SDKs**: First-party Google Antigravity CLI harnesses and language SDKs.
+- **IDE Extensions & Cockpits**: VS Code / Antigravity IDE extensions and native desktop apps specifically built for Antigravity quota monitoring, HUDs, or account workflows.
+- **Platform Fixes & Runtime Patches**: OS-level hotfixes, NTFS/symlink bridges, localization injectors, proxy injectors, and session database recovery tools targeting Antigravity bugs.
+- **Dedicated Gateways, ACP Adapters & Migration Tooling**: Engineering utilities built natively around `agy acp` or Antigravity's `plugin.json` specification.
 
-### ✅ What We Accept:
-- **IDE Extensions & HUDs**: VS Code / Antigravity IDE plugins (e.g., quota monitors, status bar indicators, model cockpits).
-- **Platform Fixes & System Utilities**: Bridging tools, file system patches (e.g., Windows NTFS link fixes), permission wrappers.
-- **Packaged Plugins & Bundles**: Full Antigravity plugins with `plugin.json` containing code, hooks, or custom integrations.
-- **MCP Servers & Adapters**: Model Context Protocol servers specifically tailored or tested for Antigravity workflows.
-- **Lifecycle Hooks & Automation Scripts**: Concrete automation scripts (PowerShell, Python, Bash) responding to session events.
-- **CLI Utilities & Developer Tooling**: Testing harnesses, scaffolding tools, configuration migrators, and linters.
-
-### ❌ What We Do NOT Accept:
-- **Bare Text Prompts or Generic Skills**: Plain `SKILL.md` collections without executable code or tooling.
-- **Closed-source / Untested Projects**: Repositories without accessible code, installation guides, or open-source licenses.
-- **Abandoned / Broken Projects**: Projects that fail to install or have unresolved critical security issues.
+### ❌ What We Reject
+- **Bare Markdown Prompt Collections (`SKILL.md`)** without executable engineering tooling.
+- **Generic Multi-Agent Tools** designed for Claude Code / Cursor / Codex that merely mention Antigravity as one of many targets.
+- **Closed-Source, Archived, or Unmaintained Projects** without clear installation documentation or working code.
 
 ---
 
-## 🧹 Automated Health Check & Deprecation Policy (定期扫描与清退机制)
+## 🗂️ Single Source of Truth Architecture
 
-To ensure this index remains reliable and free of dead weight, we enforce an automated **Daily Health Audit & Deprecation Workflow**:
+This repository uses **`data/tools.json`** (validated against [`data/catalog.schema.json`](data/catalog.schema.json)) as the canonical data source. Both `README.md` and `README.zh-CN.md` are generated deterministically — **never hand-edit the README files directly**.
 
-* ⏰ **Daily Automated Scan**: A GitHub Actions workflow (`.github/workflows/health-check.yml`) runs every day at 02:00 UTC (10:00 AM Beijing time).
-* 🔍 **What Gets Checked**:
-  1. **HTTP Availability**: Detects deleted, renamed, or private repositories (404).
-  2. **Archival Status**: Checks whether the repository has been marked `archived: true` by its author.
-  3. **Activity & Staleness**: Calculates elapsed days since the last push (`pushed_at`).
-* ⚖️ **Deprecation & Retirement Actions**:
-  - **Immediate Pruning**: Repositories returning 404 or with wiped code are removed immediately from the active list.
-  - **Archival Tagging**: Repositories archived by authors are tagged with `[Archived]` or transitioned to the archive appendix.
-  - **Stale Observation**: Repositories with zero commits for >180 days with critical unresolved breaking issues enter a 30-day review period before pruning.
-  - **Audit Dashboard**: Results are published daily in [`health_report.md`](health_report.md) with automated tracking issues.
+### Fastest Way to Add a Tool (CLI)
 
----
+```bash
+python scripts/aat_cli.py add \
+  --repo "owner/repo" \
+  --category "ide-extensions-cockpits" \
+  --desc-en "Concise objective English description ending with a period." \
+  --desc-zh "简明客观的中文描述，以中文句号结尾。" \
+  --reason-en "Explain why it is built exclusively for Google Antigravity." \
+  --reason-zh "说明为何该项目 100% 专为 Google Antigravity 打造。" \
+  --platforms "Windows,macOS,Linux" \
+  --tags "Rust,CLI,ACP" \
+  --sync-docs
+```
 
-## 📝 Formatting Guidelines
+### Manual JSON Edit Workflow
 
-When adding a new item, ensure it adheres to these rules:
-
-1. **Format**:
-   ```markdown
-   - [Tool Name](https://github.com/user/repo) - Concise, informative one-line description starting with a capital letter and ending with a period. `Tag1` `Tag2`
+1. Fork and create a branch (`git checkout -b add-my-tool`).
+2. Add your entry to `data/tools.json`.
+3. Canonicalize ordering and regenerate bilingual READMEs:
+   ```bash
+   python scripts/validate_catalog.py --fix-order
+   python scripts/generate_docs.py
+   python scripts/validate_catalog.py --check-sync --strict-warnings
    ```
-2. **Tone**: Objective and informative. Avoid marketing hyperbole like *"the best"*, *"revolutionary"*, or *"ultimate"*.
-3. **Alphabetical Order**: Keep entries sorted alphabetically by project name within each section.
-4. **Tags**: Optional small backtick tags indicating platform or runtime (e.g., `VS Code`, `Windows`, `Python`, `MCP`).
+4. Open a Pull Request!
+
+### Or Submit via GitHub Issue
+
+Prefer not to open a PR? Use our [Tool Submission Form](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose). Our automated triage workflow validates your submission and prepares a ready-to-merge `data/tools.json` snippet.
 
 ---
 
-## 🚀 How to Submit
+## 🧹 Automated Health Check, Scoring & Deprecation Policy
 
-### Option 1: Submit a Pull Request (Fastest)
-1. Fork this repository.
-2. Create a new branch: `git checkout -b add-my-tool`.
-3. Add your tool to the appropriate category in `README.md` in alphabetical order.
-4. Check that links are valid and formatting matches existing entries.
-5. Submit a Pull Request referencing the checklist in our PR template.
-
-### Option 2: Open an Issue
-If you prefer not to open a PR or wish to suggest someone else's tool, open an issue using the **Submit a Tool** form:
-- Navigate to [New Issue](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
-- Choose **Tool Submission Form** and fill in the details.
+Every day at 02:00 UTC, `.github/workflows/health-check.yml` audits every repository in `data/tools.json`:
+- **0–100 Health Score**: Computed from freshness (45 pts), community stars (25 pts), license clarity (15 pts), and release/metadata signals (15 pts).
+- **Rolling 90-Day History**: Aggregate trends and status transitions are recorded in `data/health_history.json`.
+- **Retirement Rules**:
+  - `DEAD` (404 / disabled): Immediate removal.
+  - `ARCHIVED`: Automatically tagged `` `[Archived]` `` in generated READMEs and flagged for maintainer review.
+  - `VERY_STALE` (>365 days inactive): Flagged in automated health-audit issues for deprecation review.
+  - `STALE` (>180 days inactive): Highlighted in `health_report.md` for observation.
 
 ---
 
-## 🏷️ Optional Badge for Maintainers
-
-If your project is listed in **awesome-antigravity-tools**, you are welcome to proudly display our badge on your README:
+## 🏷️ Optional Badge for Featured Maintainers
 
 ```markdown
 [![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)

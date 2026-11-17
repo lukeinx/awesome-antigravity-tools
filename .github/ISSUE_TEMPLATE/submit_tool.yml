@@ -1,5 +1,5 @@
-name: 🚀 Submit a Tool / Extension
-description: Suggest an Antigravity tool, extension, platform fix, or MCP server for inclusion
+name: 🚀 Submit an Antigravity-Exclusive Tool
+description: Suggest a 100% Google Antigravity-dedicated tool, IDE extension, runtime fix, or ACP gateway
 title: "[Tool Submission]: "
 labels: ["submission", "review-needed"]
 body:
@@ -7,13 +7,13 @@ body:
     attributes:
       value: |
         Thanks for helping curate **awesome-antigravity-tools**!
-        Please fill out this form to recommend a project. Note: We only accept **actionable engineering tools, code, and extensions** (not bare prompt/skill text files).
+        **Strict Exclusivity Gate**: We ONLY accept open-source, executable tools built **100% specifically for Google Antigravity** (IDE, `agy` CLI, or `agy acp`). Generic prompt packs (`SKILL.md`) and multi-agent tools will be declined.
 
   - type: input
     id: tool_name
     attributes:
       label: Tool Name
-      description: The name of the project or extension.
+      description: Display name of the project or extension.
       placeholder: e.g. vscode-antigravity-cockpit
     validations:
       required: true
@@ -22,8 +22,8 @@ body:
     id: repo_url
     attributes:
       label: Repository / Project URL
-      description: Link to the GitHub repository, documentation, or marketplace page.
-      placeholder: https://github.com/user/project
+      description: Public GitHub repository URL (`https://github.com/owner/repo`).
+      placeholder: https://github.com/owner/repo
     validations:
       required: true
 
@@ -31,34 +31,77 @@ body:
     id: category
     attributes:
       label: Category
-      description: Which section does this tool belong to?
+      description: Select the canonical catalog category.
       options:
-        - "IDE Extensions & HUDs"
-        - "Platform Fixes & System Utilities"
-        - "Packaged Plugins & Bundles"
-        - "MCP Servers & Bridges"
-        - "Lifecycle Hooks & Automations"
-        - "CLI Utilities & Dev Tools"
+        - "Official CLI & SDKs"
+        - "IDE Extensions & Cockpits"
+        - "Platform Fixes & Runtime Patches"
+        - "Dedicated Gateways, ACP Adapters & Migration Tooling"
     validations:
       required: true
 
   - type: textarea
-    id: description
+    id: description_en
     attributes:
-      label: One-line Description
-      description: A concise summary of what this tool accomplishes. Must start with a capital letter and end with a period.
-      placeholder: e.g. Zero-copy NTFS hardlink bridge resolving Go language server directory junction discovery on Windows.
+      label: One-line Description (English)
+      description: Objective one-line summary (15-240 chars, starts with a capital letter, ends with a period).
+      placeholder: Zero-copy NTFS hardlink directory bridge resolving Go language server junction discovery failures on Windows.
     validations:
       required: true
+
+  - type: textarea
+    id: description_zh
+    attributes:
+      label: One-line Description (Chinese, Optional)
+      description: 简明客观的中文一句话介绍（以中文句号“。”结尾，留空则由维护者补充）。
+      placeholder: 零磁盘占用 NTFS 硬链接目录桥接工具，解决 Windows 目录联接无法被发现的问题。
+    validations:
+      required: false
+
+  - type: textarea
+    id: exclusivity_reason
+    attributes:
+      label: Antigravity Exclusivity Rationale
+      description: Explain why this tool is built specifically for Google Antigravity rather than generic AI coding agents.
+      placeholder: Built natively on Google Antigravity's official `agy acp` protocol over stdio.
+    validations:
+      required: true
+
+  - type: input
+    id: platforms
+    attributes:
+      label: Platforms
+      description: "Comma-separated values from: Windows, macOS, Linux, Cross-Platform, VS Code, Antigravity IDE, Mobile, Web."
+      placeholder: Windows, macOS, Linux
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: 1 to 5 concise comma-separated technical tags (e.g. Rust, ACP, Gateway).
+      placeholder: Rust, GPUI, Gateway
+    validations:
+      required: true
+
+  - type: input
+    id: install_hint
+    attributes:
+      label: Install / Quick-Start Hint (Optional)
+      description: Short install command or release instruction shown in the CLI and Web Explorer.
+      placeholder: Download installer from GitHub Releases
+    validations:
+      required: false
 
   - type: checkboxes
     id: quality_checklist
     attributes:
-      label: Quality Verification
+      label: Quality & Exclusivity Verification
       options:
-        - label: The project is open source and contains executable code or configuration (NOT a bare prompt or raw markdown skill).
+        - label: The project is 100% dedicated to Google Antigravity (not a generic cross-agent tool or bare `SKILL.md` prompt pack).
           required: true
-        - label: The project is actively maintained and documented with clear installation instructions.
+        - label: The repository is public, contains real executable code, and has clear installation instructions.
           required: true
-        - label: I have tested this tool and verified it functions as intended.
+        - label: I have verified the tool works and does not return 404 or violate licensing terms.
           required: true

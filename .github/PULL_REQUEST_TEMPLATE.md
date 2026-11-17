@@ -1,14 +1,13 @@
-### Description
+### Summary
 
-<!-- Briefly describe the tool you are adding and why it belongs in awesome-antigravity-tools. -->
+<!-- Briefly describe the tool(s) or improvements in this pull request. -->
 
 ### Submission Checklist
 
-Please review and confirm each of the following before submitting:
+All catalog entries are maintained in **`data/tools.json`** (single source of truth). Do not manually edit `README.md` or `README.zh-CN.md`.
 
-- [ ] **Executable Code/Tool**: The item being submitted contains executable code, a real extension, an MCP server, or a packaged plugin (it is **not** a bare prompt or raw `SKILL.md` text file).
-- [ ] **Correct Section**: The tool is added to the most relevant category.
-- [ ] **Alphabetical Order**: The entry is placed in alphabetical order by project name within its category.
-- [ ] **Format Compliance**: The entry follows the format `- [Project](URL) - Concise description ending with a period. \`Tag1\` \`Tag2\``.
-- [ ] **Tested & Documented**: The repository has documentation and was verified to work properly.
-- [ ] **Valid Links**: All links have been verified and do not return 404.
+- [ ] **100% Antigravity-Exclusive**: Built specifically for Google Antigravity IDE, `agy` CLI, or `agy acp` (no generic prompt dumps or cross-agent rebrands).
+- [ ] **Edited `data/tools.json`**: Added entry with complete English/Chinese descriptions, exclusivity rationale, platforms, and 1–5 tags.
+- [ ] **Canonical Order & Regenerated Docs**: Ran `python scripts/validate_catalog.py --fix-order && python scripts/generate_docs.py`.
+- [ ] **Validation Passed**: Ran `python scripts/validate_catalog.py --check-sync --strict-warnings` with 0 errors and 0 warnings.
+- [ ] **Tests Passed**: Ran `python -m unittest discover -s tests` (if modifying scripts).
