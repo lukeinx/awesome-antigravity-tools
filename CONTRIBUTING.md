@@ -48,7 +48,7 @@ When adding a new item, ensure it adheres to these rules:
 
 ### Option 2: Open an Issue
 If you prefer not to open a PR or wish to suggest someone else's tool, open an issue using the **Submit a Tool** form:
-- Navigate to [New Issue](https://github.com/your-username/awesome-antigravity-tools/issues/new/choose)
+- Navigate to [New Issue](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
 - Choose **Tool Submission Form** and fill in the details.
 
 ---
@@ -58,5 +58,5 @@ If you prefer not to open a PR or wish to suggest someone else's tool, open an i
 If your project is listed in **awesome-antigravity-tools**, you are welcome to proudly display our badge on your README:
 
 ```markdown
-[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/your-username/awesome-antigravity-tools)
+[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)
 ```

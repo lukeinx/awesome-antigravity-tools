@@ -6,7 +6,7 @@
 
 > A curated list of awesome **tools, IDE extensions, platform fixes, MCP servers, lifecycle hooks, and developer utilities** for Google Antigravity.
 
-[中文文档 (Chinese)](README.zh-CN.md) · [Contributing Guidelines](CONTRIBUTING.md) · [Submit a Tool](https://github.com/your-username/awesome-antigravity-tools/issues/new/choose)
+[中文文档 (Chinese)](README.zh-CN.md) · [Contributing Guidelines](CONTRIBUTING.md) · [Submit a Tool](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
 
 ---
 
@@ -47,7 +47,7 @@ Tools and extensions that enhance IDEs (VS Code, Antigravity IDE) with real-time
 
 Low-level patches, file system bridges, and OS-specific adapters that solve core Antigravity runtime limitations.
 
-- [antigravity-junction-skill-fix](https://github.com/your-username/antigravity-junction-skill-fix) - Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`). `Windows` `PowerShell` `NTFS`
+- [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`). `Windows` `PowerShell` `NTFS`
 
 ---
 
@@ -55,7 +55,7 @@ Low-level patches, file system bridges, and OS-specific adapters that solve core
 
 Multi-capability plugins packaged with `plugin.json` containing executable scripts, MCP configs, and integrated capabilities.
 
-- [modern-web-guidance-plugin](https://github.com/your-username/awesome-antigravity-tools) - Curated web development guidance, accessibility audit patterns, and modern DOM automation integration for Antigravity. `Web` `Plugin`
+- [modern-web-guidance-plugin](https://github.com/wllzhang/awesome-antigravity-tools) - Curated web development guidance, accessibility audit patterns, and modern DOM automation integration for Antigravity. `Web` `Plugin`
 
 ---
 
@@ -63,8 +63,8 @@ Multi-capability plugins packaged with `plugin.json` containing executable scrip
 
 Model Context Protocol (MCP) servers tailored for Antigravity to connect with local services, desktop UI, and APIs.
 
-- [windows-mcp](https://github.com/your-username/awesome-antigravity-tools) - Native Windows system integration server providing control over accessibility trees, UI automation, PowerShell execution, and notifications. `Windows` `Automation`
-- [chrome-devtools-mcp](https://github.com/your-username/awesome-antigravity-tools) - Deep Chrome browser automation and DevTools protocol inspection for Antigravity agents. `Browser` `DevTools`
+- [windows-mcp](https://github.com/wllzhang/awesome-antigravity-tools) - Native Windows system integration server providing control over accessibility trees, UI automation, PowerShell execution, and notifications. `Windows` `Automation`
+- [chrome-devtools-mcp](https://github.com/wllzhang/awesome-antigravity-tools) - Deep Chrome browser automation and DevTools protocol inspection for Antigravity agents. `Browser` `DevTools`
 
 ---
 
@@ -72,7 +72,7 @@ Model Context Protocol (MCP) servers tailored for Antigravity to connect with lo
 
 Shell and PowerShell hooks configured via `hooks.json` to automate tasks before/after agent sessions or tool runs.
 
-- [antigravity-session-bridge-hook](https://github.com/your-username/awesome-antigravity-tools) - Pre-session hook template to ensure dynamic directory links and environment variables are refreshed before the agent starts. `Hooks` `Automation`
+- [antigravity-session-bridge-hook](https://github.com/wllzhang/awesome-antigravity-tools) - Pre-session hook template to ensure dynamic directory links and environment variables are refreshed before the agent starts. `Hooks` `Automation`
 
 ---
 
@@ -80,7 +80,7 @@ Shell and PowerShell hooks configured via `hooks.json` to automate tasks before/
 
 Scaffolding tools, testing suites, migration scripts, and linters for building Antigravity plugins and workflows.
 
-- [skills-manager-cli](https://github.com/your-username/awesome-antigravity-tools) - CLI utility to manage, deploy, symlink, and adopt skills across multiple coding agents (Antigravity, Claude Code, Cursor, Codex). `CLI` `Cross-Agent`
+- [skills-manager-cli](https://github.com/wllzhang/awesome-antigravity-tools) - CLI utility to manage, deploy, symlink, and adopt skills across multiple coding agents (Antigravity, Claude Code, Cursor, Codex). `CLI` `Cross-Agent`
 
 ---
 
@@ -88,10 +88,10 @@ Scaffolding tools, testing suites, migration scripts, and linters for building A
 
 If your tool is featured in this list, add this badge to your README:
 
-[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/your-username/awesome-antigravity-tools)
+[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)
 
 ```markdown
-[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/your-username/awesome-antigravity-tools)
+[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)
 ```
 
 ---

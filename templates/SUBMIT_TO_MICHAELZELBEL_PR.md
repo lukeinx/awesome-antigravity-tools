@@ -15,13 +15,13 @@
 
 This PR introduces valuable developer extensions and system-level utilities for Google Antigravity:
 
-1. **[antigravity-junction-skill-fix](https://github.com/{{YOUR_USERNAME}}/antigravity-junction-skill-fix)**: A zero-copy NTFS hardlink bridge resolving the issue where Antigravity's Go Language Server fails to scan skills linked via Windows directory junctions (`mklink /J`) or directory symlinks (`mklink /D`).
+1. **[antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix)**: A zero-copy NTFS hardlink bridge resolving the issue where Antigravity's Go Language Server fails to scan skills linked via Windows directory junctions (`mklink /J`) or directory symlinks (`mklink /D`).
 2. **[vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit)**: An essential VS Code extension providing real-time quota tracking, status bar indicators, and model capability HUD for Antigravity.
 
 ### Proposed Additions
 
 Under **Developer Tools & Extensions**:
-- [antigravity-junction-skill-fix](https://github.com/{{YOUR_USERNAME}}/antigravity-junction-skill-fix) - Zero-copy NTFS hardlink bridge resolving Go language server discovery failures for Windows directory junctions and symlinks. `Windows` `Plugin`
+- [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - Zero-copy NTFS hardlink bridge resolving Go language server discovery failures for Windows directory junctions and symlinks. `Windows` `Plugin`
 - [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) - VS Code extension for real-time model quota tracking, status bar countdowns, and capability HUDs. `VS Code` `TypeScript`
 
 ### Checklist

@@ -15,7 +15,7 @@
 ```markdown
 Hi @{{AUTHOR}},
 
-Just wanted to let you know that your project **{{PROJECT_NAME}}** has been featured in the [awesome-antigravity-tools](https://github.com/{{YOUR_USERNAME}}/awesome-antigravity-tools) curated directory under the *{{CATEGORY}}* section!
+Just wanted to let you know that your project **{{PROJECT_NAME}}** has been featured in the [awesome-antigravity-tools](https://github.com/wllzhang/awesome-antigravity-tools) curated directory under the *{{CATEGORY}}* section!
 
 We created this index specifically to highlight high-value, executable developer tools and extensions for Google Antigravity (distinguishing them from bare prompt/skill collections), and your project is a standout example.
 
@@ -25,10 +25,10 @@ Thank you for your fantastic work and contribution to the Antigravity community!
 
 *Optional:* If you would like to showcase the inclusion badge on your README, you can paste the snippet below:
 
-[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/{{YOUR_USERNAME}}/awesome-antigravity-tools)
+[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)
 
 ```markdown
-[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/{{YOUR_USERNAME}}/awesome-antigravity-tools)
+[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)
 \```
 
 *No action is required from you. Feel free to close this issue at any time!*

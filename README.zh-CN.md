@@ -6,7 +6,7 @@
 
 > 汇集 Google Antigravity 生态中优秀的 **IDE 扩展、底层系统补丁、真实插件、MCP 服务器、生命周期钩子与工程开发工具**。
 
-[English Documentation](README.md) · [贡献指南](CONTRIBUTING.md) · [提交新工具](https://github.com/your-username/awesome-antigravity-tools/issues/new/choose)
+[English Documentation](README.md) · [贡献指南](CONTRIBUTING.md) · [提交新工具](https://github.com/wllzhang/awesome-antigravity-tools/issues/new/choose)
 
 ---
 
@@ -49,7 +49,7 @@
 
 针对特定操作系统或底层运行时的桥接工具与修补脚本。
 
-- [antigravity-junction-skill-fix](https://github.com/your-username/antigravity-junction-skill-fix) - 零磁盘占用 NTFS 硬链接目录桥接工具，彻底解决 Antigravity Go Language Server 无法加载 Windows 目录联接 (`mklink /J`) 与符号链接 (`mklink /D`) 的问题。 `Windows` `PowerShell` `NTFS`
+- [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - 零磁盘占用 NTFS 硬链接目录桥接工具，彻底解决 Antigravity Go Language Server 无法加载 Windows 目录联接 (`mklink /J`) 与符号链接 (`mklink /D`) 的问题。 `Windows` `PowerShell` `NTFS`
 
 ---
 
@@ -57,7 +57,7 @@
 
 基于 `plugin.json` 规范打包，内含可执行脚本、MCP 配置与集成能力的综合插件。
 
-- [modern-web-guidance-plugin](https://github.com/your-username/awesome-antigravity-tools) - 针对 Antigravity 的现代前端开发规范、无障碍审查与 DOM 自动化集成插件。 `Web` `Plugin`
+- [modern-web-guidance-plugin](https://github.com/wllzhang/awesome-antigravity-tools) - 针对 Antigravity 的现代前端开发规范、无障碍审查与 DOM 自动化集成插件。 `Web` `Plugin`
 
 ---
 
@@ -65,8 +65,8 @@
 
 连接外部服务、桌面系统与专用 API 的模型上下文协议 (MCP) 服务端。
 
-- [windows-mcp](https://github.com/your-username/awesome-antigravity-tools) - 深度集成 Windows 系统无障碍树、UI 自动化、PowerShell 执行与通知推送的专用 MCP 服务。 `Windows` `Automation`
-- [chrome-devtools-mcp](https://github.com/your-username/awesome-antigravity-tools) - 为 Antigravity 智能体提供深度 Chrome 浏览器控制与 DevTools 协议调试的 MCP 服务。 `Browser` `DevTools`
+- [windows-mcp](https://github.com/wllzhang/awesome-antigravity-tools) - 深度集成 Windows 系统无障碍树、UI 自动化、PowerShell 执行与通知推送的专用 MCP 服务。 `Windows` `Automation`
+- [chrome-devtools-mcp](https://github.com/wllzhang/awesome-antigravity-tools) - 为 Antigravity 智能体提供深度 Chrome 浏览器控制与 DevTools 协议调试的 MCP 服务。 `Browser` `DevTools`
 
 ---
 
@@ -74,7 +74,7 @@
 
 通过 `hooks.json` 配置的会话前、工具调用前后的自动化处理脚本。
 
-- [antigravity-session-bridge-hook](https://github.com/your-username/awesome-antigravity-tools) - 会话启动前自动同步目录桥接与刷新环境变量的 Hook 模板。 `Hooks` `Automation`
+- [antigravity-session-bridge-hook](https://github.com/wllzhang/awesome-antigravity-tools) - 会话启动前自动同步目录桥接与刷新环境变量的 Hook 模板。 `Hooks` `Automation`
 
 ---
 
@@ -82,7 +82,7 @@
 
 用于构建、测试、迁移和调试 Antigravity 插件的工具套件。
 
-- [skills-manager-cli](https://github.com/your-username/awesome-antigravity-tools) - 跨 Coding Agent (Antigravity, Claude Code, Cursor, Codex) 的技能统一管理与软链接分发 CLI。 `CLI` `Cross-Agent`
+- [skills-manager-cli](https://github.com/wllzhang/awesome-antigravity-tools) - 跨 Coding Agent (Antigravity, Claude Code, Cursor, Codex) 的技能统一管理与软链接分发 CLI。 `CLI` `Cross-Agent`
 
 ---
 
@@ -90,10 +90,10 @@
 
 如果您的工具已被收录到本榜单，欢迎在您的 README 中展示收录徽章：
 
-[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/your-username/awesome-antigravity-tools)
+[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)
 
 ```markdown
-[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/your-username/awesome-antigravity-tools)
+[![Awesome Antigravity Tools](https://img.shields.io/badge/Awesome-Antigravity--Tools-brightgreen?logo=google&logoColor=white)](https://github.com/wllzhang/awesome-antigravity-tools)
 ```
 
 ---
