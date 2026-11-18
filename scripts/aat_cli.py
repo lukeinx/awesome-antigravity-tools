@@ -302,6 +302,9 @@ def sync_all_derived_artifacts(catalog_path: Path, snapshot_path: Path) -> int:
     catalog = validate_catalog.sort_catalog_tools(catalog)
     catalog_path.write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
 
+    if catalog_path.resolve() == DEFAULT_CATALOG.resolve():
+        validate_catalog.sync_issue_template_categories(catalog)
+
     snapshot = generate_docs.load_json(snapshot_path)
 
     # 1. Badges
@@ -337,6 +340,7 @@ def sync_all_derived_artifacts(catalog_path: Path, snapshot_path: Path) -> int:
 def cmd_verify(args: argparse.Namespace) -> int:
     import build_site
     import export_catalog
+    import generate_badges
     import validate_catalog
 
     argv = ["--catalog", str(args.catalog)]
@@ -351,11 +355,13 @@ def cmd_verify(args: argparse.Namespace) -> int:
         if rc_val != 0 or not args.check_sync:
             return rc_val
         if args.catalog.resolve() == DEFAULT_CATALOG.resolve():
+            sys.argv = ["generate_badges.py", "--check"]
+            rc_badges = generate_badges.main()
             sys.argv = ["build_site.py", "--check"]
             rc_site = build_site.main()
             sys.argv = ["export_catalog.py", "--check"]
             rc_exp = export_catalog.main()
-            return 0 if (rc_site == 0 and rc_exp == 0) else 1
+            return 0 if (rc_badges == 0 and rc_site == 0 and rc_exp == 0) else 1
         return 0
     finally:
         sys.argv = old_argv

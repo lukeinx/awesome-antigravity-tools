@@ -20,6 +20,7 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CATALOG = REPO_ROOT / "data" / "tools.json"
 DEFAULT_SCHEMA = REPO_ROOT / "data" / "catalog.schema.json"
+DEFAULT_ISSUE_TEMPLATE = REPO_ROOT / ".github" / "ISSUE_TEMPLATE" / "submit_tool.yml"
 
 ALLOWED_PLATFORMS = {
     "Windows",
@@ -247,6 +248,51 @@ def sort_catalog_tools(data: dict[str, Any]) -> dict[str, Any]:
     return data
 
 
+_CATEGORY_BLOCK_RE = re.compile(
+    r"(  - type: dropdown\n    id: category\n[\s\S]*?      options:\n)((?:        - .*\n)+)"
+)
+
+
+def extract_issue_template_categories(template_text: str) -> list[str]:
+    match = _CATEGORY_BLOCK_RE.search(template_text.replace("\r\n", "\n"))
+    if not match:
+        return []
+    options: list[str] = []
+    for line in match.group(2).strip().splitlines():
+        item = line.strip().removeprefix("-").strip().strip('"').strip("'")
+        if item:
+            options.append(item)
+    return options
+
+
+def sync_issue_template_categories(catalog: dict[str, Any], template_path: Path = DEFAULT_ISSUE_TEMPLATE) -> bool:
+    if not template_path.exists():
+        return False
+    raw = template_path.read_text(encoding="utf-8").replace("\r\n", "\n")
+    expected_lines = "".join(f'        - "{c["name_en"]}"\n' for c in catalog.get("categories", []))
+    updated, count = _CATEGORY_BLOCK_RE.subn(rf"\g<1>{expected_lines}", raw, count=1)
+    if count == 0:
+        return False
+    template_path.write_text(updated, encoding="utf-8", newline="\n")
+    print(f"[+] Synced category options in {template_path}")
+    return True
+
+
+def validate_issue_template_categories(
+    catalog: dict[str, Any], template_path: Path = DEFAULT_ISSUE_TEMPLATE
+) -> tuple[bool, str]:
+    if not template_path.exists():
+        return False, f"Missing issue template: {template_path}"
+    expected = [c["name_en"] for c in catalog.get("categories", [])]
+    actual = extract_issue_template_categories(template_path.read_text(encoding="utf-8"))
+    if actual != expected:
+        return (
+            False,
+            f"Issue template categories {actual} out of sync with tools.json {expected} (run `python scripts/aat_cli.py sync`)",
+        )
+    return True, f"[OK] Issue template categories in sync: {template_path}"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate awesome-antigravity-tools catalog.")
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG, help="Path to data/tools.json")
@@ -297,7 +343,14 @@ def main() -> int:
         ok_zh = generate_docs.write_or_check(
             REPO_ROOT / "README.zh-CN.md", generate_docs.render_readme_zh(catalog, snapshot), check_only=True
         )
-        sync_ok = ok_en and ok_zh
+        ok_tpl = True
+        if args.catalog.resolve() == DEFAULT_CATALOG.resolve():
+            ok_tpl, tpl_msg = validate_issue_template_categories(catalog, DEFAULT_ISSUE_TEMPLATE)
+            if ok_tpl:
+                print(tpl_msg)
+            else:
+                print(f"[FAIL] {tpl_msg}", file=sys.stderr)
+        sync_ok = ok_en and ok_zh and ok_tpl
 
     if errors or not sync_ok or (args.strict_warnings and warnings):
         print(f"[FAIL] Validation failed ({len(errors)} errors, {len(warnings)} warnings).", file=sys.stderr)

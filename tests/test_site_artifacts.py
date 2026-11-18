@@ -20,6 +20,7 @@ if str(SCRIPTS_DIR) not in sys.path:
 
 import build_site
 import export_catalog
+import generate_badges
 
 
 class TestSiteArtifacts(unittest.TestCase):
@@ -98,6 +99,14 @@ class TestSiteArtifacts(unittest.TestCase):
         zh_keys = set(re.findall(r"^\s*([A-Za-z0-9_]+):", zh_block.group(1), flags=re.MULTILINE))
         self.assertEqual(i18n_attrs - en_keys, set(), f"Missing I18N.en keys: {i18n_attrs - en_keys}")
         self.assertEqual(i18n_attrs - zh_keys, set(), f"Missing I18N.zh keys: {i18n_attrs - zh_keys}")
+
+    def test_badges_check_mode_passes(self):
+        old_argv = sys.argv
+        try:
+            sys.argv = ["generate_badges.py", "--check"]
+            self.assertEqual(generate_badges.main(), 0)
+        finally:
+            sys.argv = old_argv
 
 
 if __name__ == "__main__":

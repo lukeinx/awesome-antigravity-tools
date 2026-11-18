@@ -19,16 +19,10 @@ Push-Location $repoRoot
 try {
     switch ($Task) {
         'validate' {
-            python scripts/validate_catalog.py --check-sync --strict-warnings
-            python scripts/build_site.py --check
-            python scripts/export_catalog.py --check
+            python scripts/aat_cli.py verify --check-sync --strict-warnings
         }
         'generate' {
-            python scripts/validate_catalog.py --fix-order
-            python scripts/generate_badges.py
-            python scripts/generate_docs.py
-            python scripts/export_catalog.py
-            python scripts/build_site.py
+            python scripts/aat_cli.py sync
         }
         'export' {
             python scripts/export_catalog.py
@@ -58,14 +52,8 @@ try {
             python -m http.server $Port --directory docs
         }
         'all' {
-            python scripts/validate_catalog.py --fix-order
-            python scripts/generate_badges.py
-            python scripts/generate_docs.py
-            python scripts/export_catalog.py
-            python scripts/build_site.py
-            python scripts/validate_catalog.py --check-sync --strict-warnings
-            python scripts/build_site.py --check
-            python scripts/export_catalog.py --check
+            python scripts/aat_cli.py sync
+            python scripts/aat_cli.py verify --check-sync --strict-warnings
             python -m unittest discover -s tests -v
             node --test tests/test_web.mjs
         }

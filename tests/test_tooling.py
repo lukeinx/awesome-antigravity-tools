@@ -98,6 +98,22 @@ class TestCatalogValidator(unittest.TestCase):
         errors, warnings = validate_catalog.validate_catalog_data(real)
         self.assertEqual(errors, [])
         self.assertEqual(warnings, [])
+        ok_tpl, _ = validate_catalog.validate_issue_template_categories(real)
+        self.assertTrue(ok_tpl)
+
+    def test_issue_template_category_drift_and_auto_sync(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tpl = Path(tmp) / "submit_tool.yml"
+            tpl.write_text(
+                (REPO_ROOT / ".github" / "ISSUE_TEMPLATE" / "submit_tool.yml").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+            sample = make_sample_catalog()
+            ok_before, _ = validate_catalog.validate_issue_template_categories(sample, tpl)
+            self.assertFalse(ok_before)
+            self.assertTrue(validate_catalog.sync_issue_template_categories(sample, tpl))
+            ok_after, _ = validate_catalog.validate_issue_template_categories(sample, tpl)
+            self.assertTrue(ok_after)
 
     def test_rejects_duplicate_repo_and_self_reference(self):
         cat = make_sample_catalog()

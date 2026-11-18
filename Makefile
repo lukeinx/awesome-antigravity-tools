@@ -3,16 +3,10 @@
 all: generate validate test
 
 generate:
-	python3 scripts/validate_catalog.py --fix-order
-	python3 scripts/generate_badges.py
-	python3 scripts/generate_docs.py
-	python3 scripts/export_catalog.py
-	python3 scripts/build_site.py
+	python3 scripts/aat_cli.py sync
 
 validate:
-	python3 scripts/validate_catalog.py --check-sync --strict-warnings
-	python3 scripts/build_site.py --check
-	python3 scripts/export_catalog.py --check
+	python3 scripts/aat_cli.py verify --check-sync --strict-warnings
 
 export:
 	python3 scripts/export_catalog.py
