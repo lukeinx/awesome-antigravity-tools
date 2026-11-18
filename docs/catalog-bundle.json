@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-17T19:11:31Z",
+  "generated_at": "2026-11-18T09:51:23Z",
   "repository": "wllzhang/awesome-antigravity-tools",
   "site_url": "https://wllzhang.github.io/awesome-antigravity-tools/",
   "summary": {
@@ -8,9 +8,9 @@
     "total_categories": 4,
     "healthy_tools": 20,
     "health_ratio_pct": 95.2,
-    "total_stars": 59005,
-    "total_forks": 6671,
-    "average_health_score": 85.0,
+    "total_stars": 59204,
+    "total_forks": 6684,
+    "average_health_score": 84.7,
     "by_status": {
       "HEALTHY": 20,
       "STALE": 1
@@ -207,13 +207,13 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 81,
-        "stars": 2865,
-        "forks": 284,
-        "open_issues": 1016,
+        "stars": 2872,
+        "forks": 285,
+        "open_issues": 1027,
         "language": null,
         "license": null,
-        "latest_release": "1.5.10",
-        "pushed_at": "2026-11-17T05:41:17Z",
+        "latest_release": "1.5.11",
+        "pushed_at": "2026-11-18T06:51:45Z",
         "days_inactive": 0
       }
     },
@@ -241,9 +241,9 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 97,
-        "stars": 4101,
-        "forks": 1597,
-        "open_issues": 34,
+        "stars": 4108,
+        "forks": 1600,
+        "open_issues": 37,
         "language": "Python",
         "license": "Apache-2.0",
         "latest_release": null,
@@ -282,7 +282,7 @@
         "license": "MIT",
         "latest_release": "v1.0.20",
         "pushed_at": "2026-06-04T05:55:39Z",
-        "days_inactive": 166
+        "days_inactive": 167
       }
     },
     {
@@ -311,13 +311,13 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 33248,
-        "forks": 3554,
-        "open_issues": 1691,
+        "stars": 33301,
+        "forks": 3556,
+        "open_issues": 1689,
         "language": "Rust",
         "license": "NOASSERTION",
         "latest_release": "v5.0.3",
-        "pushed_at": "2026-11-17T12:54:13Z",
+        "pushed_at": "2026-11-18T02:07:10Z",
         "days_inactive": 0
       }
     },
@@ -345,14 +345,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 97,
-        "stars": 857,
+        "stars": 863,
         "forks": 46,
         "open_issues": 5,
         "language": "TypeScript",
         "license": "Apache-2.0",
         "latest_release": "v2.8.5",
         "pushed_at": "2026-11-16T09:01:15Z",
-        "days_inactive": 1
+        "days_inactive": 2
       }
     },
     {
@@ -380,9 +380,9 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 90,
-        "stars": 2521,
+        "stars": 2526,
         "forks": 303,
-        "open_issues": 14,
+        "open_issues": 15,
         "language": "TypeScript",
         "license": "NOASSERTION",
         "latest_release": "v0.32.1",
@@ -421,7 +421,7 @@
         "license": "MIT",
         "latest_release": "v1.0.3",
         "pushed_at": "2026-02-26T09:24:24Z",
-        "days_inactive": 264
+        "days_inactive": 265
       }
     },
     {
@@ -449,14 +449,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 96,
-        "stars": 4853,
-        "forks": 145,
+        "stars": 4855,
+        "forks": 146,
         "open_issues": 26,
         "language": "TypeScript",
         "license": "MIT",
         "latest_release": "v2.1.53",
         "pushed_at": "2026-11-12T08:56:56Z",
-        "days_inactive": 5
+        "days_inactive": 6
       }
     },
     {
@@ -485,13 +485,13 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 1121,
-        "forks": 34,
-        "open_issues": 1,
+        "stars": 1172,
+        "forks": 35,
+        "open_issues": 0,
         "language": "JavaScript",
         "license": "MIT",
-        "latest_release": "v2.32.2.1",
-        "pushed_at": "2026-11-17T04:13:13Z",
+        "latest_release": "v2.33.0",
+        "pushed_at": "2026-11-18T06:15:28Z",
         "days_inactive": 0
       }
     },
@@ -554,9 +554,9 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 84,
-        "stars": 589,
-        "forks": 64,
-        "open_issues": 3,
+        "stars": 620,
+        "forks": 67,
+        "open_issues": 4,
         "language": "Python",
         "license": "MIT",
         "latest_release": null,
@@ -595,7 +595,7 @@
         "language": "PowerShell",
         "license": "MIT",
         "latest_release": null,
-        "pushed_at": "2026-11-17T09:51:08Z",
+        "pushed_at": "2026-11-18T02:24:08Z",
         "days_inactive": 0
       }
     },
@@ -624,9 +624,9 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 4946,
-        "forks": 343,
-        "open_issues": 0,
+        "stars": 4980,
+        "forks": 344,
+        "open_issues": 1,
         "language": "C++",
         "license": "NOASSERTION",
         "latest_release": "v2.6.4",
@@ -665,7 +665,7 @@
         "license": "AGPL-3.0",
         "latest_release": "v2.1.0",
         "pushed_at": "2026-09-15T02:18:40Z",
-        "days_inactive": 63
+        "days_inactive": 64
       }
     },
     {
@@ -699,7 +699,7 @@
         "license": "MIT",
         "latest_release": null,
         "pushed_at": "2026-10-30T21:29:13Z",
-        "days_inactive": 17
+        "days_inactive": 18
       }
     },
     {
@@ -725,9 +725,9 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 50,
-        "forks": 7,
-        "open_issues": 2,
+        "stars": 51,
+        "forks": 8,
+        "open_issues": 3,
         "language": "Python",
         "license": "MIT",
         "latest_release": "v1.5.2",
@@ -757,7 +757,7 @@
       "added_at": "2026-11-18",
       "telemetry": {
         "status": "HEALTHY",
-        "health_score": 79,
+        "health_score": 71,
         "stars": 21,
         "forks": 9,
         "open_issues": 27,
@@ -765,7 +765,7 @@
         "license": "Apache-2.0",
         "latest_release": "v0.5.2",
         "pushed_at": "2026-08-19T07:31:21Z",
-        "days_inactive": 90
+        "days_inactive": 91
       }
     },
     {
@@ -791,7 +791,7 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 84,
-        "stars": 85,
+        "stars": 86,
         "forks": 24,
         "open_issues": 8,
         "language": "TypeScript",
@@ -831,7 +831,7 @@
         "license": "MIT",
         "latest_release": "v1.0.1",
         "pushed_at": "2026-11-15T08:06:00Z",
-        "days_inactive": 2
+        "days_inactive": 3
       }
     },
     {
@@ -860,13 +860,13 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 84,
-        "stars": 31,
+        "stars": 32,
         "forks": 3,
         "open_issues": 0,
         "language": "Rust",
         "license": "Apache-2.0",
-        "latest_release": "v0.2.0",
-        "pushed_at": "2026-11-17T10:47:23Z",
+        "latest_release": "v0.2.1",
+        "pushed_at": "2026-11-18T08:54:31Z",
         "days_inactive": 0
       }
     },
@@ -918,6 +918,20 @@
       "total_stars": 59005,
       "total_forks": 6671,
       "average_health_score": 85.0
+    },
+    {
+      "date": "2026-11-18",
+      "generated_at": "2026-11-18T09:51:23Z",
+      "total": 21,
+      "healthy": 20,
+      "stale": 1,
+      "very_stale": 0,
+      "archived": 0,
+      "dead": 0,
+      "health_ratio_pct": 95.2,
+      "total_stars": 59204,
+      "total_forks": 6684,
+      "average_health_score": 84.7
     }
   ]
 }
