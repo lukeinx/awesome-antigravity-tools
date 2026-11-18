@@ -217,6 +217,8 @@ def render_readme_en(catalog: dict[str, Any], snapshot: dict[str, Any] | None) -
             "",
             "Contributions are welcome! All entries are managed in [`data/tools.json`](data/tools.json) and rendered deterministically into both English and Chinese READMEs via `python scripts/generate_docs.py`.",
             "",
+            "> **Tip**: This repository also ships as a native Antigravity plugin ([`plugin.json`](plugin.json) + `antigravity-tools-advisor` skill) and CLI (`python scripts/aat_cli.py search <query>`).",
+            "",
             "Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting a pull request or issue.",
             "",
         ]
@@ -323,6 +325,8 @@ def render_readme_zh(catalog: dict[str, Any], snapshot: dict[str, Any] | None) -
             "## 🤝 参与贡献",
             "",
             "欢迎提交您的专有工具！所有收录条目统一维护于 [`data/tools.json`](data/tools.json)，通过 `python scripts/generate_docs.py` 自动同步生成中英文文档。",
+            "",
+            "> **提示**：本仓库本身亦遵循 Antigravity 原生插件规范（[`plugin.json`](plugin.json) + `antigravity-tools-advisor` 技能），同时内置零依赖 CLI（`python scripts/aat_cli.py search <关键词>`）。",
             "",
             "在提交前请阅读我们的 [贡献指南](CONTRIBUTING.zh-CN.md) 与 [行为准则](CODE_OF_CONDUCT.md)。",
             "",

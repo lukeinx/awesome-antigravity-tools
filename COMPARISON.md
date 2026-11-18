@@ -17,7 +17,7 @@
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | `HEALTHY` | **93** | 33,301 | Rust | NOASSERTION | `v5.0.3` | Windows, macOS, Linux |
+| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | `HEALTHY` | **93** | 33,302 | Rust | NOASSERTION | `v5.0.3` | Windows, macOS, Linux |
 | [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | `HEALTHY` | **96** | 4,855 | TypeScript | MIT | `v2.1.53` | VS Code, Antigravity IDE |
 | [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | `HEALTHY` | **90** | 2,526 | TypeScript | NOASSERTION | `v0.32.1` | Windows, macOS, Linux |
 | [AntigravityQuotaWatcher](https://github.com/wusimpl/AntigravityQuotaWatcher) | `STALE` | **62** | 2,249 | TypeScript | MIT | `v1.0.3` | VS Code, Antigravity IDE |
@@ -28,13 +28,13 @@
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | `HEALTHY` | **93** | 4,980 | C++ | NOASSERTION | `v2.6.4` | Windows, Antigravity IDE |
-| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | `HEALTHY` | **93** | 1,172 | JavaScript | MIT | `v2.33.0` | Windows, macOS, Linux, Antigravity IDE |
+| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | `HEALTHY` | **93** | 4,981 | C++ | NOASSERTION | `v2.6.4` | Windows, Antigravity IDE |
+| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | `HEALTHY` | **93** | 1,173 | JavaScript | MIT | `v2.33.0` | Windows, macOS, Linux, Antigravity IDE |
 | [antigravity-conversation-fix](https://github.com/FutureisinPast/antigravity-conversation-fix) | `HEALTHY` | **84** | 1,144 | Python | MIT | `V1.07` | Cross-Platform, Antigravity IDE |
 | [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) | `HEALTHY` | **84** | 620 | Python | MIT | - | Windows, macOS, Linux |
 | [antigravity_bypass](https://github.com/Futureppo/antigravity_bypass) | `HEALTHY` | **84** | 70 | Go | AGPL-3.0 | `v2.1.0` | Windows, Antigravity IDE |
 | [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | `HEALTHY` | **75** | 4 | JavaScript | MIT | - | Windows, VS Code |
-| [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | `HEALTHY` | **70** | 0 | PowerShell | MIT | - | Windows, Antigravity IDE |
+| [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | `HEALTHY` | **79** | 0 | PowerShell | MIT | `v1.0.1` | Windows, Antigravity IDE |
 
 ## 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling
 

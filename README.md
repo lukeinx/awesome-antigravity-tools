@@ -26,7 +26,7 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 - Directly fixes critical Antigravity bugs, OS runtime limitations, or telemetry blind spots.
 - Verified daily by our automated health audit (`scripts/health-check.py`) and backed by a single-source-of-truth JSON catalog (`data/tools.json`).
 
-> **Ecosystem Pulse**: `21` curated tools across `4` categories · `59.2k` combined GitHub stars · `20/21` active (`95.2%`) · Avg Health Score: `84.7/100` ([Full Audit](health_report.md))
+> **Ecosystem Pulse**: `21` curated tools across `4` categories · `59.2k` combined GitHub stars · `20/21` active (`95.2%`) · Avg Health Score: `85.1/100` ([Full Audit](health_report.md))
 
 ---
 
@@ -105,5 +105,7 @@ If your tool is featured in this list, add this badge to your README:
 ## 🤝 Contributing
 
 Contributions are welcome! All entries are managed in [`data/tools.json`](data/tools.json) and rendered deterministically into both English and Chinese READMEs via `python scripts/generate_docs.py`.
+
+> **Tip**: This repository also ships as a native Antigravity plugin ([`plugin.json`](plugin.json) + `antigravity-tools-advisor` skill) and CLI (`python scripts/aat_cli.py search <query>`).
 
 Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting a pull request or issue.

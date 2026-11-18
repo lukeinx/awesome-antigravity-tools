@@ -6,14 +6,14 @@
     <atom:link href="https://wllzhang.github.io/awesome-antigravity-tools/feed.xml" rel="self" type="application/rss+xml" />
     <description>Strictly 100% Google Antigravity-exclusive engineering tools, IDE extensions, runtime hotfixes, and ACP gateways.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2026 09:51:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 10:27:53 +0000</lastBuildDate>
     <docs>https://github.com/wllzhang/awesome-antigravity-tools</docs>
     <item>
       <title>antigravity-proxy (Platform Fixes &amp; Runtime Patches)</title>
       <link>https://github.com/yuaotian/antigravity-proxy</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-proxy</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode. | Exclusivity: Targets Antigravity's Windows child processes (including language server binaries) that ignore system proxy settings. | Stars: 4,980 | Health: 93/100</description>
+      <description>Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode. | Exclusivity: Targets Antigravity's Windows child processes (including language server binaries) that ignore system proxy settings. | Stars: 4,981 | Health: 93/100</description>
     </item>
     <item>
       <title>antigravity-sdk-python (Official CLI &amp; SDKs)</title>
@@ -41,7 +41,7 @@
       <link>https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-chinese-localization</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-      <description>MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE. | Exclusivity: Targets Antigravity IDE's bundled UI string tables and resource packages exclusively. | Stars: 1,172 | Health: 93/100</description>
+      <description>MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE. | Exclusivity: Targets Antigravity IDE's bundled UI string tables and resource packages exclusively. | Stars: 1,173 | Health: 93/100</description>
     </item>
     <item>
       <title>antigravity-panel (IDE Extensions &amp; Cockpits)</title>
@@ -90,7 +90,7 @@
       <link>https://github.com/lbjlaq/Antigravity-Manager</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-manager</guid>
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React. | Exclusivity: Targets Antigravity's local profile, authentication state, and account switching workflow natively. | Stars: 33,301 | Health: 93/100</description>
+      <description>Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React. | Exclusivity: Targets Antigravity's local profile, authentication state, and account switching workflow natively. | Stars: 33,302 | Health: 93/100</description>
     </item>
     <item>
       <title>vscode-antigravity-cockpit (IDE Extensions &amp; Cockpits)</title>
@@ -153,7 +153,7 @@
       <link>https://github.com/wllzhang/antigravity-junction-skill-fix</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-junction-skill-fix</guid>
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`). | Exclusivity: Solves the Antigravity Go language server (`language_server_windows_x64.exe`) reparse-point skip bug via a native `SessionStart` plugin hook. | Stars: 0 | Health: 70/100</description>
+      <description>Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`). | Exclusivity: Solves the Antigravity Go language server (`language_server_windows_x64.exe`) reparse-point skip bug via a native `SessionStart` plugin hook. | Stars: 0 | Health: 79/100</description>
     </item>
   </channel>
 </rss>

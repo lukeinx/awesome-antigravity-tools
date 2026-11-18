@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-18T09:51:23Z",
+  "generated_at": "2026-11-18T10:27:53Z",
   "summary": {
     "total": 21,
     "healthy": 20,
@@ -10,9 +10,9 @@
     "dead": 0,
     "error": 0,
     "health_ratio_pct": 95.2,
-    "total_stars": 59204,
+    "total_stars": 59207,
     "total_forks": 6684,
-    "average_health_score": 84.7
+    "average_health_score": 85.1
   },
   "repositories": [
     {
@@ -132,9 +132,9 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 33301,
+      "stars": 33302,
       "forks": 3556,
-      "open_issues": 1689,
+      "open_issues": 1690,
       "language": "Rust",
       "license": "NOASSERTION",
       "default_branch": "main",
@@ -147,7 +147,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 33301 stars)"
+      "message": "Active (0d ago, 33302 stars)"
     },
     {
       "id": "antigravity-panel",
@@ -295,7 +295,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 1172,
+      "stars": 1173,
       "forks": 35,
       "open_issues": 0,
       "language": "JavaScript",
@@ -307,7 +307,7 @@
       "topics": [],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 1172 stars)"
+      "message": "Active (0d ago, 1173 stars)"
     },
     {
       "id": "antigravity-conversation-fix",
@@ -375,17 +375,26 @@
       "section_zh": "🔧 平台补丁与底层运行时修复",
       "status": "HEALTHY",
       "code": 200,
-      "health_score": 70,
+      "health_score": 79,
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
       "language": "PowerShell",
       "license": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-11-18T02:24:08Z",
-      "latest_release": null,
-      "latest_release_at": null,
-      "topics": [],
+      "pushed_at": "2026-11-18T10:24:33Z",
+      "latest_release": "v1.0.1",
+      "latest_release_at": "2026-11-18T10:24:34Z",
+      "topics": [
+        "antigravity",
+        "antigravity-plugin",
+        "hardlink",
+        "junction",
+        "ntfs",
+        "powershell",
+        "symlink",
+        "windows"
+      ],
       "archived": false,
       "days_inactive": 0,
       "message": "Active (0d ago, 0 stars)"
@@ -403,7 +412,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 4980,
+      "stars": 4981,
       "forks": 344,
       "open_issues": 1,
       "language": "C++",
@@ -426,7 +435,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 4980 stars)"
+      "message": "Active (0d ago, 4981 stars)"
     },
     {
       "id": "antigravity-bypass",

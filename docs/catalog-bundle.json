@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-18T09:51:23Z",
+  "generated_at": "2026-11-18T10:27:53Z",
   "repository": "wllzhang/awesome-antigravity-tools",
   "site_url": "https://wllzhang.github.io/awesome-antigravity-tools/",
   "summary": {
@@ -8,9 +8,9 @@
     "total_categories": 4,
     "healthy_tools": 20,
     "health_ratio_pct": 95.2,
-    "total_stars": 59204,
+    "total_stars": 59207,
     "total_forks": 6684,
-    "average_health_score": 84.7,
+    "average_health_score": 85.1,
     "by_status": {
       "HEALTHY": 20,
       "STALE": 1
@@ -311,9 +311,9 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 33301,
+        "stars": 33302,
         "forks": 3556,
-        "open_issues": 1689,
+        "open_issues": 1690,
         "language": "Rust",
         "license": "NOASSERTION",
         "latest_release": "v5.0.3",
@@ -485,7 +485,7 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 1172,
+        "stars": 1173,
         "forks": 35,
         "open_issues": 0,
         "language": "JavaScript",
@@ -588,14 +588,14 @@
       "featured": true,
       "telemetry": {
         "status": "HEALTHY",
-        "health_score": 70,
+        "health_score": 79,
         "stars": 0,
         "forks": 0,
         "open_issues": 0,
         "language": "PowerShell",
         "license": "MIT",
-        "latest_release": null,
-        "pushed_at": "2026-11-18T02:24:08Z",
+        "latest_release": "v1.0.1",
+        "pushed_at": "2026-11-18T10:24:33Z",
         "days_inactive": 0
       }
     },
@@ -624,7 +624,7 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 4980,
+        "stars": 4981,
         "forks": 344,
         "open_issues": 1,
         "language": "C++",
@@ -921,7 +921,7 @@
     },
     {
       "date": "2026-11-18",
-      "generated_at": "2026-11-18T09:51:23Z",
+      "generated_at": "2026-11-18T10:27:53Z",
       "total": 21,
       "healthy": 20,
       "stale": 1,
@@ -929,9 +929,9 @@
       "archived": 0,
       "dead": 0,
       "health_ratio_pct": 95.2,
-      "total_stars": 59204,
+      "total_stars": 59207,
       "total_forks": 6684,
-      "average_health_score": 84.7
+      "average_health_score": 85.1
     }
   ]
 }

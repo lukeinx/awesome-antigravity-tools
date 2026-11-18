@@ -26,7 +26,7 @@
 - 正面攻克 Antigravity 运行时的特定缺陷、系统级死锁或配额盲区；
 - 由统一数据源 `data/tools.json` 驱动，每日自动执行健康度与活性巡检（`scripts/health-check.py`）。
 
-> **生态脉搏**：共收录 `21` 款专有工具（`4` 个分类）· 合计 `59.2k` Stars · `20/21` 活跃（`95.2%`）· 平均健康分：`84.7/100`（[完整巡检报告](health_report.zh-CN.md)）
+> **生态脉搏**：共收录 `21` 款专有工具（`4` 个分类）· 合计 `59.2k` Stars · `20/21` 活跃（`95.2%`）· 平均健康分：`85.1/100`（[完整巡检报告](health_report.zh-CN.md)）
 
 ---
 
@@ -105,5 +105,7 @@
 ## 🤝 参与贡献
 
 欢迎提交您的专有工具！所有收录条目统一维护于 [`data/tools.json`](data/tools.json)，通过 `python scripts/generate_docs.py` 自动同步生成中英文文档。
+
+> **提示**：本仓库本身亦遵循 Antigravity 原生插件规范（[`plugin.json`](plugin.json) + `antigravity-tools-advisor` 技能），同时内置零依赖 CLI（`python scripts/aat_cli.py search <关键词>`）。
 
 在提交前请阅读我们的 [贡献指南](CONTRIBUTING.zh-CN.md) 与 [行为准则](CODE_OF_CONDUCT.md)。

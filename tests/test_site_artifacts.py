@@ -108,6 +108,25 @@ class TestSiteArtifacts(unittest.TestCase):
         finally:
             sys.argv = old_argv
 
+    def test_native_plugin_manifest_and_skill(self):
+        manifest = json.loads((REPO_ROOT / "plugin.json").read_text(encoding="utf-8"))
+        allowed_keys = {
+            "name",
+            "displayName",
+            "description",
+            "logo",
+            "version",
+            "author",
+            "homepage",
+            "repository",
+            "suggestedPrompts",
+            "disabled",
+        }
+        self.assertTrue(set(manifest.keys()).issubset(allowed_keys))
+        self.assertEqual(manifest["name"], "awesome-antigravity-tools")
+        self.assertTrue((REPO_ROOT / manifest["logo"]).exists())
+        self.assertTrue((REPO_ROOT / "skills" / "antigravity-tools-advisor" / "SKILL.md").exists())
+
 
 if __name__ == "__main__":
     unittest.main()
