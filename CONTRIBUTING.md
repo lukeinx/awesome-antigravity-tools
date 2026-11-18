@@ -44,11 +44,10 @@ python scripts/aat_cli.py add \
 
 1. Fork and create a branch (`git checkout -b add-my-tool`).
 2. Add your entry to `data/tools.json`.
-3. Canonicalize ordering and regenerate bilingual READMEs:
+3. Canonicalize ordering and regenerate all derived artifacts (bilingual READMEs, badges, exports, and web bundle):
    ```bash
-   python scripts/validate_catalog.py --fix-order
-   python scripts/generate_docs.py
-   python scripts/validate_catalog.py --check-sync --strict-warnings
+   python scripts/aat_cli.py sync
+   python scripts/aat_cli.py verify --check-sync --strict-warnings
    ```
 4. Open a Pull Request!
 

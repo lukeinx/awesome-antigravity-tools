@@ -608,11 +608,22 @@ def generate_report_en(
     return report_content, len(action_needed)
 
 
-def generate_report_zh(snapshot: dict[str, Any], report_file: Path) -> str:
+def generate_report_zh(
+    snapshot: dict[str, Any],
+    report_file: Path,
+    previous_snapshot: dict[str, Any] | None = None,
+    status_changes: list[dict[str, str]] | None = None,
+) -> str:
     results = snapshot["repositories"]
     summary = snapshot["summary"]
     now_str = snapshot["generated_at"].replace("T", " ").replace("Z", " UTC")
     total = summary["total"]
+    prev_map = (
+        {r["full_name"].lower(): r for r in previous_snapshot.get("repositories", [])}
+        if previous_snapshot
+        else {}
+    )
+    action_needed = [r for r in results if r["status"] in ("DEAD", "ARCHIVED", "VERY_STALE")]
 
     badge_map = {
         "HEALTHY": "🟢 活跃",
@@ -644,25 +655,85 @@ def generate_report_zh(snapshot: dict[str, Any], report_file: Path) -> str:
         f"| ❌ **失效 / 404** | {summary['dead']} | 立即从精选榜单移除 |",
         f"| ⚠️ **API 异常** | {summary['error']} | 下次巡检自动复查 |",
         "",
-        "## 完整巡检明细表",
-        "",
-        "| 项目名称 | 所属分类 | 健康状态 | 健康分 | Stars | 主语言 | 开源协议 | 最新版本 | 最近推送 |",
-        "| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |",
     ]
+
+    if status_changes:
+        lines.extend(
+            [
+                "## 🔄 上次巡检以来的状态变更",
+                "",
+                "| 仓库 | 原状态 | 当前状态 |",
+                "| :--- | :---: | :---: |",
+            ]
+        )
+        for ch in status_changes:
+            lines.append(f"| `{ch['repo']}` | `{ch['from']}` | `{ch['to']}` |")
+        lines.append("")
+
+    if action_needed:
+        lines.extend(
+            [
+                "## ⚠️ 需维护者处理的仓库（移除或归档）",
+                "",
+                "| 项目名称 | 所属分类 | 状态 | 未更新天数 | 建议处理方式 |",
+                "| :--- | :--- | :---: | :---: | :--- |",
+            ]
+        )
+        for r in action_needed:
+            sec_zh = r.get("section_zh") or r["section"]
+            if r["status"] == "DEAD":
+                action = "**立即移除**（404 失效）"
+            elif r["status"] == "ARCHIVED":
+                action = "**标记 `[Archived]`** 或移入归档区"
+            else:
+                action = "**废弃评审**（超过 1 年未更新）"
+            lines.append(
+                f"| [{r['title']}]({r['url']}) | {sec_zh} | `{r['status']}` | {r['days_inactive']} | {action} |"
+            )
+        lines.append("")
+
+    lines.extend(
+        [
+            "## 完整巡检明细表",
+            "",
+            "| 项目名称 | 所属分类 | 健康状态 | 健康分 | Stars | 主语言 | 开源协议 | 最新版本 | 最近推送 |",
+            "| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |",
+        ]
+    )
 
     for r in results:
         status_badge = badge_map.get(r["status"], r["status"])
         days_str = f"{r['days_inactive']}天前" if r["status"] not in ("DEAD", "ERROR", "UNKNOWN") else "N/A"
+        prev = prev_map.get(r["full_name"].lower())
+        star_delta = ""
+        if prev and isinstance(prev.get("stars"), int):
+            diff = r["stars"] - prev["stars"]
+            if diff > 0:
+                star_delta = f" (+{diff})"
+            elif diff < 0:
+                star_delta = f" ({diff})"
         lang = r.get("language") or "-"
         lic = r.get("license") or "-"
         rel = f"`{r['latest_release']}`" if r.get("latest_release") else "-"
         sec_zh = r.get("section_zh") or r["section"]
         lines.append(
             f"| [{r['title']}]({r['url']}) | {sec_zh} | {status_badge} | **{r['health_score']}** | "
-            f"{r['stars']:,} | {lang} | {lic} | {rel} | {days_str} |"
+            f"{r['stars']:,}{star_delta} | {lang} | {lic} | {rel} | {days_str} |"
         )
 
-    lines.append("")
+    lines.extend(
+        [
+            "",
+            "## 健康分计算标准",
+            "",
+            "每个仓库按以下四个维度确定性计算 `0-100` 综合工程健康分：",
+            "- **更新活跃度（45 分）**：距离最近一次代码推送（`pushed_at`）的天数。",
+            "- **社区认可度（25 分）**：GitHub Star 数量对数分档得分。",
+            "- **协议清晰度（15 分）**：是否具备明确的 OSI 标准 SPDX 开源协议。",
+            "- **分发与元数据（15 分）**：仓库简介、Topics 标签、Release 版本发布与 Fork 活跃度。",
+            "",
+        ]
+    )
     content = "\n".join(lines)
     report_file.write_text(content, encoding="utf-8", newline="\n")
     print(f"[+] Chinese health report written to {report_file}")
@@ -743,7 +814,12 @@ def main() -> int:
         status_changes=status_changes,
     )
     if args.report_zh:
-        generate_report_zh(snapshot, args.report_zh)
+        generate_report_zh(
+            snapshot,
+            args.report_zh,
+            previous_snapshot=None if args.from_snapshot else previous_snapshot,
+            status_changes=status_changes,
+        )
 
     if args.fail_on_dead and action_count > 0:
         print(f"[!] {action_count} items need attention. Exiting with non-zero status.")

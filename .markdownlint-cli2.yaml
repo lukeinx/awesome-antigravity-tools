@@ -7,7 +7,6 @@ config:
   MD032: false # blanks around lists
   MD041: false # first line heading
   MD004: false # list style
-  MD051: false # link fragments
   MD022: false # blanks around headings
   MD031: false # blanks around fences
   MD001: false # heading increment

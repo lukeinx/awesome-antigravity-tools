@@ -44,11 +44,10 @@ python scripts/aat_cli.py add \
 
 1. Fork 仓库并创建新分支（`git checkout -b add-my-tool`）。
 2. 在 `data/tools.json` 中添加工具条目。
-3. 执行自动排序、文档生成与严格校验：
+3. 执行自动排序、全量派生产物生成（双语 README、徽章、导出表与网页包）及严格校验：
    ```bash
-   python scripts/validate_catalog.py --fix-order
-   python scripts/generate_docs.py
-   python scripts/validate_catalog.py --check-sync --strict-warnings
+   python scripts/aat_cli.py sync
+   python scripts/aat_cli.py verify --check-sync --strict-warnings
    ```
 4. 提交 Pull Request！
 

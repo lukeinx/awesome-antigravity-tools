@@ -25,7 +25,7 @@
 | [antigravity-cli](https://github.com/google-antigravity/antigravity-cli) | 🚀 Official CLI & SDKs | 🟢 Healthy | **81** | 2,865 | - | - | `1.5.10` | 0d ago |
 | [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | 🚀 Official CLI & SDKs | 🟢 Healthy | **97** | 4,101 | Python | Apache-2.0 | - | 20d ago |
 | [antigravity-link-extension](https://github.com/cafeTechne/antigravity-link-extension) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **76** | 223 | HTML | MIT | `v1.0.20` | 166d ago |
-| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **93** | 33,248 (+1) | Rust | NOASSERTION | `v5.0.3` | 0d ago |
+| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **93** | 33,248 | Rust | NOASSERTION | `v5.0.3` | 0d ago |
 | [antigravity-panel](https://github.com/n2ns/antigravity-panel) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **97** | 857 | TypeScript | Apache-2.0 | `v2.8.5` | 1d ago |
 | [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | 🖥️ IDE Extensions & Cockpits | 🟢 Healthy | **90** | 2,521 | TypeScript | NOASSERTION | `v0.32.1` | 1d ago |
 | [AntigravityQuotaWatcher](https://github.com/wusimpl/AntigravityQuotaWatcher) | 🖥️ IDE Extensions & Cockpits | 🟡 Stale | **62** | 2,249 | TypeScript | MIT | `v1.0.3` | 264d ago |

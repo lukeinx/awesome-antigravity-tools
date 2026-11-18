@@ -43,3 +43,11 @@
 | [antigravity-skill-porter](https://github.com/Pranav-Nexus/antigravity-skill-porter) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **83** | 6 | Python | MIT | `v1.0.1` | 2天前 |
 | [liftgate](https://github.com/acking-you/liftgate) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **84** | 31 | Rust | Apache-2.0 | `v0.2.0` | 0天前 |
 | [refined-antigravity-acp](https://github.com/simonepri/refined-antigravity-acp) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **88** | 21 | TypeScript | MIT | `v1.6.7` | 0天前 |
+
+## 健康分计算标准
+
+每个仓库按以下四个维度确定性计算 `0-100` 综合工程健康分：
+- **更新活跃度（45 分）**：距离最近一次代码推送（`pushed_at`）的天数。
+- **社区认可度（25 分）**：GitHub Star 数量对数分档得分。
+- **协议清晰度（15 分）**：是否具备明确的 OSI 标准 SPDX 开源协议。
+- **分发与元数据（15 分）**：仓库简介、Topics 标签、Release 版本发布与 Fork 活跃度。

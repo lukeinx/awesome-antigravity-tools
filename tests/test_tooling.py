@@ -167,6 +167,19 @@ class TestDocsGenerator(unittest.TestCase):
             )
         )
 
+    def test_github_anchors_match_all_readme_headings(self):
+        import re
+
+        self.assertEqual(generate_docs.github_anchor("🖥️ IDE Extensions & Cockpits"), "\ufe0f-ide-extensions--cockpits")
+        self.assertEqual(generate_docs.github_anchor("🏷️ Badge"), "\ufe0f-badge")
+        for fname in ("README.md", "README.zh-CN.md"):
+            text = (REPO_ROOT / fname).read_text(encoding="utf-8")
+            valid_anchors = {
+                f"#{generate_docs.github_anchor(m.group(1))}" for m in re.finditer(r"^##+\s+(.+)$", text, flags=re.MULTILINE)
+            }
+            for link in re.findall(r"\]\((#[^)]+)\)", text):
+                self.assertIn(link, valid_anchors, f"Broken TOC anchor {link!r} in {fname}")
+
 
 class TestHealthEngineV2(unittest.TestCase):
     def test_health_score_bounds_and_penalties(self):
@@ -264,6 +277,13 @@ class TestHealthEngineV2(unittest.TestCase):
             self.assertTrue(issue_md.exists())
             self.assertIn("(+10)", rep_en.read_text(encoding="utf-8"))
             self.assertIn("Status Transitions Since Last Audit", rep_en.read_text(encoding="utf-8"))
+
+            rep_zh = tmp_path / "report.zh.md"
+            health_check.generate_report_zh(snap, rep_zh, previous_snapshot=prev, status_changes=changes)
+            zh_txt = rep_zh.read_text(encoding="utf-8")
+            self.assertIn("(+10)", zh_txt)
+            self.assertIn("上次巡检以来的状态变更", zh_txt)
+            self.assertIn("需维护者处理的仓库", zh_txt)
 
 
 class TestBadgesAndDiscovery(unittest.TestCase):
@@ -380,6 +400,8 @@ CLI, Hooks
         self.assertEqual(errors, [])
         self.assertEqual(entry["repo"], "acme/gamma-bridge")
         self.assertEqual(entry["category"], "ide-extensions-cockpits")
+        comment = parse_submission.render_triage_comment(entry, errors)
+        self.assertIn("<!-- aat-submission-triage -->", comment)
 
         dup_body = valid_body.replace("acme/gamma-bridge", "acme/alpha-tool")
         _, dup_errors = parse_submission.build_candidate_entry(parse_submission.parse_issue_form(dup_body), cat)

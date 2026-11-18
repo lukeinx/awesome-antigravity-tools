@@ -9,10 +9,14 @@ on:
 permissions:
   contents: write
   issues: write
+  pages: write
+  id-token: write
 
 jobs:
   health-check:
     runs-on: ubuntu-latest
+    outputs:
+      updated: ${{ steps.commit_changes.outputs.updated }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -30,11 +34,8 @@ jobs:
 
       - name: Regenerate Badges, Bilingual Docs, Exports & Web Bundle
         run: |
-          python scripts/generate_badges.py
-          python scripts/generate_docs.py
-          python scripts/export_catalog.py
-          python scripts/build_site.py
-          python scripts/validate_catalog.py --check-sync --strict-warnings
+          python scripts/aat_cli.py sync
+          python scripts/aat_cli.py verify --check-sync --strict-warnings
 
       - name: Manage Health Audit Issue
         env:
@@ -62,6 +63,7 @@ jobs:
           fi
 
       - name: Commit Updated Audit Telemetry & Generated Docs
+        id: commit_changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -70,7 +72,34 @@ jobs:
             docs/catalog-bundle.json docs/feed.xml docs/sitemap.xml docs/robots.txt
           if git diff --staged --quiet; then
             echo "No changes in health audit artifacts."
+            echo "updated=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore(audit): refresh daily telemetry, badges, docs, and web bundle [skip ci]"
             git push
+            echo "updated=true" >> "$GITHUB_OUTPUT"
           fi
+
+  deploy-pages:
+    needs: health-check
+    if: needs.health-check.outputs.updated == 'true'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Updated Main Branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

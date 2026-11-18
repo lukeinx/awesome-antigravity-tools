@@ -2,7 +2,7 @@ name: Automated Tool Submission Triage
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, labeled]
 
 permissions:
   contents: read
@@ -30,12 +30,22 @@ jobs:
           printf '%s' "$ISSUE_BODY" > /tmp/issue_input.md
           python scripts/parse_submission.py --input /tmp/issue_input.md --verify-github --format comment --out /tmp/triage_comment.md || true
 
-      - name: Post Automated Triage Comment
+      - name: Create or Update Automated Triage Comment
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
         run: |
-          if [ -f /tmp/triage_comment.md ]; then
+          if [ ! -f /tmp/triage_comment.md ]; then
+            exit 0
+          fi
+          COMMENT_ID=$(gh api "repos/$REPO/issues/$ISSUE_NUMBER/comments" \
+            --jq '.[] | select(.body | contains("<!-- aat-submission-triage -->")) | .id' | head -n 1)
+          if [ -n "$COMMENT_ID" ]; then
+            echo "[*] Updating existing triage comment #$COMMENT_ID..."
+            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" -F body=@/tmp/triage_comment.md
+          else
+            echo "[*] Posting initial triage comment..."
             gh issue comment "$ISSUE_NUMBER" --body-file /tmp/triage_comment.md
           fi

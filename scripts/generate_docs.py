@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -32,16 +33,13 @@ def load_json(path: Path) -> dict[str, Any] | None:
 
 
 def github_anchor(heading: str) -> str:
-    """Replicate GitHub's heading anchor slugification for ASCII + CJK + emoji."""
+    """Replicate GitHub's exact heading anchor slugification (including U+FE0F marks & CJK)."""
     slug = heading.strip().lower()
-    # Keep word chars (including CJK), spaces, and hyphens; drop emojis & punctuation
-    cleaned = []
-    for ch in slug:
-        if ch.isalnum() or ch in (" ", "-", "_"):
-            cleaned.append(ch)
-    result = "".join(cleaned).strip()
-    result = re.sub(r" ", "-", result)
-    return result
+    allowed_categories = {"Lu", "Ll", "Lt", "Lm", "Lo", "Nd", "Nl", "No", "Mn", "Mc", "Pc"}
+    cleaned = [
+        ch for ch in slug if ch in (" ", "-") or unicodedata.category(ch) in allowed_categories
+    ]
+    return "".join(cleaned).replace(" ", "-")
 
 
 def format_number(n: int) -> str:
@@ -178,11 +176,11 @@ def render_readme_en(catalog: dict[str, Any], snapshot: dict[str, Any] | None) -
         heading = f"{cat['icon']} {cat['name_en']}"
         anchor = github_anchor(heading)
         count = len(grouped.get(cat["id"], []))
-        lines.append(f"- [{cat['name_en']} ({count})](#-{anchor})")
+        lines.append(f"- [{cat['name_en']} ({count})](#{anchor})")
     lines.extend(
         [
-            "- [Badge](#-badge)",
-            "- [Contributing](#-contributing)",
+            f"- [Badge](#{github_anchor('🏷️ Badge')})",
+            f"- [Contributing](#{github_anchor('🤝 Contributing')})",
             "",
             "---",
             "",
@@ -245,10 +243,10 @@ def render_readme_zh(catalog: dict[str, Any], snapshot: dict[str, Any] | None) -
         "# Awesome Antigravity Tools (Antigravity 专有工程工具精选榜) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
         "",
         "[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)",
-        "[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)",
+        "[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.zh-CN.md)",
         f"[![收录工具数](https://img.shields.io/badge/精选收录-{count_msg}-4285F4.svg)](#目录)",
         f"[![每日健康巡检](https://github.com/{repo}/actions/workflows/health-check.yml/badge.svg)](https://github.com/{repo}/actions/workflows/health-check.yml)",
-        f"[![巡检状态](https://img.shields.io/badge/巡检状态-{health_msg}-{ratio_color})](health_report.md)",
+        f"[![巡检状态](https://img.shields.io/badge/巡检状态-{health_msg}-{ratio_color})](health_report.zh-CN.md)",
         "[![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)",
         "",
         "> 纯粹且极致：由 Schema 严格校验的精选目录，只收录 **100% 专为 Google Antigravity 设计研发** 的原生 IDE 扩展、底层系统补丁、运行时热修补与专用工程网关。",
@@ -275,7 +273,7 @@ def render_readme_zh(catalog: dict[str, Any], snapshot: dict[str, Any] | None) -
         avg_disp = f"`{summary['avg_score']}/100`" if summary["avg_score"] is not None else "N/A"
         lines.extend(
             [
-                f"> **生态脉搏**：共收录 `{summary['total']}` 款专有工具（`{len(catalog['categories'])}` 个分类）· 合计 `{stars_disp}` Stars · `{summary['healthy']}/{summary['audited']}` 活跃（`{summary['ratio_pct']:.1f}%`）· 平均健康分：{avg_disp}（[完整巡检报告](health_report.md)）",
+                f"> **生态脉搏**：共收录 `{summary['total']}` 款专有工具（`{len(catalog['categories'])}` 个分类）· 合计 `{stars_disp}` Stars · `{summary['healthy']}/{summary['audited']}` 活跃（`{summary['ratio_pct']:.1f}%`）· 平均健康分：{avg_disp}（[完整巡检报告](health_report.zh-CN.md)）",
                 "",
             ]
         )
@@ -285,11 +283,11 @@ def render_readme_zh(catalog: dict[str, Any], snapshot: dict[str, Any] | None) -
         heading = f"{cat['icon']} {cat['name_zh']}"
         anchor = github_anchor(heading)
         count = len(grouped.get(cat["id"], []))
-        lines.append(f"- [{cat['icon']} {cat['name_zh']} ({count})](#-{anchor})")
+        lines.append(f"- [{cat['icon']} {cat['name_zh']} ({count})](#{anchor})")
     lines.extend(
         [
-            "- [🏷️ 项目徽章 (Badge)](#️-项目徽章-badge)",
-            "- [🤝 参与贡献](#-参与贡献)",
+            f"- [🏷️ 项目徽章 (Badge)](#{github_anchor('🏷️ 项目徽章 (Badge)')})",
+            f"- [🤝 参与贡献](#{github_anchor('🤝 参与贡献')})",
             "",
             "---",
             "",

@@ -287,17 +287,56 @@ def cmd_add(args: argparse.Namespace) -> int:
     print(f"[+] Added '{name}' ({repo}) to {args.catalog}")
 
     if args.sync_docs:
-        snapshot = generate_docs.load_json(args.snapshot)
-        generate_docs.write_or_check(
-            REPO_ROOT / "README.md", generate_docs.render_readme_en(catalog, snapshot), check_only=False
-        )
-        generate_docs.write_or_check(
-            REPO_ROOT / "README.zh-CN.md", generate_docs.render_readme_zh(catalog, snapshot), check_only=False
-        )
+        return sync_all_derived_artifacts(args.catalog, args.snapshot)
     return 0
 
 
+def sync_all_derived_artifacts(catalog_path: Path, snapshot_path: Path) -> int:
+    import build_site
+    import export_catalog
+    import generate_badges
+    import generate_docs
+    import validate_catalog
+
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    catalog = validate_catalog.sort_catalog_tools(catalog)
+    catalog_path.write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+
+    snapshot = generate_docs.load_json(snapshot_path)
+
+    # 1. Badges
+    badges = generate_badges.build_badges(catalog, snapshot)
+    badges_dir = REPO_ROOT / "data" / "badges"
+    badges_dir.mkdir(parents=True, exist_ok=True)
+    for fname, payload in badges.items():
+        (badges_dir / fname).write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
+        )
+
+    # 2. Bilingual READMEs
+    generate_docs.write_or_check(
+        REPO_ROOT / "README.md", generate_docs.render_readme_en(catalog, snapshot), check_only=False
+    )
+    generate_docs.write_or_check(
+        REPO_ROOT / "README.zh-CN.md", generate_docs.render_readme_zh(catalog, snapshot), check_only=False
+    )
+
+    # 3. Exports (COMPARISON.md, CSV, JSON-LD) & 4. Site Bundle + Feeds
+    old_argv = sys.argv
+    try:
+        sys.argv = ["export_catalog.py", "--catalog", str(catalog_path), "--snapshot", str(snapshot_path)]
+        rc_exp = export_catalog.main()
+        sys.argv = ["build_site.py", "--catalog", str(catalog_path), "--snapshot", str(snapshot_path)]
+        rc_site = build_site.main()
+    finally:
+        sys.argv = old_argv
+
+    return 0 if (rc_exp == 0 and rc_site == 0) else 1
+
+
 def cmd_verify(args: argparse.Namespace) -> int:
+    import build_site
+    import export_catalog
     import validate_catalog
 
     argv = ["--catalog", str(args.catalog)]
@@ -308,7 +347,16 @@ def cmd_verify(args: argparse.Namespace) -> int:
     old_argv = sys.argv
     try:
         sys.argv = ["validate_catalog.py", *argv]
-        return validate_catalog.main()
+        rc_val = validate_catalog.main()
+        if rc_val != 0 or not args.check_sync:
+            return rc_val
+        if args.catalog.resolve() == DEFAULT_CATALOG.resolve():
+            sys.argv = ["build_site.py", "--check"]
+            rc_site = build_site.main()
+            sys.argv = ["export_catalog.py", "--check"]
+            rc_exp = export_catalog.main()
+            return 0 if (rc_site == 0 and rc_exp == 0) else 1
+        return 0
     finally:
         sys.argv = old_argv
 
@@ -362,9 +410,11 @@ def build_parser() -> argparse.ArgumentParser:
     p_add.add_argument("--install-hint", default="")
     p_add.add_argument("--added-at", default="")
     p_add.add_argument("--featured", action="store_true")
-    p_add.add_argument("--sync-docs", action="store_true", help="Regenerate README.md and README.zh-CN.md")
+    p_add.add_argument("--sync-docs", action="store_true", help="Regenerate READMEs, badges, exports, and web bundle")
 
-    p_verify = sub.add_parser("verify", help="Validate catalog schema and optional README sync")
+    sub.add_parser("sync", help="Canonicalize catalog order and regenerate all derived docs, badges, exports, and site bundle")
+
+    p_verify = sub.add_parser("verify", help="Validate catalog schema and optional full artifact sync")
     p_verify.add_argument("--check-sync", action="store_true")
     p_verify.add_argument("--strict-warnings", action="store_true")
 
@@ -384,6 +434,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_stats(args)
     if args.command == "add":
         return cmd_add(args)
+    if args.command == "sync":
+        return sync_all_derived_artifacts(args.catalog, args.snapshot)
     if args.command == "verify":
         return cmd_verify(args)
     return 1

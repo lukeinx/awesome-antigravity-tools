@@ -33,10 +33,10 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 ## Contents
 
 - [Official CLI & SDKs (2)](#-official-cli--sdks)
-- [IDE Extensions & Cockpits (6)](#-ide-extensions--cockpits)
+- [IDE Extensions & Cockpits (6)](#️-ide-extensions--cockpits)
 - [Platform Fixes & Runtime Patches (7)](#-platform-fixes--runtime-patches)
 - [Dedicated Gateways, ACP Adapters & Migration Tooling (6)](#-dedicated-gateways-acp-adapters--migration-tooling)
-- [Badge](#-badge)
+- [Badge](#️-badge)
 - [Contributing](#-contributing)
 
 ---

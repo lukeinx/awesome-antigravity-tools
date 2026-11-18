@@ -11,10 +11,16 @@ license = { file = "LICENSE" }
 requires-python = ">=3.10"
 dependencies = []
 
+[project.scripts]
+aat = "scripts.aat_cli:main"
+
 [project.urls]
 Homepage = "https://wllzhang.github.io/awesome-antigravity-tools/"
 Repository = "https://github.com/wllzhang/awesome-antigravity-tools"
 Issues = "https://github.com/wllzhang/awesome-antigravity-tools/issues"
+
+[tool.setuptools]
+packages = ["scripts"]
 
 [tool.ruff]
 line-length = 120

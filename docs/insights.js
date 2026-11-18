@@ -33,10 +33,12 @@ function renderBarList(title, items, maxVal) {
 
 export function renderInsightsPanel(mountEl, bundle, lang) {
   if (!mountEl || !bundle) return;
+  const wasOpen = mountEl.querySelector(".insights-details")?.open ?? false;
   mountEl.hidden = false;
   mountEl.textContent = "";
 
   const details = el("details", "insights-details");
+  details.open = wasOpen;
   const summary = el(
     "summary",
     "insights-summary",

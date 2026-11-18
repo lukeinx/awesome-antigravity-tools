@@ -180,7 +180,7 @@ def render_triage_comment(
         if passed
         else "### ⚠️ Automated Submission Triage: Action Needed"
     )
-    lines = [header, ""]
+    lines = ["<!-- aat-submission-triage -->", header, ""]
 
     if errors:
         lines.append("**Validation Issues Found:**")
@@ -207,7 +207,7 @@ def render_triage_comment(
                 json.dumps(entry, indent=2, ensure_ascii=False),
                 "```",
                 "",
-                "> Maintainers can copy this entry into `data/tools.json` and run `python scripts/validate_catalog.py --fix-order && python scripts/generate_docs.py`.",
+                "> Maintainers can copy this entry into `data/tools.json` and run `python scripts/aat_cli.py sync`.",
             ]
         )
     return "\n".join(lines) + "\n"

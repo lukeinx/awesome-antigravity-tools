@@ -5,6 +5,7 @@ Verification tests for generated docs/ site bundle, RSS/XML feeds, and HTML/CSS 
 from __future__ import annotations
 
 import json
+import re
 import sys
 import unittest
 import xml.etree.ElementTree as ET
@@ -80,6 +81,23 @@ class TestSiteArtifacts(unittest.TestCase):
 
         csv_lines = (REPO_ROOT / "data" / "exports" / "tools.csv").read_text(encoding="utf-8").strip().splitlines()
         self.assertEqual(len(csv_lines), len(catalog["tools"]) + 1)
+
+    def test_dom_ids_and_i18n_keys_complete(self):
+        html = (DOCS_DIR / "index.html").read_text(encoding="utf-8")
+        app = (DOCS_DIR / "app.js").read_text(encoding="utf-8")
+
+        html_ids = set(re.findall(r'\bid="([^"]+)"', html))
+        js_ids = set(re.findall(r'getElementById\("([^"]+)"\)', app))
+        self.assertEqual(js_ids - html_ids, set(), f"Missing HTML IDs: {js_ids - html_ids}")
+
+        i18n_attrs = set(re.findall(r'data-i18n="([^"]+)"', html))
+        en_block = re.search(r"en:\s*\{([\s\S]*?)\},\s*zh:", app)
+        zh_block = re.search(r"zh:\s*\{([\s\S]*?)\}\s*,?\s*\};", app)
+        assert en_block and zh_block
+        en_keys = set(re.findall(r"^\s*([A-Za-z0-9_]+):", en_block.group(1), flags=re.MULTILINE))
+        zh_keys = set(re.findall(r"^\s*([A-Za-z0-9_]+):", zh_block.group(1), flags=re.MULTILINE))
+        self.assertEqual(i18n_attrs - en_keys, set(), f"Missing I18N.en keys: {i18n_attrs - en_keys}")
+        self.assertEqual(i18n_attrs - zh_keys, set(), f"Missing I18N.zh keys: {i18n_attrs - zh_keys}")
 
 
 if __name__ == "__main__":

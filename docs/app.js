@@ -26,6 +26,10 @@ const I18N = {
     sortScore: "Health Score",
     sortRecent: "Recently Updated",
     sortName: "Alphabetical (A-Z)",
+    searchLabel: "Search tools",
+    platformLabel: "Filter by platform",
+    statusLabel: "Filter by health status",
+    sortLabel: "Sort tools",
     searchPlaceholder: "Search tools, tags, languages, ACP, quota... (Press /)",
     resetFilters: "Reset filters",
     emptyMessage: "No Antigravity-exclusive tools matched your current filters.",
@@ -61,6 +65,10 @@ const I18N = {
     sortScore: "按健康分排序",
     sortRecent: "按最近更新",
     sortName: "按名称 A-Z",
+    searchLabel: "搜索工具",
+    platformLabel: "按平台筛选",
+    statusLabel: "按健康状态筛选",
+    sortLabel: "工具排序",
     searchPlaceholder: "搜索工具名、标签、语言、ACP、配额... (按 / 聚焦)",
     resetFilters: "重置筛选",
     emptyMessage: "当前筛选条件下未找到匹配的 Antigravity 专有工具。",
@@ -118,6 +126,8 @@ const els = {
   statActiveRatio: document.getElementById("statActiveRatio"),
   statAvgScore: document.getElementById("statAvgScore"),
   lastUpdatedText: document.getElementById("lastUpdatedText"),
+  footerContributeLink: document.getElementById("footerContributeLink"),
+  footerReportLink: document.getElementById("footerReportLink"),
 };
 
 function t(key) {
@@ -201,6 +211,18 @@ function applyI18n() {
   }
   els.searchInput.placeholder = t("searchPlaceholder");
   els.langToggle.textContent = t("langToggle");
+  if (els.footerContributeLink) {
+    els.footerContributeLink.href =
+      state.lang === "zh"
+        ? "https://github.com/wllzhang/awesome-antigravity-tools/blob/main/CONTRIBUTING.zh-CN.md"
+        : "https://github.com/wllzhang/awesome-antigravity-tools/blob/main/CONTRIBUTING.md";
+  }
+  if (els.footerReportLink) {
+    els.footerReportLink.href =
+      state.lang === "zh"
+        ? "https://github.com/wllzhang/awesome-antigravity-tools/blob/main/health_report.zh-CN.md"
+        : "https://github.com/wllzhang/awesome-antigravity-tools/blob/main/health_report.md";
+  }
 }
 
 function renderSummary() {
@@ -329,6 +351,7 @@ function openToolDialog(tool) {
 }
 
 function renderToolsGrid() {
+  state.focusedIndex = -1;
   const visible = filterAndSortTools(state.bundle.tools, state);
   els.toolsGrid.textContent = "";
 
