@@ -31,8 +31,8 @@
       "icon": "🔌",
       "name_en": "Dedicated Gateways, ACP Adapters & Migration Tooling",
       "name_zh": "专用网关、ACP 适配器与迁移工具",
-      "description_en": "Engineering utilities specifically built around the official Antigravity Agent Client Protocol (`agy acp`) and native plugin specifications (`plugin.json`).",
-      "description_zh": "严格围绕 Antigravity 官方核心协议（`agy acp`）与原生插件规范（`plugin.json`）打造的高性能工程工具。"
+      "description_en": "Engineering utilities built around the official Antigravity Agent Client Protocol (`agy acp`), native plugin specifications (`plugin.json`), and companion Google AI (Flow) media API gateways.",
+      "description_zh": "围绕 Antigravity 官方核心协议（`agy acp`）、原生插件规范（`plugin.json`）以及 Google AI（Flow）生态配套媒体网关打造的高性能工程工具。"
     }
   ],
   "tools": [
@@ -81,28 +81,6 @@
       "install_hint": "pip install antigravity-sdk (check repo README for exact package name)",
       "added_at": "2026-11-18",
       "featured": true
-    },
-    {
-      "id": "antigravity-link-extension",
-      "name": "antigravity-link-extension",
-      "repo": "cafeTechne/antigravity-link-extension",
-      "url": "https://github.com/cafeTechne/antigravity-link-extension",
-      "category": "ide-extensions-cockpits",
-      "description_en": "Mobile companion extension specifically mirroring Antigravity IDE sessions to phone with emergency stop triggers and 9 MCP tools.",
-      "description_zh": "专为 Antigravity IDE 打造的手机伴侣扩展，实时镜像会话进度，支持手机端紧急终止并提供 9 种 MCP 工具操作。",
-      "exclusivity_reason_en": "Built exclusively to mirror Antigravity IDE session state and expose emergency stop hooks over Antigravity's extension API.",
-      "exclusivity_reason_zh": "专为 Antigravity IDE 会话镜像与移动端紧急终止控制研发。",
-      "platforms": [
-        "Antigravity IDE",
-        "Mobile"
-      ],
-      "tags": [
-        "Mobile",
-        "Antigravity-IDE",
-        "MCP"
-      ],
-      "install_hint": "Install from GitHub Releases or package VSIX for Antigravity IDE",
-      "added_at": "2026-11-17"
     },
     {
       "id": "antigravity-manager",
@@ -174,28 +152,6 @@
       "added_at": "2026-11-18"
     },
     {
-      "id": "antigravity-quota-watcher",
-      "name": "AntigravityQuotaWatcher",
-      "repo": "wusimpl/AntigravityQuotaWatcher",
-      "url": "https://github.com/wusimpl/AntigravityQuotaWatcher",
-      "category": "ide-extensions-cockpits",
-      "description_en": "VS Code extension for continuous monitoring and status bar alerts of Antigravity AI model quotas.",
-      "description_zh": "长期维护的高星 Antigravity AI 模型配额观察与状态栏提示插件。",
-      "exclusivity_reason_en": "Queries Antigravity's local language server quota telemetry directly for status bar alerting.",
-      "exclusivity_reason_zh": "直接读取 Antigravity 本地语言服务器的模型配额状态并在状态栏预警。",
-      "platforms": [
-        "VS Code",
-        "Antigravity IDE"
-      ],
-      "tags": [
-        "VS Code",
-        "IDE",
-        "Quota"
-      ],
-      "install_hint": "Install VSIX from GitHub Releases or Open VSX",
-      "added_at": "2026-11-17"
-    },
-    {
       "id": "vscode-antigravity-cockpit",
       "name": "vscode-antigravity-cockpit",
       "repo": "jlcodes99/vscode-antigravity-cockpit",
@@ -241,28 +197,6 @@
       ],
       "install_hint": "Run localization script per repository README",
       "added_at": "2026-11-18"
-    },
-    {
-      "id": "antigravity-conversation-fix",
-      "name": "antigravity-conversation-fix",
-      "repo": "FutureisinPast/antigravity-conversation-fix",
-      "url": "https://github.com/FutureisinPast/antigravity-conversation-fix",
-      "category": "platform-fixes-runtime-patches",
-      "description_en": "Repairs corrupted Antigravity session databases, missing threads, and out-of-order conversation history.",
-      "description_zh": "修复 Antigravity 会话数据损坏、历史乱序与线程丢失的专用修复工具。",
-      "exclusivity_reason_en": "Operates specifically on Antigravity's internal conversation storage schema to recover damaged threads.",
-      "exclusivity_reason_zh": "针对 Antigravity 内部会话存储格式进行损坏检测与历史重建。",
-      "platforms": [
-        "Cross-Platform",
-        "Antigravity IDE"
-      ],
-      "tags": [
-        "IDE",
-        "Fix",
-        "Recovery"
-      ],
-      "install_hint": "Clone repository and run recovery script against Antigravity storage",
-      "added_at": "2026-11-17"
     },
     {
       "id": "antigravity-fixer",
@@ -334,28 +268,6 @@
       "featured": true
     },
     {
-      "id": "antigravity-bypass",
-      "name": "antigravity_bypass",
-      "repo": "Futureppo/antigravity_bypass",
-      "url": "https://github.com/Futureppo/antigravity_bypass",
-      "category": "platform-fixes-runtime-patches",
-      "description_en": "Runtime patch raising local MCP tool limits to 8192 in Antigravity IDE and Windows desktop client with automated backup and restore.",
-      "description_zh": "底层限制解除补丁，将 Antigravity IDE 本地 MCP 工具数量上限安全提升至 8192，带自动备份与一键还原。",
-      "exclusivity_reason_en": "Patches Antigravity's hardcoded MCP tool registration cap directly inside its runtime bundle.",
-      "exclusivity_reason_zh": "直接修补 Antigravity 客户端内置的 MCP 工具注册数量硬上限。",
-      "platforms": [
-        "Windows",
-        "Antigravity IDE"
-      ],
-      "tags": [
-        "Windows",
-        "Patch",
-        "MCP"
-      ],
-      "install_hint": "Follow backup and patch instructions in repository README",
-      "added_at": "2026-11-17"
-    },
-    {
       "id": "vscode-antigravity-backend-fix",
       "name": "vscode-antigravity-backend-fix",
       "repo": "HeshamNoaman/vscode-antigravity-backend-fix",
@@ -399,27 +311,6 @@
       "added_at": "2026-11-18"
     },
     {
-      "id": "agy-acp",
-      "name": "agy-acp",
-      "repo": "shindgew/agy-acp",
-      "url": "https://github.com/shindgew/agy-acp",
-      "category": "dedicated-gateways-migration",
-      "description_en": "Apache-2.0 Agent Client Protocol adapter wrapping the official Google Antigravity CLI (`agy`) for ACP-compatible editors.",
-      "description_zh": "Apache-2.0 协议的 Agent Client Protocol 适配器，将官方 `agy` CLI 接入各类支持 ACP 的编辑器。",
-      "exclusivity_reason_en": "Dedicated ACP protocol wrapper specifically targeting the `agy` CLI command surface.",
-      "exclusivity_reason_zh": "专门封装 Google Antigravity `agy` CLI 的 ACP 协议适配层。",
-      "platforms": [
-        "Cross-Platform"
-      ],
-      "tags": [
-        "TypeScript",
-        "ACP",
-        "Adapter"
-      ],
-      "install_hint": "Install via npm/npx per repository README",
-      "added_at": "2026-11-18"
-    },
-    {
       "id": "antigravity-acp",
       "name": "antigravity-acp",
       "repo": "shubzkothekar/antigravity-acp",
@@ -460,6 +351,29 @@
       ],
       "install_hint": "Install CLI per repository README",
       "added_at": "2026-11-17"
+    },
+    {
+      "id": "flow2api",
+      "name": "flow2api",
+      "repo": "TheSmallHanCat/flow2api",
+      "url": "https://github.com/TheSmallHanCat/flow2api",
+      "category": "dedicated-gateways-migration",
+      "description_en": "OpenAI and Gemini compatible API gateway for Google Flow (Veo 3.1, Nano Banana, and Omni) featuring multi-account pooling, automatic cookie refresh, and proxy support.",
+      "description_zh": "面向 Google Flow（Veo 3.1、Nano Banana 与 Omni）的 OpenAI 与 Gemini 兼容 API 网关，支持多账号池负载均衡、Cookie 自动刷新、代理与 Web 管理后台。",
+      "exclusivity_reason_en": "Companion Google AI Pro/Ultra media gateway exposing Google Flow image and video generation alongside Antigravity workflows over OpenAI/Gemini APIs.",
+      "exclusivity_reason_zh": "Google AI Pro/Ultra 同订阅生态配套媒体网关，将 Google Flow 生图与视频能力以 OpenAI/Gemini 标准接口接入 Antigravity 工作流。",
+      "platforms": [
+        "Cross-Platform",
+        "Web"
+      ],
+      "tags": [
+        "Python",
+        "Docker",
+        "Google-Flow",
+        "Gateway"
+      ],
+      "install_hint": "Run via Docker Compose or Python 3.8+ per repository README",
+      "added_at": "2026-11-19"
     },
     {
       "id": "liftgate",

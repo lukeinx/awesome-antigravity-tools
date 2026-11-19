@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.zh-CN.md)
-[![收录工具数](https://img.shields.io/badge/精选收录-21%20%E4%B8%AA%E5%B7%A5%E5%85%B7-4285F4.svg)](#目录)
+[![收录工具数](https://img.shields.io/badge/精选收录-17%20%E4%B8%AA%E5%B7%A5%E5%85%B7-4285F4.svg)](#目录)
 [![每日健康巡检](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
-[![巡检状态](https://img.shields.io/badge/巡检状态-20/21%20%E6%B4%BB%E8%B7%83%20%2895%25%29-brightgreen)](health_report.zh-CN.md)
+[![巡检状态](https://img.shields.io/badge/巡检状态-17/17%20%E6%B4%BB%E8%B7%83%20%28100%25%29-brightgreen)](health_report.zh-CN.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
 
 > 纯粹且极致：由 Schema 严格校验的精选目录，只收录 **100% 专为 Google Antigravity 设计研发** 的原生 IDE 扩展、底层系统补丁、运行时热修补与专用工程网关。
@@ -26,15 +26,15 @@
 - 正面攻克 Antigravity 运行时的特定缺陷、系统级死锁或配额盲区；
 - 由统一数据源 `data/tools.json` 驱动，每日自动执行健康度与活性巡检（`scripts/health-check.py`）。
 
-> **生态脉搏**：共收录 `21` 款专有工具（`4` 个分类）· 合计 `59.2k` Stars · `20/21` 活跃（`95.2%`）· 平均健康分：`85.1/100`（[完整巡检报告](health_report.zh-CN.md)）
+> **生态脉搏**：共收录 `17` 款专有工具（`4` 个分类）· 合计 `58.9k` Stars · `17/17` 活跃（`100.0%`）· 平均健康分：`88.6/100`（[完整巡检报告](health_report.zh-CN.md)）
 
 ---
 
 ## 目录
 
 - [🚀 官方 CLI 与开发套件 (2)](#-官方-cli-与开发套件)
-- [🖥️ IDE 扩展与专属控制台 (6)](#️-ide-扩展与专属控制台)
-- [🔧 平台补丁与底层运行时修复 (7)](#-平台补丁与底层运行时修复)
+- [🖥️ IDE 扩展与专属控制台 (4)](#️-ide-扩展与专属控制台)
+- [🔧 平台补丁与底层运行时修复 (5)](#-平台补丁与底层运行时修复)
 - [🔌 专用网关、ACP 适配器与迁移工具 (6)](#-专用网关acp-适配器与迁移工具)
 - [🏷️ 项目徽章 (Badge)](#️-项目徽章-badge)
 - [🤝 参与贡献](#-参与贡献)
@@ -54,11 +54,9 @@
 
 专为 Antigravity 模型配额监控、状态栏倒计时与账号管理打造的桌面应用与扩展。
 
-- [antigravity-link-extension](https://github.com/cafeTechne/antigravity-link-extension) - 专为 Antigravity IDE 打造的手机伴侣扩展，实时镜像会话进度，支持手机端紧急终止并提供 9 种 MCP 工具操作。 `Mobile` `Antigravity-IDE` `MCP`
 - [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) - 基于 Rust (Tauri v2) + React 构建的桌面级 Antigravity 账号管理与一键切换工具。 `Desktop` `Rust` `Tauri`
 - [antigravity-panel](https://github.com/n2ns/antigravity-panel) - 专为 Google Antigravity IDE 打造的配额监控与缓存管理面板，支持多模型额度、周限额与趋势统计。 `VS Code` `TypeScript` `Quota`
 - [AntigravityManager](https://github.com/Draculabo/AntigravityManager) - 面向 Antigravity Classic、Antigravity IDE 与 `agy` CLI 的多客户端账号管理桌面端，支持实时配额查看与无缝切换。 `Desktop` `TypeScript` `Quota`
-- [AntigravityQuotaWatcher](https://github.com/wusimpl/AntigravityQuotaWatcher) - 长期维护的高星 Antigravity AI 模型配额观察与状态栏提示插件。 `VS Code` `IDE` `Quota`
 - [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) - Antigravity 标杆级 VS Code 扩展，支持多模型配额实时监控、状态栏倒计时提示、多模型置顶及模型能力 HUD。 `VS Code` `TypeScript` `HUD`
 
 ---
@@ -68,23 +66,21 @@
 正面攻克 Antigravity 官方客户端特定缺陷、汉化注入、无 TUN 代理、符号链接失效与进程死锁的底层工具。
 
 - [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) - MIT 开源协议的 Antigravity IDE 一键中文汉化工具包，精准覆盖客户端界面与菜单词条。 `Localization` `JavaScript` `Patch`
-- [antigravity-conversation-fix](https://github.com/FutureisinPast/antigravity-conversation-fix) - 修复 Antigravity 会话数据损坏、历史乱序与线程丢失的专用修复工具。 `IDE` `Fix` `Recovery`
 - [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) - 针对 Google Antigravity「not eligible」账号资格报错的一键诊断、凭证清理与自动修复工具。 `Python` `Fix` `Diagnostics`
 - [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - 零磁盘占用 NTFS 硬链接目录桥接工具，彻底解决 Antigravity Go Language Server 无法加载 Windows 目录联接 (`mklink /J`) 与符号链接 (`mklink /D`) 的硬伤问题。 `Windows` `PowerShell` `NTFS`
 - [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) - 专为 Antigravity 打造的 Windows 免 TUN 强制代理工具，基于 DLL 注入实现进程级 SOCKS5/HTTP 流量转发。 `Windows` `C++` `Proxy`
-- [antigravity_bypass](https://github.com/Futureppo/antigravity_bypass) - 底层限制解除补丁，将 Antigravity IDE 本地 MCP 工具数量上限安全提升至 8192，带自动备份与一键还原。 `Windows` `Patch` `MCP`
 - [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) - 官方 VS Code 插件热修补工具，彻底解决 Windows Defender 超时引发的每次启动重复下载 ~202MB `agy.exe` 的网络拥堵与进程锁死问题。 `Windows` `Node.js` `PowerShell`
 
 ---
 
 ## 🔌 专用网关、ACP 适配器与迁移工具
 
-严格围绕 Antigravity 官方核心协议（`agy acp`）与原生插件规范（`plugin.json`）打造的高性能工程工具。
+围绕 Antigravity 官方核心协议（`agy acp`）、原生插件规范（`plugin.json`）以及 Google AI（Flow）生态配套媒体网关打造的高性能工程工具。
 
 - [ACP-Ant](https://github.com/czg86389-hub/ACP-Ant) - 基于 Google 官方 Antigravity CLI ACP 协议构建的 OpenAI/Anthropic 兼容 API 服务，支持多账号独立代理与工具调用。 `Python` `ACP` `Gateway`
-- [agy-acp](https://github.com/shindgew/agy-acp) - Apache-2.0 协议的 Agent Client Protocol 适配器，将官方 `agy` CLI 接入各类支持 ACP 的编辑器。 `TypeScript` `ACP` `Adapter`
 - [antigravity-acp](https://github.com/shubzkothekar/antigravity-acp) - 基于 Bun 构建的 Google Antigravity `agy` CLI ACP 服务端，支持实时流式输出与会话历史回放。 `TypeScript` `Bun` `ACP`
 - [antigravity-skill-porter](https://github.com/Pranav-Nexus/antigravity-skill-porter) - 专门用于将外部技能代码适配并打包为规范 Antigravity 原生插件（自动补全 `plugin.json` 与生命周期配置）的转换脚手架。 `CLI` `Converter` `Plugin`
+- [flow2api](https://github.com/TheSmallHanCat/flow2api) - 面向 Google Flow（Veo 3.1、Nano Banana 与 Omni）的 OpenAI 与 Gemini 兼容 API 网关，支持多账号池负载均衡、Cookie 自动刷新、代理与 Web 管理后台。 `Python` `Docker` `Google-Flow` `Gateway`
 - [liftgate](https://github.com/acking-you/liftgate) - 专为 Antigravity 官方 `agy acp`（Agent Client Protocol）通道构建的原生 API 网关与 GPUI 桌面控制中心，免除任何账号池与封号风险。 `Rust` `GPUI` `Gateway`
 - [refined-antigravity-acp](https://github.com/simonepri/refined-antigravity-acp) - 开箱即用的 Google Antigravity ACP 协议增强封装二进制，修复第三方 ACP 客户端接入时的兼容性边界问题。 `TypeScript` `ACP` `Wrapper`
 

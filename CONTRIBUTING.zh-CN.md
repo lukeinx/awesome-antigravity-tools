@@ -12,7 +12,7 @@
 - **官方 CLI 与开发套件**：`google-antigravity` 官方维护的命令行工具与语言 SDK。
 - **IDE 扩展与专属控制台**：专为 Antigravity 配额监控、状态栏 HUD、账号切换打造的扩展与桌面端应用。
 - **平台补丁与底层运行时修复**：解决 Antigravity 客户端缺陷、NTFS 符号链接失效、汉化注入、无 TUN 代理或会话损坏修复的底层工具。
-- **专用网关、ACP 适配器与迁移工具**：严格基于官方 `agy acp` 协议或原生 `plugin.json` 插件规范研发的工具。
+- **专用网关、ACP 适配器与迁移工具**：围绕官方 `agy acp` 协议、原生 `plugin.json` 插件规范以及 Google AI（Flow）生态配套媒体网关研发的工具。
 
 ### ❌ 明确拒绝
 - **纯 Markdown 提示词合集（`SKILL.md`）**：无实际可执行代码或工程封装。

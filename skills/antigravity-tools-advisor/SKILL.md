@@ -1,6 +1,6 @@
 ---
 name: antigravity-tools-advisor
-description: Search, compare, and recommend verified 100% Google Antigravity-exclusive tools (quota HUDs, Windows runtime fixes, proxy injectors, ACP gateways, official CLI/SDKs) from the awesome-antigravity-tools catalog. Trigger when the user asks for Antigravity extensions, quota monitors, Windows/NTFS/Defender/proxy/conversation fixes, ACP adapters, or wants to verify/submit a tool to awesome-antigravity-tools.
+description: Search, compare, and recommend verified 100% Google Antigravity-exclusive tools (quota HUDs, Windows runtime fixes, proxy injectors, ACP gateways, official CLI/SDKs) from the awesome-antigravity-tools catalog. Trigger when the user asks for Antigravity extensions, quota monitors, Windows/NTFS/Defender/proxy/login fixes, ACP adapters, or wants to verify/submit a tool to awesome-antigravity-tools.
 ---
 
 # Antigravity Tools Advisor
@@ -28,11 +28,10 @@ When diagnosing common Google Antigravity environment issues, query the catalog 
 1. **Windows skill discovery fails for `mklink /J` or `mklink /D` links**: Recommend `antigravity-junction-skill-fix`.
 2. **VS Code official extension keeps re-downloading ~202 MB `agy.exe` (Windows Defender timeout)**: Recommend `vscode-antigravity-backend-fix`.
 3. **Antigravity ignores system proxy without TUN mode on Windows**: Recommend `antigravity-proxy`.
-4. **Local MCP tool count hits cap**: Recommend `antigravity_bypass`.
-5. **Corrupted or out-of-order conversation history**: Recommend `antigravity-conversation-fix`.
-6. **"Not eligible" sign-in / credential cache error**: Recommend `antigravity-fixer`.
-7. **Quota HUDs, status bar countdowns, and account switching**: Compare `vscode-antigravity-cockpit`, `antigravity-panel`, `Antigravity-Manager`, `AntigravityManager`, and `AntigravityQuotaWatcher` (note `AntigravityQuotaWatcher` staleness if >180d).
-8. **Expose `agy acp` as OpenAI/Anthropic API or ACP server**: Compare `liftgate`, `ACP-Ant`, `antigravity-acp`, `agy-acp`, and `refined-antigravity-acp`.
+4. **"Not eligible" sign-in / credential cache error**: Recommend `antigravity-fixer`.
+5. **Quota HUDs, status bar countdowns, and account switching**: Compare `vscode-antigravity-cockpit`, `antigravity-panel`, `Antigravity-Manager`, and `AntigravityManager`.
+6. **Expose `agy acp` as OpenAI/Anthropic API or ACP server**: Compare `liftgate`, `ACP-Ant`, `antigravity-acp`, and `refined-antigravity-acp`.
+7. **Google Flow image/video generation (Veo 3.1, Nano Banana, Omni) over OpenAI/Gemini APIs**: Recommend `flow2api`.
 
 ## Output Rules
 

@@ -1,27 +1,26 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-18T10:27:53Z",
+  "generated_at": "2026-11-19T09:52:33Z",
   "repository": "wllzhang/awesome-antigravity-tools",
   "site_url": "https://wllzhang.github.io/awesome-antigravity-tools/",
   "summary": {
-    "total_tools": 21,
+    "total_tools": 17,
     "total_categories": 4,
-    "healthy_tools": 20,
-    "health_ratio_pct": 95.2,
-    "total_stars": 59207,
-    "total_forks": 6684,
-    "average_health_score": 85.1,
+    "healthy_tools": 17,
+    "health_ratio_pct": 100.0,
+    "total_stars": 58900,
+    "total_forks": 7175,
+    "average_health_score": 88.6,
     "by_status": {
-      "HEALTHY": 20,
-      "STALE": 1
+      "HEALTHY": 17
     },
     "by_language": [
       {
-        "name": "TypeScript",
-        "count": 7
+        "name": "Python",
+        "count": 5
       },
       {
-        "name": "Python",
+        "name": "TypeScript",
         "count": 5
       },
       {
@@ -37,34 +36,18 @@
         "count": 1
       },
       {
-        "name": "HTML",
-        "count": 1
-      },
-      {
         "name": "PowerShell",
         "count": 1
       },
       {
         "name": "C++",
         "count": 1
-      },
-      {
-        "name": "Go",
-        "count": 1
       }
     ],
     "by_platform": [
       {
         "name": "Windows",
-        "count": 10
-      },
-      {
-        "name": "Antigravity IDE",
         "count": 9
-      },
-      {
-        "name": "Cross-Platform",
-        "count": 7
       },
       {
         "name": "macOS",
@@ -75,37 +58,41 @@
         "count": 6
       },
       {
-        "name": "VS Code",
-        "count": 4
+        "name": "Cross-Platform",
+        "count": 6
       },
       {
-        "name": "Mobile",
+        "name": "Antigravity IDE",
+        "count": 5
+      },
+      {
+        "name": "VS Code",
+        "count": 3
+      },
+      {
+        "name": "Web",
         "count": 1
       }
     ],
     "top_tags": [
       {
         "name": "TypeScript",
-        "count": 6
-      },
-      {
-        "name": "Windows",
-        "count": 4
-      },
-      {
-        "name": "ACP",
-        "count": 4
+        "count": 5
       },
       {
         "name": "Python",
+        "count": 4
+      },
+      {
+        "name": "Windows",
         "count": 3
       },
       {
-        "name": "VS Code",
+        "name": "ACP",
         "count": 3
       },
       {
-        "name": "Quota",
+        "name": "Gateway",
         "count": 3
       },
       {
@@ -117,10 +104,6 @@
         "count": 2
       },
       {
-        "name": "MCP",
-        "count": 2
-      },
-      {
         "name": "Desktop",
         "count": 2
       },
@@ -129,20 +112,28 @@
         "count": 2
       },
       {
-        "name": "IDE",
+        "name": "VS Code",
         "count": 2
       },
       {
-        "name": "Patch",
-        "count": 2
-      },
-      {
-        "name": "Fix",
+        "name": "Quota",
         "count": 2
       },
       {
         "name": "PowerShell",
         "count": 2
+      },
+      {
+        "name": "Terminal",
+        "count": 1
+      },
+      {
+        "name": "SDK",
+        "count": 1
+      },
+      {
+        "name": "Tauri",
+        "count": 1
       }
     ]
   },
@@ -176,8 +167,8 @@
       "icon": "🔌",
       "name_en": "Dedicated Gateways, ACP Adapters & Migration Tooling",
       "name_zh": "专用网关、ACP 适配器与迁移工具",
-      "description_en": "Engineering utilities specifically built around the official Antigravity Agent Client Protocol (`agy acp`) and native plugin specifications (`plugin.json`).",
-      "description_zh": "严格围绕 Antigravity 官方核心协议（`agy acp`）与原生插件规范（`plugin.json`）打造的高性能工程工具。"
+      "description_en": "Engineering utilities built around the official Antigravity Agent Client Protocol (`agy acp`), native plugin specifications (`plugin.json`), and companion Google AI (Flow) media API gateways.",
+      "description_zh": "围绕 Antigravity 官方核心协议（`agy acp`）、原生插件规范（`plugin.json`）以及 Google AI（Flow）生态配套媒体网关打造的高性能工程工具。"
     }
   ],
   "tools": [
@@ -207,13 +198,13 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 81,
-        "stars": 2872,
+        "stars": 2900,
         "forks": 285,
-        "open_issues": 1027,
+        "open_issues": 998,
         "language": null,
         "license": null,
-        "latest_release": "1.5.11",
-        "pushed_at": "2026-11-18T06:51:45Z",
+        "latest_release": "1.5.12",
+        "pushed_at": "2026-11-19T00:26:35Z",
         "days_inactive": 0
       }
     },
@@ -241,48 +232,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 97,
-        "stars": 4108,
-        "forks": 1600,
-        "open_issues": 37,
+        "stars": 4114,
+        "forks": 1607,
+        "open_issues": 38,
         "language": "Python",
         "license": "Apache-2.0",
         "latest_release": null,
         "pushed_at": "2026-10-28T16:45:46Z",
-        "days_inactive": 20
-      }
-    },
-    {
-      "id": "antigravity-link-extension",
-      "name": "antigravity-link-extension",
-      "repo": "cafeTechne/antigravity-link-extension",
-      "url": "https://github.com/cafeTechne/antigravity-link-extension",
-      "category": "ide-extensions-cockpits",
-      "description_en": "Mobile companion extension specifically mirroring Antigravity IDE sessions to phone with emergency stop triggers and 9 MCP tools.",
-      "description_zh": "专为 Antigravity IDE 打造的手机伴侣扩展，实时镜像会话进度，支持手机端紧急终止并提供 9 种 MCP 工具操作。",
-      "exclusivity_reason_en": "Built exclusively to mirror Antigravity IDE session state and expose emergency stop hooks over Antigravity's extension API.",
-      "exclusivity_reason_zh": "专为 Antigravity IDE 会话镜像与移动端紧急终止控制研发。",
-      "platforms": [
-        "Antigravity IDE",
-        "Mobile"
-      ],
-      "tags": [
-        "Mobile",
-        "Antigravity-IDE",
-        "MCP"
-      ],
-      "install_hint": "Install from GitHub Releases or package VSIX for Antigravity IDE",
-      "added_at": "2026-11-17",
-      "telemetry": {
-        "status": "HEALTHY",
-        "health_score": 76,
-        "stars": 223,
-        "forks": 33,
-        "open_issues": 1,
-        "language": "HTML",
-        "license": "MIT",
-        "latest_release": "v1.0.20",
-        "pushed_at": "2026-06-04T05:55:39Z",
-        "days_inactive": 167
+        "days_inactive": 21
       }
     },
     {
@@ -311,13 +268,13 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 33302,
-        "forks": 3556,
-        "open_issues": 1690,
+        "stars": 33356,
+        "forks": 3558,
+        "open_issues": 1696,
         "language": "Rust",
         "license": "NOASSERTION",
         "latest_release": "v5.0.3",
-        "pushed_at": "2026-11-18T02:07:10Z",
+        "pushed_at": "2026-11-19T00:47:03Z",
         "days_inactive": 0
       }
     },
@@ -345,14 +302,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 97,
-        "stars": 863,
+        "stars": 864,
         "forks": 46,
         "open_issues": 5,
         "language": "TypeScript",
         "license": "Apache-2.0",
         "latest_release": "v2.8.5",
         "pushed_at": "2026-11-16T09:01:15Z",
-        "days_inactive": 2
+        "days_inactive": 3
       }
     },
     {
@@ -380,48 +337,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 90,
-        "stars": 2526,
+        "stars": 2534,
         "forks": 303,
-        "open_issues": 15,
+        "open_issues": 19,
         "language": "TypeScript",
         "license": "NOASSERTION",
         "latest_release": "v0.32.1",
         "pushed_at": "2026-11-16T11:11:11Z",
-        "days_inactive": 1
-      }
-    },
-    {
-      "id": "antigravity-quota-watcher",
-      "name": "AntigravityQuotaWatcher",
-      "repo": "wusimpl/AntigravityQuotaWatcher",
-      "url": "https://github.com/wusimpl/AntigravityQuotaWatcher",
-      "category": "ide-extensions-cockpits",
-      "description_en": "VS Code extension for continuous monitoring and status bar alerts of Antigravity AI model quotas.",
-      "description_zh": "长期维护的高星 Antigravity AI 模型配额观察与状态栏提示插件。",
-      "exclusivity_reason_en": "Queries Antigravity's local language server quota telemetry directly for status bar alerting.",
-      "exclusivity_reason_zh": "直接读取 Antigravity 本地语言服务器的模型配额状态并在状态栏预警。",
-      "platforms": [
-        "VS Code",
-        "Antigravity IDE"
-      ],
-      "tags": [
-        "VS Code",
-        "IDE",
-        "Quota"
-      ],
-      "install_hint": "Install VSIX from GitHub Releases or Open VSX",
-      "added_at": "2026-11-17",
-      "telemetry": {
-        "status": "STALE",
-        "health_score": 62,
-        "stars": 2249,
-        "forks": 105,
-        "open_issues": 7,
-        "language": "TypeScript",
-        "license": "MIT",
-        "latest_release": "v1.0.3",
-        "pushed_at": "2026-02-26T09:24:24Z",
-        "days_inactive": 265
+        "days_inactive": 2
       }
     },
     {
@@ -449,14 +372,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 96,
-        "stars": 4855,
+        "stars": 4856,
         "forks": 146,
         "open_issues": 26,
         "language": "TypeScript",
         "license": "MIT",
         "latest_release": "v2.1.53",
         "pushed_at": "2026-11-12T08:56:56Z",
-        "days_inactive": 6
+        "days_inactive": 7
       }
     },
     {
@@ -485,48 +408,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 1173,
-        "forks": 35,
+        "stars": 1256,
+        "forks": 36,
         "open_issues": 0,
         "language": "JavaScript",
         "license": "MIT",
         "latest_release": "v2.33.0",
         "pushed_at": "2026-11-18T06:15:28Z",
-        "days_inactive": 0
-      }
-    },
-    {
-      "id": "antigravity-conversation-fix",
-      "name": "antigravity-conversation-fix",
-      "repo": "FutureisinPast/antigravity-conversation-fix",
-      "url": "https://github.com/FutureisinPast/antigravity-conversation-fix",
-      "category": "platform-fixes-runtime-patches",
-      "description_en": "Repairs corrupted Antigravity session databases, missing threads, and out-of-order conversation history.",
-      "description_zh": "修复 Antigravity 会话数据损坏、历史乱序与线程丢失的专用修复工具。",
-      "exclusivity_reason_en": "Operates specifically on Antigravity's internal conversation storage schema to recover damaged threads.",
-      "exclusivity_reason_zh": "针对 Antigravity 内部会话存储格式进行损坏检测与历史重建。",
-      "platforms": [
-        "Cross-Platform",
-        "Antigravity IDE"
-      ],
-      "tags": [
-        "IDE",
-        "Fix",
-        "Recovery"
-      ],
-      "install_hint": "Clone repository and run recovery script against Antigravity storage",
-      "added_at": "2026-11-17",
-      "telemetry": {
-        "status": "HEALTHY",
-        "health_score": 84,
-        "stars": 1144,
-        "forks": 98,
-        "open_issues": 4,
-        "language": "Python",
-        "license": "MIT",
-        "latest_release": "V1.07",
-        "pushed_at": "2026-08-26T15:53:28Z",
-        "days_inactive": 83
+        "days_inactive": 1
       }
     },
     {
@@ -554,14 +443,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 84,
-        "stars": 620,
-        "forks": 67,
+        "stars": 621,
+        "forks": 68,
         "open_issues": 4,
         "language": "Python",
         "license": "MIT",
         "latest_release": null,
         "pushed_at": "2026-09-29T12:53:16Z",
-        "days_inactive": 49
+        "days_inactive": 50
       }
     },
     {
@@ -595,7 +484,7 @@
         "language": "PowerShell",
         "license": "MIT",
         "latest_release": "v1.0.1",
-        "pushed_at": "2026-11-18T10:24:33Z",
+        "pushed_at": "2026-11-18T13:50:37Z",
         "days_inactive": 0
       }
     },
@@ -624,48 +513,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 4981,
-        "forks": 344,
+        "stars": 5022,
+        "forks": 345,
         "open_issues": 1,
         "language": "C++",
         "license": "NOASSERTION",
         "latest_release": "v2.6.4",
         "pushed_at": "2026-11-17T13:10:55Z",
-        "days_inactive": 0
-      }
-    },
-    {
-      "id": "antigravity-bypass",
-      "name": "antigravity_bypass",
-      "repo": "Futureppo/antigravity_bypass",
-      "url": "https://github.com/Futureppo/antigravity_bypass",
-      "category": "platform-fixes-runtime-patches",
-      "description_en": "Runtime patch raising local MCP tool limits to 8192 in Antigravity IDE and Windows desktop client with automated backup and restore.",
-      "description_zh": "底层限制解除补丁，将 Antigravity IDE 本地 MCP 工具数量上限安全提升至 8192，带自动备份与一键还原。",
-      "exclusivity_reason_en": "Patches Antigravity's hardcoded MCP tool registration cap directly inside its runtime bundle.",
-      "exclusivity_reason_zh": "直接修补 Antigravity 客户端内置的 MCP 工具注册数量硬上限。",
-      "platforms": [
-        "Windows",
-        "Antigravity IDE"
-      ],
-      "tags": [
-        "Windows",
-        "Patch",
-        "MCP"
-      ],
-      "install_hint": "Follow backup and patch instructions in repository README",
-      "added_at": "2026-11-17",
-      "telemetry": {
-        "status": "HEALTHY",
-        "health_score": 84,
-        "stars": 70,
-        "forks": 16,
-        "open_issues": 0,
-        "language": "Go",
-        "license": "AGPL-3.0",
-        "latest_release": "v2.1.0",
-        "pushed_at": "2026-09-15T02:18:40Z",
-        "days_inactive": 64
+        "days_inactive": 1
       }
     },
     {
@@ -699,7 +554,7 @@
         "license": "MIT",
         "latest_release": null,
         "pushed_at": "2026-10-30T21:29:13Z",
-        "days_inactive": 18
+        "days_inactive": 19
       }
     },
     {
@@ -726,46 +581,13 @@
         "status": "HEALTHY",
         "health_score": 93,
         "stars": 51,
-        "forks": 8,
-        "open_issues": 3,
+        "forks": 9,
+        "open_issues": 1,
         "language": "Python",
         "license": "MIT",
         "latest_release": "v1.5.2",
-        "pushed_at": "2026-11-17T15:59:29Z",
+        "pushed_at": "2026-11-19T09:06:07Z",
         "days_inactive": 0
-      }
-    },
-    {
-      "id": "agy-acp",
-      "name": "agy-acp",
-      "repo": "shindgew/agy-acp",
-      "url": "https://github.com/shindgew/agy-acp",
-      "category": "dedicated-gateways-migration",
-      "description_en": "Apache-2.0 Agent Client Protocol adapter wrapping the official Google Antigravity CLI (`agy`) for ACP-compatible editors.",
-      "description_zh": "Apache-2.0 协议的 Agent Client Protocol 适配器，将官方 `agy` CLI 接入各类支持 ACP 的编辑器。",
-      "exclusivity_reason_en": "Dedicated ACP protocol wrapper specifically targeting the `agy` CLI command surface.",
-      "exclusivity_reason_zh": "专门封装 Google Antigravity `agy` CLI 的 ACP 协议适配层。",
-      "platforms": [
-        "Cross-Platform"
-      ],
-      "tags": [
-        "TypeScript",
-        "ACP",
-        "Adapter"
-      ],
-      "install_hint": "Install via npm/npx per repository README",
-      "added_at": "2026-11-18",
-      "telemetry": {
-        "status": "HEALTHY",
-        "health_score": 71,
-        "stars": 21,
-        "forks": 9,
-        "open_issues": 27,
-        "language": "TypeScript",
-        "license": "Apache-2.0",
-        "latest_release": "v0.5.2",
-        "pushed_at": "2026-08-19T07:31:21Z",
-        "days_inactive": 91
       }
     },
     {
@@ -791,14 +613,14 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 84,
-        "stars": 86,
+        "stars": 85,
         "forks": 24,
         "open_issues": 8,
         "language": "TypeScript",
         "license": "MIT",
         "latest_release": "v1.2.0",
         "pushed_at": "2026-09-27T12:37:59Z",
-        "days_inactive": 51
+        "days_inactive": 52
       }
     },
     {
@@ -831,7 +653,42 @@
         "license": "MIT",
         "latest_release": "v1.0.1",
         "pushed_at": "2026-11-15T08:06:00Z",
-        "days_inactive": 3
+        "days_inactive": 4
+      }
+    },
+    {
+      "id": "flow2api",
+      "name": "flow2api",
+      "repo": "TheSmallHanCat/flow2api",
+      "url": "https://github.com/TheSmallHanCat/flow2api",
+      "category": "dedicated-gateways-migration",
+      "description_en": "OpenAI and Gemini compatible API gateway for Google Flow (Veo 3.1, Nano Banana, and Omni) featuring multi-account pooling, automatic cookie refresh, and proxy support.",
+      "description_zh": "面向 Google Flow（Veo 3.1、Nano Banana 与 Omni）的 OpenAI 与 Gemini 兼容 API 网关，支持多账号池负载均衡、Cookie 自动刷新、代理与 Web 管理后台。",
+      "exclusivity_reason_en": "Companion Google AI Pro/Ultra media gateway exposing Google Flow image and video generation alongside Antigravity workflows over OpenAI/Gemini APIs.",
+      "exclusivity_reason_zh": "Google AI Pro/Ultra 同订阅生态配套媒体网关，将 Google Flow 生图与视频能力以 OpenAI/Gemini 标准接口接入 Antigravity 工作流。",
+      "platforms": [
+        "Cross-Platform",
+        "Web"
+      ],
+      "tags": [
+        "Python",
+        "Docker",
+        "Google-Flow",
+        "Gateway"
+      ],
+      "install_hint": "Run via Docker Compose or Python 3.8+ per repository README",
+      "added_at": "2026-11-19",
+      "telemetry": {
+        "status": "HEALTHY",
+        "health_score": 96,
+        "stars": 3177,
+        "forks": 739,
+        "open_issues": 2,
+        "language": "Python",
+        "license": "MIT",
+        "latest_release": null,
+        "pushed_at": "2026-11-17T05:06:42Z",
+        "days_inactive": 2
       }
     },
     {
@@ -860,13 +717,13 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 84,
-        "stars": 32,
+        "stars": 33,
         "forks": 3,
-        "open_issues": 0,
+        "open_issues": 1,
         "language": "Rust",
         "license": "Apache-2.0",
-        "latest_release": "v0.2.1",
-        "pushed_at": "2026-11-18T08:54:31Z",
+        "latest_release": "v0.2.3",
+        "pushed_at": "2026-11-19T09:11:01Z",
         "days_inactive": 0
       }
     },
@@ -895,11 +752,11 @@
         "health_score": 88,
         "stars": 21,
         "forks": 4,
-        "open_issues": 11,
+        "open_issues": 3,
         "language": "TypeScript",
         "license": "MIT",
-        "latest_release": "v1.6.7",
-        "pushed_at": "2026-11-17T12:35:08Z",
+        "latest_release": "v1.6.8",
+        "pushed_at": "2026-11-19T09:03:31Z",
         "days_inactive": 0
       }
     }
@@ -932,6 +789,20 @@
       "total_stars": 59207,
       "total_forks": 6684,
       "average_health_score": 85.1
+    },
+    {
+      "date": "2026-11-19",
+      "generated_at": "2026-11-19T09:52:33Z",
+      "total": 17,
+      "healthy": 17,
+      "stale": 0,
+      "very_stale": 0,
+      "archived": 0,
+      "dead": 0,
+      "health_ratio_pct": 100.0,
+      "total_stars": 58900,
+      "total_forks": 7175,
+      "average_health_score": 88.6
     }
   ]
 }

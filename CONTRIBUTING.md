@@ -12,7 +12,7 @@ Thank you for contributing to **awesome-antigravity-tools**! We curate strictly 
 - **Official CLI & SDKs**: First-party Google Antigravity CLI harnesses and language SDKs.
 - **IDE Extensions & Cockpits**: VS Code / Antigravity IDE extensions and native desktop apps specifically built for Antigravity quota monitoring, HUDs, or account workflows.
 - **Platform Fixes & Runtime Patches**: OS-level hotfixes, NTFS/symlink bridges, localization injectors, proxy injectors, and session database recovery tools targeting Antigravity bugs.
-- **Dedicated Gateways, ACP Adapters & Migration Tooling**: Engineering utilities built natively around `agy acp` or Antigravity's `plugin.json` specification.
+- **Dedicated Gateways, ACP Adapters & Migration Tooling**: Engineering utilities built around `agy acp`, Antigravity's `plugin.json` specification, and companion Google AI (Flow) media API gateways.
 
 ### ❌ What We Reject
 - **Bare Markdown Prompt Collections (`SKILL.md`)** without executable engineering tooling.

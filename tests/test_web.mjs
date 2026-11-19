@@ -15,11 +15,14 @@ import {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const bundlePath = path.resolve(__dirname, "..", "docs", "catalog-bundle.json");
+const catalogPath = path.resolve(__dirname, "..", "data", "tools.json");
 const bundle = JSON.parse(fs.readFileSync(bundlePath, "utf8"));
+const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 
 test("bundle contains expected categories and enriched tools", () => {
   assert.ok(bundle.categories.length >= 4);
-  assert.ok(bundle.tools.length >= 19);
+  assert.equal(bundle.tools.length, catalog.tools.length);
+  assert.ok(bundle.tools.length >= 15);
   for (const tool of bundle.tools) {
     assert.ok(tool.id && tool.name && tool.url && tool.telemetry);
   }
