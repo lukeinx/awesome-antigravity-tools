@@ -17,9 +17,9 @@
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | `HEALTHY` | **93** | 33,356 | Rust | NOASSERTION | `v5.0.3` | Windows, macOS, Linux |
+| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | `HEALTHY` | **93** | 33,357 | Rust | NOASSERTION | `v5.0.3` | Windows, macOS, Linux |
 | [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | `HEALTHY` | **96** | 4,856 | TypeScript | MIT | `v2.1.53` | VS Code, Antigravity IDE |
-| [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | `HEALTHY` | **90** | 2,534 | TypeScript | NOASSERTION | `v0.32.1` | Windows, macOS, Linux |
+| [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | `HEALTHY` | **90** | 2,535 | TypeScript | NOASSERTION | `v0.32.1` | Windows, macOS, Linux |
 | [antigravity-panel](https://github.com/n2ns/antigravity-panel) | `HEALTHY` | **97** | 864 | TypeScript | Apache-2.0 | `v2.8.5` | VS Code, Antigravity IDE |
 
 ## 🔧 Platform Fixes & Runtime Patches

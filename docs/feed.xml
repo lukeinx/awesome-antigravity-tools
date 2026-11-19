@@ -6,7 +6,7 @@
     <atom:link href="https://wllzhang.github.io/awesome-antigravity-tools/feed.xml" rel="self" type="application/rss+xml" />
     <description>Strictly 100% Google Antigravity-exclusive engineering tools, IDE extensions, runtime hotfixes, and ACP gateways.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 09:52:33 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 09:59:06 +0000</lastBuildDate>
     <docs>https://github.com/wllzhang/awesome-antigravity-tools</docs>
     <item>
       <title>flow2api (Dedicated Gateways, ACP Adapters &amp; Migration Tooling)</title>
@@ -41,7 +41,7 @@
       <link>https://github.com/Draculabo/AntigravityManager</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=draculabo-antigravity-manager</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Desktop application for managing Google accounts across Antigravity Classic, Antigravity IDE, and `agy` CLI with real-time quota views. | Exclusivity: Built specifically around Antigravity Classic, Antigravity IDE, and `agy` CLI local account and quota storage. | Stars: 2,534 | Health: 90/100</description>
+      <description>Desktop application for managing Google accounts across Antigravity Classic, Antigravity IDE, and `agy` CLI with real-time quota views. | Exclusivity: Built specifically around Antigravity Classic, Antigravity IDE, and `agy` CLI local account and quota storage. | Stars: 2,535 | Health: 90/100</description>
     </item>
     <item>
       <title>Antigravity-Chinese-Localization (Platform Fixes &amp; Runtime Patches)</title>
@@ -90,7 +90,7 @@
       <link>https://github.com/lbjlaq/Antigravity-Manager</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-manager</guid>
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React. | Exclusivity: Targets Antigravity's local profile, authentication state, and account switching workflow natively. | Stars: 33,356 | Health: 93/100</description>
+      <description>Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React. | Exclusivity: Targets Antigravity's local profile, authentication state, and account switching workflow natively. | Stars: 33,357 | Health: 93/100</description>
     </item>
     <item>
       <title>vscode-antigravity-cockpit (IDE Extensions &amp; Cockpits)</title>

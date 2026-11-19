@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-19T09:52:33Z",
+  "generated_at": "2026-11-19T09:59:06Z",
   "summary": {
     "total": 17,
     "healthy": 17,
@@ -10,7 +10,7 @@
     "dead": 0,
     "error": 0,
     "health_ratio_pct": 100.0,
-    "total_stars": 58900,
+    "total_stars": 58902,
     "total_forks": 7175,
     "average_health_score": 88.6
   },
@@ -92,7 +92,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 33356,
+      "stars": 33357,
       "forks": 3558,
       "open_issues": 1696,
       "language": "Rust",
@@ -107,7 +107,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 33356 stars)"
+      "message": "Active (0d ago, 33357 stars)"
     },
     {
       "id": "antigravity-panel",
@@ -163,7 +163,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 90,
-      "stars": 2534,
+      "stars": 2535,
       "forks": 303,
       "open_issues": 19,
       "language": "TypeScript",
@@ -186,7 +186,7 @@
       ],
       "archived": false,
       "days_inactive": 2,
-      "message": "Active (2d ago, 2534 stars)"
+      "message": "Active (2d ago, 2535 stars)"
     },
     {
       "id": "vscode-antigravity-cockpit",

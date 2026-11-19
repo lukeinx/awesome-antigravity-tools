@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-19T09:52:33Z",
+  "generated_at": "2026-11-19T09:59:06Z",
   "repository": "wllzhang/awesome-antigravity-tools",
   "site_url": "https://wllzhang.github.io/awesome-antigravity-tools/",
   "summary": {
@@ -8,7 +8,7 @@
     "total_categories": 4,
     "healthy_tools": 17,
     "health_ratio_pct": 100.0,
-    "total_stars": 58900,
+    "total_stars": 58902,
     "total_forks": 7175,
     "average_health_score": 88.6,
     "by_status": {
@@ -268,7 +268,7 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 93,
-        "stars": 33356,
+        "stars": 33357,
         "forks": 3558,
         "open_issues": 1696,
         "language": "Rust",
@@ -337,7 +337,7 @@
       "telemetry": {
         "status": "HEALTHY",
         "health_score": 90,
-        "stars": 2534,
+        "stars": 2535,
         "forks": 303,
         "open_issues": 19,
         "language": "TypeScript",
@@ -792,7 +792,7 @@
     },
     {
       "date": "2026-11-19",
-      "generated_at": "2026-11-19T09:52:33Z",
+      "generated_at": "2026-11-19T09:59:06Z",
       "total": 17,
       "healthy": 17,
       "stale": 0,
@@ -800,7 +800,7 @@
       "archived": 0,
       "dead": 0,
       "health_ratio_pct": 100.0,
-      "total_stars": 58900,
+      "total_stars": 58902,
       "total_forks": 7175,
       "average_health_score": 88.6
     }
