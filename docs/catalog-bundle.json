@@ -4,15 +4,16 @@
   "repository": "wllzhang/awesome-antigravity-tools",
   "site_url": "https://wllzhang.github.io/awesome-antigravity-tools/",
   "summary": {
-    "total_tools": 17,
+    "total_tools": 18,
     "total_categories": 4,
     "healthy_tools": 17,
-    "health_ratio_pct": 100.0,
+    "health_ratio_pct": 94.4,
     "total_stars": 59499,
     "total_forks": 7217,
     "average_health_score": 88.6,
     "by_status": {
-      "HEALTHY": 17
+      "HEALTHY": 17,
+      "UNAUDITED": 1
     },
     "by_language": [
       {
@@ -24,16 +25,16 @@
         "count": 5
       },
       {
+        "name": "Unspecified",
+        "count": 2
+      },
+      {
         "name": "Rust",
         "count": 2
       },
       {
         "name": "JavaScript",
         "count": 2
-      },
-      {
-        "name": "Unspecified",
-        "count": 1
       },
       {
         "name": "PowerShell",
@@ -47,15 +48,15 @@
     "by_platform": [
       {
         "name": "Windows",
-        "count": 9
+        "count": 10
       },
       {
         "name": "macOS",
-        "count": 6
+        "count": 7
       },
       {
         "name": "Linux",
-        "count": 6
+        "count": 7
       },
       {
         "name": "Cross-Platform",
@@ -84,6 +85,10 @@
         "count": 4
       },
       {
+        "name": "Desktop",
+        "count": 3
+      },
+      {
         "name": "Windows",
         "count": 3
       },
@@ -104,10 +109,6 @@
         "count": 2
       },
       {
-        "name": "Desktop",
-        "count": 2
-      },
-      {
         "name": "Rust",
         "count": 2
       },
@@ -120,19 +121,19 @@
         "count": 2
       },
       {
+        "name": "Localization",
+        "count": 2
+      },
+      {
+        "name": "Node.js",
+        "count": 2
+      },
+      {
         "name": "PowerShell",
         "count": 2
       },
       {
         "name": "Terminal",
-        "count": 1
-      },
-      {
-        "name": "SDK",
-        "count": 1
-      },
-      {
-        "name": "Tauri",
         "count": 1
       }
     ]
@@ -380,6 +381,41 @@
         "latest_release": "v2.1.53",
         "pushed_at": "2026-11-12T08:56:56Z",
         "days_inactive": 9
+      }
+    },
+    {
+      "id": "agy-desktop-exo",
+      "name": "agy-desktop-exo",
+      "repo": "jiangnanquan/agy-desktop-exo",
+      "url": "https://github.com/jiangnanquan/agy-desktop-exo",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "UX enhancements (compact wide-layout toggle, inline Office/EPUB sidebar preview) and Simplified Chinese localization for Google Antigravity Desktop.",
+      "description_zh": "面向 Google Antigravity 桌面端的体验增强（紧凑加宽布局开关、Office/EPUB 侧边栏速览）与简体中文汉化引擎。",
+      "exclusivity_reason_en": "Built exclusively for Antigravity Desktop 2.0+ Electron app.asar patching with strict content isolation and inside-out macOS codesigning.",
+      "exclusivity_reason_zh": "专为 Antigravity 2.0+ 桌面端 app.asar 定向注入与 macOS 由内而外重签名打造。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Desktop",
+        "Localization",
+        "UX",
+        "Node.js"
+      ],
+      "added_at": "2026-11-20",
+      "telemetry": {
+        "status": "UNAUDITED",
+        "health_score": null,
+        "stars": 0,
+        "forks": 0,
+        "open_issues": 0,
+        "language": null,
+        "license": null,
+        "latest_release": null,
+        "pushed_at": null,
+        "days_inactive": null
       }
     },
     {

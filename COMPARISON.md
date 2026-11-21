@@ -31,6 +31,7 @@
 | [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) | `HEALTHY` | **84** | 621 | Python | MIT | - | Windows, macOS, Linux |
 | [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | `HEALTHY` | **75** | 4 | JavaScript | MIT | - | Windows, VS Code |
 | [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | `HEALTHY` | **79** | 0 | PowerShell | MIT | `v1.0.1` | Windows, Antigravity IDE |
+| [agy-desktop-exo](https://github.com/jiangnanquan/agy-desktop-exo) | `UNAUDITED` | - | 0 | - | - | - | Windows, macOS, Linux |
 
 ## 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling
 

@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.zh-CN.md)
-[![收录工具数](https://img.shields.io/badge/精选收录-17%20%E4%B8%AA%E5%B7%A5%E5%85%B7-4285F4.svg)](#目录)
+[![收录工具数](https://img.shields.io/badge/精选收录-18%20%E4%B8%AA%E5%B7%A5%E5%85%B7-4285F4.svg)](#目录)
 [![每日健康巡检](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
 [![巡检状态](https://img.shields.io/badge/巡检状态-17/17%20%E6%B4%BB%E8%B7%83%20%28100%25%29-brightgreen)](health_report.zh-CN.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
@@ -26,7 +26,7 @@
 - 正面攻克 Antigravity 运行时的特定缺陷、系统级死锁或配额盲区；
 - 由统一数据源 `data/tools.json` 驱动，每日自动执行健康度与活性巡检（`scripts/health-check.py`）。
 
-> **生态脉搏**：共收录 `17` 款专有工具（`4` 个分类）· 合计 `59.5k` Stars · `17/17` 活跃（`100.0%`）· 平均健康分：`88.6/100`（[完整巡检报告](health_report.zh-CN.md)）
+> **生态脉搏**：共收录 `18` 款专有工具（`4` 个分类）· 合计 `59.5k` Stars · `17/17` 活跃（`100.0%`）· 平均健康分：`88.6/100`（[完整巡检报告](health_report.zh-CN.md)）
 
 ---
 
@@ -34,7 +34,7 @@
 
 - [🚀 官方 CLI 与开发套件 (2)](#-官方-cli-与开发套件)
 - [🖥️ IDE 扩展与专属控制台 (4)](#️-ide-扩展与专属控制台)
-- [🔧 平台补丁与底层运行时修复 (5)](#-平台补丁与底层运行时修复)
+- [🔧 平台补丁与底层运行时修复 (6)](#-平台补丁与底层运行时修复)
 - [🔌 专用网关、ACP 适配器与迁移工具 (6)](#-专用网关acp-适配器与迁移工具)
 - [🏷️ 项目徽章 (Badge)](#️-项目徽章-badge)
 - [🤝 参与贡献](#-参与贡献)
@@ -65,6 +65,7 @@
 
 正面攻克 Antigravity 官方客户端特定缺陷、汉化注入、无 TUN 代理、符号链接失效与进程死锁的底层工具。
 
+- [agy-desktop-exo](https://github.com/jiangnanquan/agy-desktop-exo) - 面向 Google Antigravity 桌面端的体验增强（紧凑加宽布局开关、Office/EPUB 侧边栏速览）与简体中文汉化引擎。 `Desktop` `Localization` `UX` `Node.js`
 - [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) - MIT 开源协议的 Antigravity IDE 一键中文汉化工具包，精准覆盖客户端界面与菜单词条。 `Localization` `JavaScript` `Patch`
 - [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) - 针对 Google Antigravity「not eligible」账号资格报错的一键诊断、凭证清理与自动修复工具。 `Python` `Fix` `Diagnostics`
 - [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - 零磁盘占用 NTFS 硬链接目录桥接工具，彻底解决 Antigravity Go Language Server 无法加载 Windows 目录联接 (`mklink /J`) 与符号链接 (`mklink /D`) 的硬伤问题。 `Windows` `PowerShell` `NTFS`

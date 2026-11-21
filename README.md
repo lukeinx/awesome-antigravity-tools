@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Curated Tools](https://img.shields.io/badge/Curated-17%20Tools-4285F4.svg)](#contents)
+[![Curated Tools](https://img.shields.io/badge/Curated-18%20Tools-4285F4.svg)](#contents)
 [![Daily Health Audit](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
 [![Repository Health](https://img.shields.io/badge/Health%20Audit-17/17%20Active%20%28100%25%29-brightgreen)](health_report.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
@@ -26,7 +26,7 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 - Directly fixes critical Antigravity bugs, OS runtime limitations, or telemetry blind spots.
 - Verified daily by our automated health audit (`scripts/health-check.py`) and backed by a single-source-of-truth JSON catalog (`data/tools.json`).
 
-> **Ecosystem Pulse**: `17` curated tools across `4` categories · `59.5k` combined GitHub stars · `17/17` active (`100.0%`) · Avg Health Score: `88.6/100` ([Full Audit](health_report.md))
+> **Ecosystem Pulse**: `18` curated tools across `4` categories · `59.5k` combined GitHub stars · `17/17` active (`100.0%`) · Avg Health Score: `88.6/100` ([Full Audit](health_report.md))
 
 ---
 
@@ -34,7 +34,7 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 
 - [Official CLI & SDKs (2)](#-official-cli--sdks)
 - [IDE Extensions & Cockpits (4)](#️-ide-extensions--cockpits)
-- [Platform Fixes & Runtime Patches (5)](#-platform-fixes--runtime-patches)
+- [Platform Fixes & Runtime Patches (6)](#-platform-fixes--runtime-patches)
 - [Dedicated Gateways, ACP Adapters & Migration Tooling (6)](#-dedicated-gateways-acp-adapters--migration-tooling)
 - [Badge](#️-badge)
 - [Contributing](#-contributing)
@@ -65,6 +65,7 @@ Extensions and desktop applications designed exclusively to monitor Antigravity 
 
 System-level hotfixes, localization injectors, network bridges, and patches solving core Antigravity bugs and OS runtime limitations.
 
+- [agy-desktop-exo](https://github.com/jiangnanquan/agy-desktop-exo) - UX enhancements (compact wide-layout toggle, inline Office/EPUB sidebar preview) and Simplified Chinese localization for Google Antigravity Desktop. `Desktop` `Localization` `UX` `Node.js`
 - [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) - MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE. `Localization` `JavaScript` `Patch`
 - [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) - Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error. `Python` `Fix` `Diagnostics`
 - [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`). `Windows` `PowerShell` `NTFS`

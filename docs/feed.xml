@@ -9,6 +9,13 @@
     <lastBuildDate>Sat, 21 Nov 2026 09:19:50 +0000</lastBuildDate>
     <docs>https://github.com/wllzhang/awesome-antigravity-tools</docs>
     <item>
+      <title>agy-desktop-exo (Platform Fixes &amp; Runtime Patches)</title>
+      <link>https://github.com/jiangnanquan/agy-desktop-exo</link>
+      <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=agy-desktop-exo</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>UX enhancements (compact wide-layout toggle, inline Office/EPUB sidebar preview) and Simplified Chinese localization for Google Antigravity Desktop. | Exclusivity: Built exclusively for Antigravity Desktop 2.0+ Electron app.asar patching with strict content isolation and inside-out macOS codesigning. | Stars: 0 | Health: None/100</description>
+    </item>
+    <item>
       <title>flow2api (Dedicated Gateways, ACP Adapters &amp; Migration Tooling)</title>
       <link>https://github.com/TheSmallHanCat/flow2api</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=flow2api</guid>
