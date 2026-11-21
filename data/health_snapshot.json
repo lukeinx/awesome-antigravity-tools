@@ -1,18 +1,18 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-21T09:19:50Z",
+  "generated_at": "2026-11-21T11:30:35Z",
   "summary": {
-    "total": 17,
-    "healthy": 17,
+    "total": 19,
+    "healthy": 19,
     "stale": 0,
     "very_stale": 0,
     "archived": 0,
     "dead": 0,
     "error": 0,
     "health_ratio_pct": 100.0,
-    "total_stars": 59499,
-    "total_forks": 7217,
-    "average_health_score": 88.6
+    "total_stars": 59543,
+    "total_forks": 7222,
+    "average_health_score": 86.9
   },
   "repositories": [
     {
@@ -28,9 +28,9 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 81,
-      "stars": 2948,
+      "stars": 2953,
       "forks": 292,
-      "open_issues": 1049,
+      "open_issues": 1050,
       "language": null,
       "license": null,
       "default_branch": "main",
@@ -40,7 +40,7 @@
       "topics": [],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 2948 stars)"
+      "message": "Active (0d ago, 2953 stars)"
     },
     {
       "id": "antigravity-sdk-python",
@@ -55,8 +55,8 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 100,
-      "stars": 4133,
-      "forks": 1612,
+      "stars": 4135,
+      "forks": 1613,
       "open_issues": 37,
       "language": "Python",
       "license": "Apache-2.0",
@@ -77,7 +77,47 @@
       ],
       "archived": false,
       "days_inactive": 1,
-      "message": "Active (1d ago, 4133 stars)"
+      "message": "Active (1d ago, 4135 stars)"
+    },
+    {
+      "id": "agy-meme",
+      "title": "agy-meme",
+      "url": "https://github.com/jiangnanquan/agy-meme",
+      "owner": "jiangnanquan",
+      "repo": "agy-meme",
+      "full_name": "jiangnanquan/agy-meme",
+      "category_id": "ide-extensions-cockpits",
+      "section": "🖥️ IDE Extensions & Cockpits",
+      "section_zh": "🖥️ IDE 扩展与专属控制台",
+      "status": "HEALTHY",
+      "code": 200,
+      "health_score": 83,
+      "stars": 1,
+      "forks": 0,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "MIT",
+      "default_branch": "main",
+      "pushed_at": "2026-11-21T07:40:14Z",
+      "latest_release": "v1.3.0",
+      "latest_release_at": "2026-11-21T05:28:23Z",
+      "topics": [
+        "antigravity",
+        "antigravity-plugin",
+        "antigravity-plugins",
+        "antigravity-skills",
+        "electron",
+        "gemini",
+        "google-antigravity",
+        "mcp",
+        "mcp-server",
+        "meme",
+        "neko",
+        "stickers"
+      ],
+      "archived": false,
+      "days_inactive": 0,
+      "message": "Active (0d ago, 1 stars)"
     },
     {
       "id": "antigravity-manager",
@@ -92,8 +132,8 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 33525,
-      "forks": 3568,
+      "stars": 33533,
+      "forks": 3569,
       "open_issues": 1684,
       "language": "Rust",
       "license": "NOASSERTION",
@@ -107,7 +147,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 33525 stars)"
+      "message": "Active (0d ago, 33533 stars)"
     },
     {
       "id": "antigravity-panel",
@@ -122,7 +162,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 97,
-      "stars": 871,
+      "stars": 872,
       "forks": 46,
       "open_issues": 7,
       "language": "TypeScript",
@@ -148,7 +188,7 @@
       ],
       "archived": false,
       "days_inactive": 5,
-      "message": "Active (5d ago, 871 stars)"
+      "message": "Active (5d ago, 872 stars)"
     },
     {
       "id": "draculabo-antigravity-manager",
@@ -165,11 +205,11 @@
       "health_score": 90,
       "stars": 2553,
       "forks": 304,
-      "open_issues": 9,
+      "open_issues": 12,
       "language": "TypeScript",
       "license": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-11-20T18:49:19Z",
+      "pushed_at": "2026-11-21T09:25:37Z",
       "latest_release": "v0.33.1",
       "latest_release_at": "2026-11-20T17:39:50Z",
       "topics": [
@@ -216,6 +256,33 @@
       "message": "Active (9d ago, 4858 stars)"
     },
     {
+      "id": "agy-desktop-exo",
+      "title": "agy-desktop-exo",
+      "url": "https://github.com/jiangnanquan/agy-desktop-exo",
+      "owner": "jiangnanquan",
+      "repo": "agy-desktop-exo",
+      "full_name": "jiangnanquan/agy-desktop-exo",
+      "category_id": "platform-fixes-runtime-patches",
+      "section": "🔧 Platform Fixes & Runtime Patches",
+      "section_zh": "🔧 平台补丁与底层运行时修复",
+      "status": "HEALTHY",
+      "code": 200,
+      "health_score": 63,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "pushed_at": "2026-11-21T07:29:21Z",
+      "latest_release": null,
+      "latest_release_at": null,
+      "topics": [],
+      "archived": false,
+      "days_inactive": 0,
+      "message": "Active (0d ago, 0 stars)"
+    },
+    {
       "id": "antigravity-chinese-localization",
       "title": "Antigravity-Chinese-Localization",
       "url": "https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization",
@@ -228,19 +295,19 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 1411,
-      "forks": 41,
-      "open_issues": 1,
+      "stars": 1420,
+      "forks": 42,
+      "open_issues": 0,
       "language": "JavaScript",
       "license": "MIT",
       "default_branch": "master",
-      "pushed_at": "2026-11-21T08:33:57Z",
+      "pushed_at": "2026-11-21T09:54:56Z",
       "latest_release": "v2.34.0",
       "latest_release_at": "2026-11-21T08:30:04Z",
       "topics": [],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 1411 stars)"
+      "message": "Active (0d ago, 1420 stars)"
     },
     {
       "id": "antigravity-fixer",
@@ -318,8 +385,8 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 5160,
-      "forks": 352,
+      "stars": 5178,
+      "forks": 354,
       "open_issues": 4,
       "language": "C++",
       "license": "NOASSERTION",
@@ -341,7 +408,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 5160 stars)"
+      "message": "Active (0d ago, 5178 stars)"
     },
     {
       "id": "vscode-antigravity-backend-fix",
@@ -544,8 +611,8 @@
       "latest_release_at": "2026-11-19T10:50:24Z",
       "topics": [],
       "archived": false,
-      "days_inactive": 1,
-      "message": "Active (1d ago, 37 stars)"
+      "days_inactive": 2,
+      "message": "Active (2d ago, 37 stars)"
     },
     {
       "id": "refined-antigravity-acp",
@@ -566,7 +633,7 @@
       "language": "TypeScript",
       "license": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-11-21T02:41:48Z",
+      "pushed_at": "2026-11-21T10:39:02Z",
       "latest_release": "v1.6.8",
       "latest_release_at": "2026-11-19T09:02:40Z",
       "topics": [
