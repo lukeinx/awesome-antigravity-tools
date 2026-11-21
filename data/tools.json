@@ -175,6 +175,29 @@
       "featured": true
     },
     {
+      "id": "agy-desktop-exo",
+      "name": "agy-desktop-exo",
+      "repo": "jiangnanquan/agy-desktop-exo",
+      "url": "https://github.com/jiangnanquan/agy-desktop-exo",
+      "category": "platform-fixes-runtime-patches",
+      "description_en": "UX enhancements (compact wide-layout toggle, inline Office/EPUB sidebar preview) and Simplified Chinese localization for Google Antigravity Desktop.",
+      "description_zh": "面向 Google Antigravity 桌面端的体验增强（紧凑加宽布局开关、Office/EPUB 侧边栏速览）与简体中文汉化引擎。",
+      "exclusivity_reason_en": "Built exclusively for Antigravity Desktop 2.0+ Electron app.asar patching with strict content isolation and inside-out macOS codesigning.",
+      "exclusivity_reason_zh": "专为 Antigravity 2.0+ 桌面端 app.asar 定向注入与 macOS 由内而外重签名打造。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Desktop",
+        "Localization",
+        "UX",
+        "Node.js"
+      ],
+      "added_at": "2026-11-20"
+    },
+    {
       "id": "antigravity-chinese-localization",
       "name": "Antigravity-Chinese-Localization",
       "repo": "antigravity-cn-community/Antigravity-Chinese-Localization",
