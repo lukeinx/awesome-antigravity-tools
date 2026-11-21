@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Curated Tools](https://img.shields.io/badge/Curated-17%20Tools-4285F4.svg)](#contents)
+[![Curated Tools](https://img.shields.io/badge/Curated-18%20Tools-4285F4.svg)](#contents)
 [![Daily Health Audit](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
 [![Repository Health](https://img.shields.io/badge/Health%20Audit-17/17%20Active%20%28100%25%29-brightgreen)](health_report.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
@@ -26,14 +26,14 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 - Directly fixes critical Antigravity bugs, OS runtime limitations, or telemetry blind spots.
 - Verified daily by our automated health audit (`scripts/health-check.py`) and backed by a single-source-of-truth JSON catalog (`data/tools.json`).
 
-> **Ecosystem Pulse**: `17` curated tools across `4` categories · `59.2k` combined GitHub stars · `17/17` active (`100.0%`) · Avg Health Score: `88.6/100` ([Full Audit](health_report.md))
+> **Ecosystem Pulse**: `18` curated tools across `4` categories · `59.2k` combined GitHub stars · `17/17` active (`100.0%`) · Avg Health Score: `88.6/100` ([Full Audit](health_report.md))
 
 ---
 
 ## Contents
 
 - [Official CLI & SDKs (2)](#-official-cli--sdks)
-- [IDE Extensions & Cockpits (4)](#️-ide-extensions--cockpits)
+- [IDE Extensions & Cockpits (5)](#️-ide-extensions--cockpits)
 - [Platform Fixes & Runtime Patches (5)](#-platform-fixes--runtime-patches)
 - [Dedicated Gateways, ACP Adapters & Migration Tooling (6)](#-dedicated-gateways-acp-adapters--migration-tooling)
 - [Badge](#️-badge)
@@ -54,6 +54,7 @@ First-party command-line harnesses and SDKs maintained under `google-antigravity
 
 Extensions and desktop applications designed exclusively to monitor Antigravity model quotas, manage accounts, and provide HUD telemetry.
 
+- [agy-meme](https://github.com/jiangnanquan/agy-meme) - Bidirectional Neko reaction stickers, Cmd/Ctrl+Shift+M inline composer picker, and Desktop-isolated zero-dependency MCP plugin (48 universal RGBA die-cut WebP stickers) for Google Antigravity Desktop. `Desktop` `Plugin` `MCP` `Node.js`
 - [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) - Native desktop account manager and one-click switcher for Antigravity built with Tauri v2 (Rust) and React. `Desktop` `Rust` `Tauri`
 - [antigravity-panel](https://github.com/n2ns/antigravity-panel) - Quota monitor and cache manager for Google Antigravity IDE tracking Gemini, Claude, and GPT limits with usage trend analytics. `VS Code` `TypeScript` `Quota`
 - [AntigravityManager](https://github.com/Draculabo/AntigravityManager) - Desktop application for managing Google accounts across Antigravity Classic, Antigravity IDE, and `agy` CLI with real-time quota views. `Desktop` `TypeScript` `Quota`

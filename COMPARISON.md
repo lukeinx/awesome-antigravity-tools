@@ -21,6 +21,7 @@
 | [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | `HEALTHY` | **93** | 4,858 | TypeScript | MIT | `v2.1.53` | VS Code, Antigravity IDE |
 | [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | `HEALTHY` | **90** | 2,548 | TypeScript | NOASSERTION | `v0.32.1` | Windows, macOS, Linux |
 | [antigravity-panel](https://github.com/n2ns/antigravity-panel) | `HEALTHY` | **97** | 866 | TypeScript | Apache-2.0 | `v2.8.5` | VS Code, Antigravity IDE |
+| [agy-meme](https://github.com/jiangnanquan/agy-meme) | `UNAUDITED` | - | 0 | - | - | - | Windows, macOS, Linux |
 
 ## 🔧 Platform Fixes & Runtime Patches
 

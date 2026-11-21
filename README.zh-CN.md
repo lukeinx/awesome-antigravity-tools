@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.zh-CN.md)
-[![收录工具数](https://img.shields.io/badge/精选收录-17%20%E4%B8%AA%E5%B7%A5%E5%85%B7-4285F4.svg)](#目录)
+[![收录工具数](https://img.shields.io/badge/精选收录-18%20%E4%B8%AA%E5%B7%A5%E5%85%B7-4285F4.svg)](#目录)
 [![每日健康巡检](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
 [![巡检状态](https://img.shields.io/badge/巡检状态-17/17%20%E6%B4%BB%E8%B7%83%20%28100%25%29-brightgreen)](health_report.zh-CN.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
@@ -26,14 +26,14 @@
 - 正面攻克 Antigravity 运行时的特定缺陷、系统级死锁或配额盲区；
 - 由统一数据源 `data/tools.json` 驱动，每日自动执行健康度与活性巡检（`scripts/health-check.py`）。
 
-> **生态脉搏**：共收录 `17` 款专有工具（`4` 个分类）· 合计 `59.2k` Stars · `17/17` 活跃（`100.0%`）· 平均健康分：`88.6/100`（[完整巡检报告](health_report.zh-CN.md)）
+> **生态脉搏**：共收录 `18` 款专有工具（`4` 个分类）· 合计 `59.2k` Stars · `17/17` 活跃（`100.0%`）· 平均健康分：`88.6/100`（[完整巡检报告](health_report.zh-CN.md)）
 
 ---
 
 ## 目录
 
 - [🚀 官方 CLI 与开发套件 (2)](#-官方-cli-与开发套件)
-- [🖥️ IDE 扩展与专属控制台 (4)](#️-ide-扩展与专属控制台)
+- [🖥️ IDE 扩展与专属控制台 (5)](#️-ide-扩展与专属控制台)
 - [🔧 平台补丁与底层运行时修复 (5)](#-平台补丁与底层运行时修复)
 - [🔌 专用网关、ACP 适配器与迁移工具 (6)](#-专用网关acp-适配器与迁移工具)
 - [🏷️ 项目徽章 (Badge)](#️-项目徽章-badge)
@@ -54,6 +54,7 @@
 
 专为 Antigravity 模型配额监控、状态栏倒计时与账号管理打造的桌面应用与扩展。
 
+- [agy-meme](https://github.com/jiangnanquan/agy-meme) - 专为 Google Antigravity 桌面端打造的双向猫娘表情贴纸渲染、Cmd/Ctrl+Shift+M 输入框选图面板与终端静默隔离原生 MCP 插件（内置 48 张全球通用无字透明模切贴纸）。 `Desktop` `Plugin` `MCP` `Node.js`
 - [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) - 基于 Rust (Tauri v2) + React 构建的桌面级 Antigravity 账号管理与一键切换工具。 `Desktop` `Rust` `Tauri`
 - [antigravity-panel](https://github.com/n2ns/antigravity-panel) - 专为 Google Antigravity IDE 打造的配额监控与缓存管理面板，支持多模型额度、周限额与趋势统计。 `VS Code` `TypeScript` `Quota`
 - [AntigravityManager](https://github.com/Draculabo/AntigravityManager) - 面向 Antigravity Classic、Antigravity IDE 与 `agy` CLI 的多客户端账号管理桌面端，支持实时配额查看与无缝切换。 `Desktop` `TypeScript` `Quota`

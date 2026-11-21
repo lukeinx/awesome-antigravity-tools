@@ -83,6 +83,30 @@
       "featured": true
     },
     {
+      "id": "agy-meme",
+      "name": "agy-meme",
+      "repo": "jiangnanquan/agy-meme",
+      "url": "https://github.com/jiangnanquan/agy-meme",
+      "category": "ide-extensions-cockpits",
+      "description_en": "Bidirectional Neko reaction stickers, Cmd/Ctrl+Shift+M inline composer picker, and Desktop-isolated zero-dependency MCP plugin (48 universal RGBA die-cut WebP stickers) for Google Antigravity Desktop.",
+      "description_zh": "专为 Google Antigravity 桌面端打造的双向猫娘表情贴纸渲染、Cmd/Ctrl+Shift+M 输入框选图面板与终端静默隔离原生 MCP 插件（内置 48 张全球通用无字透明模切贴纸）。",
+      "exclusivity_reason_en": "Built exclusively on Antigravity's native plugin.json specification and Antigravity Desktop 2.0+ Electron app.asar IPC/preload overlay with automatic agy CLI process-tree isolation.",
+      "exclusivity_reason_zh": "深度基于 Antigravity 原生 plugin.json 插件规范与桌面端 app.asar 双向气泡渲染构建，具备 agy CLI 进程树自动识别静默隔离机制。",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "tags": [
+        "Desktop",
+        "Plugin",
+        "MCP",
+        "Node.js"
+      ],
+      "install_hint": "git clone https://github.com/jiangnanquan/agy-meme && cd agy-meme && ./install.sh",
+      "added_at": "2026-11-21"
+    },
+    {
       "id": "antigravity-manager",
       "name": "Antigravity-Manager",
       "repo": "lbjlaq/Antigravity-Manager",
