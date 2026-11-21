@@ -9,6 +9,13 @@
     <lastBuildDate>Sat, 21 Nov 2026 09:19:50 +0000</lastBuildDate>
     <docs>https://github.com/wllzhang/awesome-antigravity-tools</docs>
     <item>
+      <title>agy-meme (IDE Extensions &amp; Cockpits)</title>
+      <link>https://github.com/jiangnanquan/agy-meme</link>
+      <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=agy-meme</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Bidirectional Neko reaction stickers, Cmd/Ctrl+Shift+M inline composer picker, and Desktop-isolated zero-dependency MCP plugin (48 universal RGBA die-cut WebP stickers) for Google Antigravity Desktop. | Exclusivity: Built exclusively on Antigravity's native plugin.json specification and Antigravity Desktop 2.0+ Electron app.asar IPC/preload overlay with automatic agy CLI process-tree isolation. | Stars: 0 | Health: None/100</description>
+    </item>
+    <item>
       <title>agy-desktop-exo (Platform Fixes &amp; Runtime Patches)</title>
       <link>https://github.com/jiangnanquan/agy-desktop-exo</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=agy-desktop-exo</guid>
