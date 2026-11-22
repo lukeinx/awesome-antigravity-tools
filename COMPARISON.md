@@ -10,26 +10,26 @@
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | `HEALTHY` | **100** | 4,135 | Python | Apache-2.0 | - | Cross-Platform |
-| [antigravity-cli](https://github.com/google-antigravity/antigravity-cli) | `HEALTHY` | **81** | 2,953 | - | - | `1.5.14` | Windows, macOS, Linux |
+| [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | `HEALTHY` | **100** | 4,151 | Python | Apache-2.0 | - | Cross-Platform |
+| [antigravity-cli](https://github.com/google-antigravity/antigravity-cli) | `HEALTHY` | **81** | 2,972 | - | - | `1.5.14` | Windows, macOS, Linux |
 
 ## 🖥️ IDE Extensions & Cockpits
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | `HEALTHY` | **93** | 33,533 | Rust | NOASSERTION | `v5.0.4` | Windows, macOS, Linux |
+| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | `HEALTHY` | **93** | 33,593 | Rust | NOASSERTION | `v5.0.4` | Windows, macOS, Linux |
 | [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | `HEALTHY` | **93** | 4,858 | TypeScript | MIT | `v2.1.53` | VS Code, Antigravity IDE |
-| [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | `HEALTHY` | **90** | 2,553 | TypeScript | NOASSERTION | `v0.33.1` | Windows, macOS, Linux |
-| [antigravity-panel](https://github.com/n2ns/antigravity-panel) | `HEALTHY` | **97** | 872 | TypeScript | Apache-2.0 | `v2.8.5` | VS Code, Antigravity IDE |
+| [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | `HEALTHY` | **90** | 2,562 | TypeScript | NOASSERTION | `v0.33.1` | Windows, macOS, Linux |
+| [antigravity-panel](https://github.com/n2ns/antigravity-panel) | `HEALTHY` | **97** | 874 | TypeScript | Apache-2.0 | `v2.8.5` | VS Code, Antigravity IDE |
 | [agy-meme](https://github.com/jiangnanquan/agy-meme) | `HEALTHY` | **83** | 1 | JavaScript | MIT | `v1.3.0` | Windows, macOS, Linux |
 
 ## 🔧 Platform Fixes & Runtime Patches
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | `HEALTHY` | **93** | 5,178 | C++ | NOASSERTION | `v2.6.5` | Windows, Antigravity IDE |
-| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | `HEALTHY` | **93** | 1,420 | JavaScript | MIT | `v2.34.0` | Windows, macOS, Linux, Antigravity IDE |
-| [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) | `HEALTHY` | **84** | 621 | Python | MIT | - | Windows, macOS, Linux |
+| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | `HEALTHY` | **93** | 5,273 | C++ | NOASSERTION | `v2.6.6` | Windows, Antigravity IDE |
+| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | `HEALTHY` | **93** | 1,486 | JavaScript | MIT | `v2.34.0` | Windows, macOS, Linux, Antigravity IDE |
+| [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) | `HEALTHY` | **84** | 623 | Python | MIT | - | Windows, macOS, Linux |
 | [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | `HEALTHY` | **75** | 4 | JavaScript | MIT | - | Windows, VS Code |
 | [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | `HEALTHY` | **79** | 0 | PowerShell | MIT | `v1.0.1` | Windows, Antigravity IDE |
 | [agy-desktop-exo](https://github.com/jiangnanquan/agy-desktop-exo) | `HEALTHY` | **63** | 0 | JavaScript | NOASSERTION | - | Windows, macOS, Linux |
@@ -40,7 +40,7 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | [flow2api](https://github.com/TheSmallHanCat/flow2api) | `HEALTHY` | **96** | 3,187 | Python | MIT | - | Cross-Platform, Web |
 | [antigravity-acp](https://github.com/shubzkothekar/antigravity-acp) | `HEALTHY` | **84** | 86 | TypeScript | MIT | `v1.2.0` | Cross-Platform |
-| [ACP-Ant](https://github.com/czg86389-hub/ACP-Ant) | `HEALTHY` | **93** | 77 | Python | MIT | `v1.5.6` | Cross-Platform |
-| [liftgate](https://github.com/acking-you/liftgate) | `HEALTHY` | **84** | 37 | Rust | Apache-2.0 | `v0.2.4` | Windows, macOS, Linux |
+| [ACP-Ant](https://github.com/czg86389-hub/ACP-Ant) | `HEALTHY` | **93** | 85 | Python | MIT | `v1.5.6` | Cross-Platform |
+| [liftgate](https://github.com/acking-you/liftgate) | `HEALTHY` | **84** | 40 | Rust | Apache-2.0 | `v0.2.5` | Windows, macOS, Linux |
 | [refined-antigravity-acp](https://github.com/simonepri/refined-antigravity-acp) | `HEALTHY` | **88** | 22 | TypeScript | MIT | `v1.6.8` | Cross-Platform |
 | [antigravity-skill-porter](https://github.com/Pranav-Nexus/antigravity-skill-porter) | `HEALTHY` | **83** | 6 | Python | MIT | `v1.0.1` | Cross-Platform |

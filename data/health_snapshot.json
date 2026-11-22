@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-21T11:30:35Z",
+  "generated_at": "2026-11-22T09:28:11Z",
   "summary": {
     "total": 19,
     "healthy": 19,
@@ -10,8 +10,8 @@
     "dead": 0,
     "error": 0,
     "health_ratio_pct": 100.0,
-    "total_stars": 59543,
-    "total_forks": 7222,
+    "total_stars": 59823,
+    "total_forks": 7243,
     "average_health_score": 86.9
   },
   "repositories": [
@@ -28,9 +28,9 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 81,
-      "stars": 2953,
+      "stars": 2972,
       "forks": 292,
-      "open_issues": 1050,
+      "open_issues": 1082,
       "language": null,
       "license": null,
       "default_branch": "main",
@@ -39,8 +39,8 @@
       "latest_release_at": "2026-11-21T07:57:06Z",
       "topics": [],
       "archived": false,
-      "days_inactive": 0,
-      "message": "Active (0d ago, 2953 stars)"
+      "days_inactive": 1,
+      "message": "Active (1d ago, 2972 stars)"
     },
     {
       "id": "antigravity-sdk-python",
@@ -55,8 +55,8 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 100,
-      "stars": 4135,
-      "forks": 1613,
+      "stars": 4151,
+      "forks": 1620,
       "open_issues": 37,
       "language": "Python",
       "license": "Apache-2.0",
@@ -76,8 +76,8 @@
         "skills"
       ],
       "archived": false,
-      "days_inactive": 1,
-      "message": "Active (1d ago, 4135 stars)"
+      "days_inactive": 2,
+      "message": "Active (2d ago, 4151 stars)"
     },
     {
       "id": "agy-meme",
@@ -98,7 +98,7 @@
       "language": "JavaScript",
       "license": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-11-21T07:40:14Z",
+      "pushed_at": "2026-11-22T00:33:07Z",
       "latest_release": "v1.3.0",
       "latest_release_at": "2026-11-21T05:28:23Z",
       "topics": [
@@ -132,13 +132,13 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 33533,
-      "forks": 3569,
-      "open_issues": 1684,
+      "stars": 33593,
+      "forks": 3575,
+      "open_issues": 1685,
       "language": "Rust",
       "license": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-11-21T06:01:32Z",
+      "pushed_at": "2026-11-21T16:37:18Z",
       "latest_release": "v5.0.4",
       "latest_release_at": "2026-11-20T16:25:01Z",
       "topics": [
@@ -147,7 +147,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 33533 stars)"
+      "message": "Active (0d ago, 33593 stars)"
     },
     {
       "id": "antigravity-panel",
@@ -162,7 +162,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 97,
-      "stars": 872,
+      "stars": 874,
       "forks": 46,
       "open_issues": 7,
       "language": "TypeScript",
@@ -187,8 +187,8 @@
         "vscode-extension"
       ],
       "archived": false,
-      "days_inactive": 5,
-      "message": "Active (5d ago, 872 stars)"
+      "days_inactive": 6,
+      "message": "Active (6d ago, 874 stars)"
     },
     {
       "id": "draculabo-antigravity-manager",
@@ -203,13 +203,13 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 90,
-      "stars": 2553,
-      "forks": 304,
+      "stars": 2562,
+      "forks": 305,
       "open_issues": 12,
       "language": "TypeScript",
       "license": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-11-21T09:25:37Z",
+      "pushed_at": "2026-11-21T12:57:15Z",
       "latest_release": "v0.33.1",
       "latest_release_at": "2026-11-20T17:39:50Z",
       "topics": [
@@ -226,7 +226,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 2553 stars)"
+      "message": "Active (0d ago, 2562 stars)"
     },
     {
       "id": "vscode-antigravity-cockpit",
@@ -252,8 +252,8 @@
       "latest_release_at": "2026-11-12T08:58:01Z",
       "topics": [],
       "archived": false,
-      "days_inactive": 9,
-      "message": "Active (9d ago, 4858 stars)"
+      "days_inactive": 10,
+      "message": "Active (10d ago, 4858 stars)"
     },
     {
       "id": "agy-desktop-exo",
@@ -274,7 +274,7 @@
       "language": "JavaScript",
       "license": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-11-21T07:29:21Z",
+      "pushed_at": "2026-11-22T00:33:02Z",
       "latest_release": null,
       "latest_release_at": null,
       "topics": [],
@@ -295,19 +295,19 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 1420,
-      "forks": 42,
+      "stars": 1486,
+      "forks": 44,
       "open_issues": 0,
       "language": "JavaScript",
       "license": "MIT",
       "default_branch": "master",
-      "pushed_at": "2026-11-21T09:54:56Z",
+      "pushed_at": "2026-11-22T06:28:17Z",
       "latest_release": "v2.34.0",
       "latest_release_at": "2026-11-21T08:30:04Z",
       "topics": [],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 1420 stars)"
+      "message": "Active (0d ago, 1486 stars)"
     },
     {
       "id": "antigravity-fixer",
@@ -322,7 +322,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 84,
-      "stars": 621,
+      "stars": 623,
       "forks": 67,
       "open_issues": 4,
       "language": "Python",
@@ -333,8 +333,8 @@
       "latest_release_at": null,
       "topics": [],
       "archived": false,
-      "days_inactive": 52,
-      "message": "Active (52d ago, 621 stars)"
+      "days_inactive": 53,
+      "message": "Active (53d ago, 623 stars)"
     },
     {
       "id": "antigravity-junction-skill-fix",
@@ -369,8 +369,8 @@
         "windows"
       ],
       "archived": false,
-      "days_inactive": 2,
-      "message": "Active (2d ago, 0 stars)"
+      "days_inactive": 3,
+      "message": "Active (3d ago, 0 stars)"
     },
     {
       "id": "antigravity-proxy",
@@ -385,15 +385,15 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 5178,
-      "forks": 354,
+      "stars": 5273,
+      "forks": 358,
       "open_issues": 4,
       "language": "C++",
       "license": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-11-21T07:24:42Z",
-      "latest_release": "v2.6.5",
-      "latest_release_at": "2026-11-21T07:24:40Z",
+      "pushed_at": "2026-11-21T13:25:18Z",
+      "latest_release": "v2.6.6",
+      "latest_release_at": "2026-11-21T13:25:16Z",
       "topics": [
         "antigravity",
         "dll-injection",
@@ -408,7 +408,7 @@
       ],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 5178 stars)"
+      "message": "Active (0d ago, 5273 stars)"
     },
     {
       "id": "vscode-antigravity-backend-fix",
@@ -445,8 +445,8 @@
         "windows-defender"
       ],
       "archived": false,
-      "days_inactive": 21,
-      "message": "Active (21d ago, 4 stars)"
+      "days_inactive": 22,
+      "message": "Active (22d ago, 4 stars)"
     },
     {
       "id": "acp-ant",
@@ -461,7 +461,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 77,
+      "stars": 85,
       "forks": 14,
       "open_issues": 2,
       "language": "Python",
@@ -478,8 +478,8 @@
         "openai-compatible"
       ],
       "archived": false,
-      "days_inactive": 0,
-      "message": "Active (0d ago, 77 stars)"
+      "days_inactive": 1,
+      "message": "Active (1d ago, 85 stars)"
     },
     {
       "id": "antigravity-acp",
@@ -519,8 +519,8 @@
         "typescript"
       ],
       "archived": false,
-      "days_inactive": 54,
-      "message": "Active (54d ago, 86 stars)"
+      "days_inactive": 55,
+      "message": "Active (55d ago, 86 stars)"
     },
     {
       "id": "antigravity-skill-porter",
@@ -557,8 +557,8 @@
         "multi-agent"
       ],
       "archived": false,
-      "days_inactive": 6,
-      "message": "Active (6d ago, 6 stars)"
+      "days_inactive": 7,
+      "message": "Active (7d ago, 6 stars)"
     },
     {
       "id": "flow2api",
@@ -584,8 +584,8 @@
       "latest_release_at": null,
       "topics": [],
       "archived": false,
-      "days_inactive": 4,
-      "message": "Active (4d ago, 3187 stars)"
+      "days_inactive": 5,
+      "message": "Active (5d ago, 3187 stars)"
     },
     {
       "id": "liftgate",
@@ -600,19 +600,19 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 84,
-      "stars": 37,
-      "forks": 3,
-      "open_issues": 0,
+      "stars": 40,
+      "forks": 4,
+      "open_issues": 1,
       "language": "Rust",
       "license": "Apache-2.0",
       "default_branch": "main",
-      "pushed_at": "2026-11-19T10:48:18Z",
-      "latest_release": "v0.2.4",
-      "latest_release_at": "2026-11-19T10:50:24Z",
+      "pushed_at": "2026-11-22T07:49:58Z",
+      "latest_release": "v0.2.5",
+      "latest_release_at": "2026-11-21T21:24:08Z",
       "topics": [],
       "archived": false,
-      "days_inactive": 2,
-      "message": "Active (2d ago, 37 stars)"
+      "days_inactive": 0,
+      "message": "Active (0d ago, 40 stars)"
     },
     {
       "id": "refined-antigravity-acp",
@@ -629,11 +629,11 @@
       "health_score": 88,
       "stars": 22,
       "forks": 4,
-      "open_issues": 8,
+      "open_issues": 9,
       "language": "TypeScript",
       "license": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-11-21T10:39:02Z",
+      "pushed_at": "2026-11-21T22:38:30Z",
       "latest_release": "v1.6.8",
       "latest_release_at": "2026-11-19T09:02:40Z",
       "topics": [

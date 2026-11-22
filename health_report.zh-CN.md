@@ -1,9 +1,9 @@
 # Awesome Antigravity Tools - 每日仓库健康与清退巡检报告
 
-> **生成时间**：`2026-11-21 11:30:35 UTC`  
+> **生成时间**：`2026-11-22 09:28:11 UTC`  
 > **本次巡检仓库总数**：`19`  
 > **活跃健康比例**：`19/19` (100.0%)  
-> **合计 GitHub Stars**：`59,543` · **平均健康分**：`86.9/100`
+> **合计 GitHub Stars**：`59,823` · **平均健康分**：`86.9/100`
 
 [English Report](health_report.md) · [返回中文精选榜](README.zh-CN.md)
 
@@ -22,24 +22,24 @@
 
 | 项目名称 | 所属分类 | 健康状态 | 健康分 | Stars | 主语言 | 开源协议 | 最新版本 | 最近推送 |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [antigravity-cli](https://github.com/google-antigravity/antigravity-cli) | 🚀 官方 CLI 与开发套件 | 🟢 活跃 | **81** | 2,953 (+5) | - | - | `1.5.14` | 0天前 |
-| [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | 🚀 官方 CLI 与开发套件 | 🟢 活跃 | **100** | 4,135 (+2) | Python | Apache-2.0 | - | 1天前 |
+| [antigravity-cli](https://github.com/google-antigravity/antigravity-cli) | 🚀 官方 CLI 与开发套件 | 🟢 活跃 | **81** | 2,972 (+19) | - | - | `1.5.14` | 1天前 |
+| [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | 🚀 官方 CLI 与开发套件 | 🟢 活跃 | **100** | 4,151 (+16) | Python | Apache-2.0 | - | 2天前 |
 | [agy-meme](https://github.com/jiangnanquan/agy-meme) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **83** | 1 | JavaScript | MIT | `v1.3.0` | 0天前 |
-| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **93** | 33,533 (+8) | Rust | NOASSERTION | `v5.0.4` | 0天前 |
-| [antigravity-panel](https://github.com/n2ns/antigravity-panel) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **97** | 872 (+1) | TypeScript | Apache-2.0 | `v2.8.5` | 5天前 |
-| [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **90** | 2,553 | TypeScript | NOASSERTION | `v0.33.1` | 0天前 |
-| [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **93** | 4,858 | TypeScript | MIT | `v2.1.53` | 9天前 |
+| [Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **93** | 33,593 (+60) | Rust | NOASSERTION | `v5.0.4` | 0天前 |
+| [antigravity-panel](https://github.com/n2ns/antigravity-panel) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **97** | 874 (+2) | TypeScript | Apache-2.0 | `v2.8.5` | 6天前 |
+| [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **90** | 2,562 (+9) | TypeScript | NOASSERTION | `v0.33.1` | 0天前 |
+| [vscode-antigravity-cockpit](https://github.com/jlcodes99/vscode-antigravity-cockpit) | 🖥️ IDE 扩展与专属控制台 | 🟢 活跃 | **93** | 4,858 | TypeScript | MIT | `v2.1.53` | 10天前 |
 | [agy-desktop-exo](https://github.com/jiangnanquan/agy-desktop-exo) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **63** | 0 | JavaScript | NOASSERTION | - | 0天前 |
-| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **93** | 1,420 (+9) | JavaScript | MIT | `v2.34.0` | 0天前 |
-| [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **84** | 621 | Python | MIT | - | 52天前 |
-| [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **79** | 0 | PowerShell | MIT | `v1.0.1` | 2天前 |
-| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **93** | 5,178 (+18) | C++ | NOASSERTION | `v2.6.5` | 0天前 |
-| [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **75** | 4 | JavaScript | MIT | - | 21天前 |
-| [ACP-Ant](https://github.com/czg86389-hub/ACP-Ant) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **93** | 77 | Python | MIT | `v1.5.6` | 0天前 |
-| [antigravity-acp](https://github.com/shubzkothekar/antigravity-acp) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **84** | 86 | TypeScript | MIT | `v1.2.0` | 54天前 |
-| [antigravity-skill-porter](https://github.com/Pranav-Nexus/antigravity-skill-porter) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **83** | 6 | Python | MIT | `v1.0.1` | 6天前 |
-| [flow2api](https://github.com/TheSmallHanCat/flow2api) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **96** | 3,187 | Python | MIT | - | 4天前 |
-| [liftgate](https://github.com/acking-you/liftgate) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **84** | 37 | Rust | Apache-2.0 | `v0.2.4` | 2天前 |
+| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **93** | 1,486 (+66) | JavaScript | MIT | `v2.34.0` | 0天前 |
+| [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **84** | 623 (+2) | Python | MIT | - | 53天前 |
+| [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **79** | 0 | PowerShell | MIT | `v1.0.1` | 3天前 |
+| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **93** | 5,273 (+95) | C++ | NOASSERTION | `v2.6.6` | 0天前 |
+| [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | 🔧 平台补丁与底层运行时修复 | 🟢 活跃 | **75** | 4 | JavaScript | MIT | - | 22天前 |
+| [ACP-Ant](https://github.com/czg86389-hub/ACP-Ant) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **93** | 85 (+8) | Python | MIT | `v1.5.6` | 1天前 |
+| [antigravity-acp](https://github.com/shubzkothekar/antigravity-acp) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **84** | 86 | TypeScript | MIT | `v1.2.0` | 55天前 |
+| [antigravity-skill-porter](https://github.com/Pranav-Nexus/antigravity-skill-porter) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **83** | 6 | Python | MIT | `v1.0.1` | 7天前 |
+| [flow2api](https://github.com/TheSmallHanCat/flow2api) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **96** | 3,187 | Python | MIT | - | 5天前 |
+| [liftgate](https://github.com/acking-you/liftgate) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **84** | 40 (+3) | Rust | Apache-2.0 | `v0.2.5` | 0天前 |
 | [refined-antigravity-acp](https://github.com/simonepri/refined-antigravity-acp) | 🔌 专用网关、ACP 适配器与迁移工具 | 🟢 活跃 | **88** | 22 | TypeScript | MIT | `v1.6.8` | 0天前 |
 
 ## 健康分计算标准
