@@ -4,9 +4,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Curated Tools](https://img.shields.io/badge/Curated-19%20Tools-4285F4.svg)](#contents)
+[![Curated Tools](https://img.shields.io/badge/Curated-18%20Tools-4285F4.svg)](#contents)
 [![Daily Health Audit](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml/badge.svg)](https://github.com/wllzhang/awesome-antigravity-tools/actions/workflows/health-check.yml)
-[![Repository Health](https://img.shields.io/badge/Health%20Audit-18/19%20Active%20%2895%25%29-brightgreen)](health_report.md)
+[![Repository Health](https://img.shields.io/badge/Health%20Audit-18/18%20Active%20%28100%25%29-brightgreen)](health_report.md)
 [![Antigravity](https://img.shields.io/badge/Google-Antigravity-4285F4.svg?logo=google)](https://antigravity.google)
 
 > A strictly curated, schema-validated directory of **100% native, dedicated tools, IDE extensions, runtime hotfixes, and engineering gateways** built exclusively for Google Antigravity.
@@ -26,7 +26,7 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 - Directly fixes critical Antigravity bugs, OS runtime limitations, or telemetry blind spots.
 - Verified daily by our automated health audit (`scripts/health-check.py`) and backed by a single-source-of-truth JSON catalog (`data/tools.json`).
 
-> **Ecosystem Pulse**: `19` curated tools across `4` categories · `59.7k` combined GitHub stars · `18/19` active (`94.7%`) · Avg Health Score: `82.5/100` ([Full Audit](health_report.md))
+> **Ecosystem Pulse**: `18` curated tools across `4` categories · `59.7k` combined GitHub stars · `18/18` active (`100.0%`) · Avg Health Score: `87.1/100` ([Full Audit](health_report.md))
 
 ---
 
@@ -34,7 +34,7 @@ Most "awesome" lists in the AI agent space are flooded with two types of noise:
 
 - [Official CLI & SDKs (2)](#-official-cli--sdks)
 - [IDE Extensions & Cockpits (5)](#️-ide-extensions--cockpits)
-- [Platform Fixes & Runtime Patches (6)](#-platform-fixes--runtime-patches)
+- [Platform Fixes & Runtime Patches (5)](#-platform-fixes--runtime-patches)
 - [Dedicated Gateways, ACP Adapters & Migration Tooling (6)](#-dedicated-gateways-acp-adapters--migration-tooling)
 - [Badge](#️-badge)
 - [Contributing](#-contributing)
@@ -68,7 +68,6 @@ System-level hotfixes, localization injectors, network bridges, and patches solv
 
 - [agy-desktop-exo](https://github.com/jiangnanquan/agy-desktop-exo) - UX enhancements (compact wide-layout toggle, inline Office/EPUB sidebar preview) and Simplified Chinese localization for Google Antigravity Desktop. `Desktop` `Localization` `UX` `Node.js`
 - [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) - MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE. `Localization` `JavaScript` `Patch`
-- [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) - Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error. `Python` `Fix` `Diagnostics`
 - [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) - Zero-copy NTFS hardlink directory bridge that resolves Go language server discovery failures for Windows directory junctions (`mklink /J`) and symlinks (`mklink /D`). `Windows` `PowerShell` `NTFS`
 - [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) - Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode. `Windows` `C++` `Proxy`
 - [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) - Hotfix for the official VS Code Antigravity extension resolving the repeated ~202 MB `agy.exe` background download loop caused by Windows Defender timeouts. `Windows` `Node.js` `PowerShell`

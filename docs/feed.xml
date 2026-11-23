@@ -6,7 +6,7 @@
     <atom:link href="https://wllzhang.github.io/awesome-antigravity-tools/feed.xml" rel="self" type="application/rss+xml" />
     <description>Strictly 100% Google Antigravity-exclusive engineering tools, IDE extensions, runtime hotfixes, and ACP gateways.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 10:58:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 11:28:42 +0000</lastBuildDate>
     <docs>https://github.com/wllzhang/awesome-antigravity-tools</docs>
     <item>
       <title>agy-meme (IDE Extensions &amp; Cockpits)</title>
@@ -34,14 +34,14 @@
       <link>https://github.com/yuaotian/antigravity-proxy</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-proxy</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode. | Exclusivity: Targets Antigravity's Windows child processes (including language server binaries) that ignore system proxy settings. | Stars: 5,396 | Health: 93/100</description>
+      <description>Transparent Windows DLL-injection proxy utility that routes Antigravity process traffic through SOCKS5/HTTP proxies without requiring TUN mode. | Exclusivity: Targets Antigravity's Windows child processes (including language server binaries) that ignore system proxy settings. | Stars: 5,397 | Health: 93/100</description>
     </item>
     <item>
       <title>antigravity-sdk-python (Official CLI &amp; SDKs)</title>
       <link>https://github.com/google-antigravity/antigravity-sdk-python</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-sdk-python</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Official Apache-2.0 Python SDK for building programmatic AI agents and workflows powered directly by Google Antigravity. | Exclusivity: Official Python client library purpose-built for Google Antigravity's agent runtime. | Stars: 4,168 | Health: 100/100</description>
+      <description>Official Apache-2.0 Python SDK for building programmatic AI agents and workflows powered directly by Google Antigravity. | Exclusivity: Official Python client library purpose-built for Google Antigravity's agent runtime. | Stars: 4,169 | Health: 100/100</description>
     </item>
     <item>
       <title>antigravity-cli (Official CLI &amp; SDKs)</title>
@@ -62,7 +62,7 @@
       <link>https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization</link>
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-chinese-localization</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-      <description>MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE. | Exclusivity: Targets Antigravity IDE's bundled UI string tables and resource packages exclusively. | Stars: 1,616 | Health: 93/100</description>
+      <description>MIT-licensed one-click Chinese localization toolkit and UI translation patch tailored for Google Antigravity IDE. | Exclusivity: Targets Antigravity IDE's bundled UI string tables and resource packages exclusively. | Stars: 1,620 | Health: 93/100</description>
     </item>
     <item>
       <title>antigravity-panel (IDE Extensions &amp; Cockpits)</title>
@@ -91,13 +91,6 @@
       <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=refined-antigravity-acp</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
       <description>Drop-in refined Google Antigravity ACP binary wrapper resolving protocol compatibility quirks for external ACP clients. | Exclusivity: Wraps and normalizes Google Antigravity's native ACP protocol stream specifically. | Stars: 22 | Health: 88/100</description>
-    </item>
-    <item>
-      <title>antigravity-fixer (Platform Fixes &amp; Runtime Patches)</title>
-      <link>https://github.com/fulldiagnose/antigravity-fixer</link>
-      <guid isPermaLink="false">https://wllzhang.github.io/awesome-antigravity-tools/#tool=antigravity-fixer</guid>
-      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error. | Exclusivity: Targets Google Antigravity's local authentication cache and eligibility diagnostic workflow specifically. | Stars: 0 | Health: 0/100</description>
     </item>
     <item>
       <title>Antigravity-Manager (IDE Extensions &amp; Cockpits)</title>

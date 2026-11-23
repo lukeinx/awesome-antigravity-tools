@@ -246,29 +246,6 @@
       "added_at": "2026-11-18"
     },
     {
-      "id": "antigravity-fixer",
-      "name": "antigravity-fixer",
-      "repo": "fulldiagnose/antigravity-fixer",
-      "url": "https://github.com/fulldiagnose/antigravity-fixer",
-      "category": "platform-fixes-runtime-patches",
-      "description_en": "Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error.",
-      "description_zh": "针对 Google Antigravity「not eligible」账号资格报错的一键诊断、凭证清理与自动修复工具。",
-      "exclusivity_reason_en": "Targets Google Antigravity's local authentication cache and eligibility diagnostic workflow specifically.",
-      "exclusivity_reason_zh": "专门排查并清理 Google Antigravity 本地鉴权缓存与资格状态异常。",
-      "platforms": [
-        "Windows",
-        "macOS",
-        "Linux"
-      ],
-      "tags": [
-        "Python",
-        "Fix",
-        "Diagnostics"
-      ],
-      "added_at": "2026-11-18",
-      "install_hint": "Clone repository and run Python diagnostic fixer per README"
-    },
-    {
       "id": "antigravity-junction-skill-fix",
       "name": "antigravity-junction-skill-fix",
       "repo": "wllzhang/antigravity-junction-skill-fix",

@@ -4,7 +4,7 @@
   "name": "Awesome Antigravity Tools",
   "description": "Strictly curated directory of 100% Google Antigravity-exclusive engineering tools, IDE extensions, runtime hotfixes, and ACP gateways.",
   "url": "https://github.com/wllzhang/awesome-antigravity-tools",
-  "numberOfItems": 19,
+  "numberOfItems": 18,
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -128,19 +128,6 @@
       "position": 10,
       "item": {
         "@type": "SoftwareApplication",
-        "name": "antigravity-fixer",
-        "url": "https://github.com/fulldiagnose/antigravity-fixer",
-        "applicationCategory": "Platform Fixes & Runtime Patches",
-        "operatingSystem": "Windows, macOS, Linux",
-        "description": "Automated diagnostic and credential-cleanup utility resolving the Google Antigravity 'not eligible' sign-in and account state error.",
-        "keywords": "Python, Fix, Diagnostics"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 11,
-      "item": {
-        "@type": "SoftwareApplication",
         "name": "antigravity-junction-skill-fix",
         "url": "https://github.com/wllzhang/antigravity-junction-skill-fix",
         "applicationCategory": "Platform Fixes & Runtime Patches",
@@ -151,7 +138,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 12,
+      "position": 11,
       "item": {
         "@type": "SoftwareApplication",
         "name": "antigravity-proxy",
@@ -164,7 +151,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 13,
+      "position": 12,
       "item": {
         "@type": "SoftwareApplication",
         "name": "vscode-antigravity-backend-fix",
@@ -177,7 +164,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 14,
+      "position": 13,
       "item": {
         "@type": "SoftwareApplication",
         "name": "ACP-Ant",
@@ -190,7 +177,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 15,
+      "position": 14,
       "item": {
         "@type": "SoftwareApplication",
         "name": "antigravity-acp",
@@ -203,7 +190,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 16,
+      "position": 15,
       "item": {
         "@type": "SoftwareApplication",
         "name": "antigravity-skill-porter",
@@ -216,7 +203,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 17,
+      "position": 16,
       "item": {
         "@type": "SoftwareApplication",
         "name": "flow2api",
@@ -229,7 +216,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 18,
+      "position": 17,
       "item": {
         "@type": "SoftwareApplication",
         "name": "liftgate",
@@ -242,7 +229,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 19,
+      "position": 18,
       "item": {
         "@type": "SoftwareApplication",
         "name": "refined-antigravity-acp",

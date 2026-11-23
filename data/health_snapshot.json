@@ -1,18 +1,18 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-11-23T10:58:21Z",
+  "generated_at": "2026-11-23T11:28:42Z",
   "summary": {
-    "total": 19,
+    "total": 18,
     "healthy": 18,
     "stale": 0,
     "very_stale": 0,
     "archived": 0,
-    "dead": 1,
+    "dead": 0,
     "error": 0,
-    "health_ratio_pct": 94.7,
-    "total_stars": 59687,
+    "health_ratio_pct": 100.0,
+    "total_stars": 59693,
     "total_forks": 7190,
-    "average_health_score": 82.5
+    "average_health_score": 87.1
   },
   "repositories": [
     {
@@ -55,7 +55,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 100,
-      "stars": 4168,
+      "stars": 4169,
       "forks": 1623,
       "open_issues": 38,
       "language": "Python",
@@ -77,7 +77,7 @@
       ],
       "archived": false,
       "days_inactive": 3,
-      "message": "Active (3d ago, 4168 stars)"
+      "message": "Active (3d ago, 4169 stars)"
     },
     {
       "id": "agy-meme",
@@ -146,8 +146,8 @@
         "antigravity"
       ],
       "archived": false,
-      "days_inactive": 0,
-      "message": "Active (0d ago, 33754 stars)"
+      "days_inactive": 1,
+      "message": "Active (1d ago, 33754 stars)"
     },
     {
       "id": "antigravity-panel",
@@ -295,7 +295,7 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 1616,
+      "stars": 1620,
       "forks": 46,
       "open_issues": 1,
       "language": "JavaScript",
@@ -307,34 +307,7 @@
       "topics": [],
       "archived": false,
       "days_inactive": 0,
-      "message": "Active (0d ago, 1616 stars)"
-    },
-    {
-      "id": "antigravity-fixer",
-      "title": "antigravity-fixer",
-      "url": "https://github.com/fulldiagnose/antigravity-fixer",
-      "owner": "fulldiagnose",
-      "repo": "antigravity-fixer",
-      "full_name": "fulldiagnose/antigravity-fixer",
-      "category_id": "platform-fixes-runtime-patches",
-      "section": "🔧 Platform Fixes & Runtime Patches",
-      "section_zh": "🔧 平台补丁与底层运行时修复",
-      "status": "DEAD",
-      "code": 404,
-      "health_score": 0,
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "language": null,
-      "license": null,
-      "default_branch": null,
-      "pushed_at": null,
-      "latest_release": null,
-      "latest_release_at": null,
-      "topics": [],
-      "archived": false,
-      "days_inactive": 0,
-      "message": "Repository 404 (deleted, renamed, or made private)"
+      "message": "Active (0d ago, 1620 stars)"
     },
     {
       "id": "antigravity-junction-skill-fix",
@@ -385,9 +358,9 @@
       "status": "HEALTHY",
       "code": 200,
       "health_score": 93,
-      "stars": 5396,
+      "stars": 5397,
       "forks": 359,
-      "open_issues": 5,
+      "open_issues": 6,
       "language": "C++",
       "license": "NOASSERTION",
       "default_branch": "main",
@@ -408,7 +381,7 @@
       ],
       "archived": false,
       "days_inactive": 1,
-      "message": "Active (1d ago, 5396 stars)"
+      "message": "Active (1d ago, 5397 stars)"
     },
     {
       "id": "vscode-antigravity-backend-fix",
@@ -633,7 +606,7 @@
       "language": "TypeScript",
       "license": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-11-23T01:57:41Z",
+      "pushed_at": "2026-11-23T11:15:04Z",
       "latest_release": "v1.6.8",
       "latest_release_at": "2026-11-19T09:02:40Z",
       "topics": [

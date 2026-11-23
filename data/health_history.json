@@ -88,24 +88,17 @@
     },
     {
       "date": "2026-11-23",
-      "generated_at": "2026-11-23T10:58:21Z",
-      "total": 19,
+      "generated_at": "2026-11-23T11:28:42Z",
+      "total": 18,
       "healthy": 18,
       "stale": 0,
       "very_stale": 0,
       "archived": 0,
-      "dead": 1,
-      "health_ratio_pct": 94.7,
-      "total_stars": 59687,
+      "dead": 0,
+      "health_ratio_pct": 100.0,
+      "total_stars": 59693,
       "total_forks": 7190,
-      "average_health_score": 82.5,
-      "status_changes": [
-        {
-          "repo": "fulldiagnose/antigravity-fixer",
-          "from": "HEALTHY",
-          "to": "DEAD"
-        }
-      ]
+      "average_health_score": 87.1
     }
   ]
 }

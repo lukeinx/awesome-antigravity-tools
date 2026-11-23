@@ -10,7 +10,7 @@
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | `HEALTHY` | **100** | 4,168 | Python | Apache-2.0 | - | Cross-Platform |
+| [antigravity-sdk-python](https://github.com/google-antigravity/antigravity-sdk-python) | `HEALTHY` | **100** | 4,169 | Python | Apache-2.0 | - | Cross-Platform |
 | [antigravity-cli](https://github.com/google-antigravity/antigravity-cli) | `HEALTHY` | **84** | 3,004 | - | - | `1.5.15` | Windows, macOS, Linux |
 
 ## 🖥️ IDE Extensions & Cockpits
@@ -27,11 +27,10 @@
 
 | Tool | Status | Score | Stars | Language | License | Release | Platforms |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | `HEALTHY` | **93** | 5,396 | C++ | NOASSERTION | `v2.6.6` | Windows, Antigravity IDE |
-| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | `HEALTHY` | **93** | 1,616 | JavaScript | MIT | `v2.34.0.1` | Windows, macOS, Linux, Antigravity IDE |
+| [antigravity-proxy](https://github.com/yuaotian/antigravity-proxy) | `HEALTHY` | **93** | 5,397 | C++ | NOASSERTION | `v2.6.6` | Windows, Antigravity IDE |
+| [Antigravity-Chinese-Localization](https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization) | `HEALTHY` | **93** | 1,620 | JavaScript | MIT | `v2.34.0.1` | Windows, macOS, Linux, Antigravity IDE |
 | [vscode-antigravity-backend-fix](https://github.com/HeshamNoaman/vscode-antigravity-backend-fix) | `HEALTHY` | **75** | 4 | JavaScript | MIT | - | Windows, VS Code |
 | [antigravity-junction-skill-fix](https://github.com/wllzhang/antigravity-junction-skill-fix) | `HEALTHY` | **79** | 0 | PowerShell | MIT | `v1.0.1` | Windows, Antigravity IDE |
-| [antigravity-fixer](https://github.com/fulldiagnose/antigravity-fixer) | `DEAD` | **0** | 0 | - | - | - | Windows, macOS, Linux |
 | [agy-desktop-exo](https://github.com/jiangnanquan/agy-desktop-exo) | `HEALTHY` | **63** | 0 | JavaScript | NOASSERTION | - | Windows, macOS, Linux |
 
 ## 🔌 Dedicated Gateways, ACP Adapters & Migration Tooling
